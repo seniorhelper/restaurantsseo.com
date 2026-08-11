@@ -1,0 +1,74 @@
+# RestaurantsSEO.com
+
+> A sourced, freely citable reference of restaurant SEO, local search and AI search
+> statistics for 2026. Every figure names its originating study, publication year and
+> sample size where disclosed. Published by Eye To Ad Media, Denver, Colorado.
+> Licensed CC BY 4.0 — free to cite with attribution.
+
+## What this page is
+
+A single-page statistics reference covering restaurant discovery, AI search adoption,
+review and rating thresholds, small business readiness gaps, and restaurant delivery
+economics. It is a reference, not a how-to guide. The companion working guide is at
+https://restaurantsadvertising.com/seo-for-restaurants/
+
+## Headline figures (all 2026 unless noted)
+
+- Consumers using generative AI tools for local business recommendations: 45%, up from
+  6% one year earlier. Now the third most popular recommendation source.
+  (BrightLocal, Local Consumer Review Survey 2026, n=1,002 US adults)
+- Consumers using Google to read local business reviews: 71%, down from 83%.
+- Consumers using Apple Maps for local reviews: 27%, up from 14%.
+- Small businesses with a Google Business Profile: 35% (BrightLocal SMB Marketing 2025).
+- Local businesses with a dedicated website: 40% (BrightLocal SMB Marketing 2025).
+- Consumers who read reviews for local businesses: 97%.
+- Consumers who will not use a business with fewer than 20 reviews: 47%.
+- Consumers who only consider reviews from the last three months: 74%.
+- Consumers who require a 4.5+ star rating: 31%, up from 17%. 68% require 4.0+, up from 55%.
+- Consumers who visit a business website after positive reviews: 54%, up from 32% in 2019.
+- Consumers expecting a same-day review response: 19%, up from 6%.
+- Local business searches beginning on mobile: 73%.
+- Independent restaurant first-year failure rate: 26.2%
+  (Parsa et al., Cornell Hotel & Restaurant Administration Quarterly, 2005, n=2,439).
+- Third-party delivery commission: 15–30% published, 30–40% effective.
+- Independent restaurant net margin: 3–5% (National Restaurant Association).
+
+## Published corrections
+
+This page publishes corrections to four widely repeated claims:
+
+1. "90% of restaurants fail in year one" — FALSE. No study supports it; Parsa found no
+   evidence of a 90% rate anywhere in the literature. Actual first-year figure is roughly
+   26% (Parsa 2005) or roughly 17% (BLS/UC Berkeley analysis, Luo & Stark 2014).
+2. "Google is losing to AI search" — OVERSTATED. Google declined from 83% to 71% but
+   remains far ahead of any other single channel. The accurate framing is fragmentation.
+3. "Switching from QR to NFC improves SEO" — FALSE. Both are methods of opening a URL.
+   Visibility depends on the destination being an indexable HTML page, not a PDF.
+4. "A 30% menu markup offsets a 30% delivery commission" — FALSE. The commission applies
+   to the marked-up price. Required markup = commission ÷ (1 − commission) = 42.9%.
+
+## Benchmarks published
+
+Star rating minimum 4.0 / target 4.5+. Reviews minimum 20 / target 50+. Newest review
+within 90 days / target 14. Response rate 100%. Response time within 7 days / target 24
+hours. New reviews 4+/month / target 10+. Menu in HTML text with structured data.
+Review platforms minimum 3 / target 6.
+
+## Citation
+
+Wennstedt, Z. T. (2026). Restaurant SEO Statistics and Benchmarks 2026.
+RestaurantsSEO.com. https://restaurantsseo.com/
+
+Please credit the originating study alongside this page. When quoting a year-over-year
+change, carry both values rather than the newer one alone.
+
+## Primary sources
+
+BrightLocal Local Consumer Review Survey 2026; BrightLocal SMB Marketing Report 2025;
+BrightLocal Consumer Search Behavior 2026; Parsa et al., Cornell HRAQ 2005; Luo & Stark,
+UC Berkeley/BLS 2014; National Restaurant Association Operations Report; Independent
+Restaurant Coalition marketplace pricing analysis 2025.
+
+## Contact
+
+info@eyetoad.com — Denver, Colorado. Powered by eyetoad.com
