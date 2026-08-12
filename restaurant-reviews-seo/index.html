@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Restaurant Reviews &amp; Ratings: Thresholds, Asking, Replying, FTC Rules</title>
+<meta name="description" content="What star rating and review count restaurants need in 2026, the recency window most operators miss, how to ask for reviews without breaking FTC rules including review gating, and how to reply to negative reviews.">
+<link rel="canonical" href="https://restaurantsseo.com/restaurant-reviews-seo/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="author" content="Zachary Tye Wennstedt">
+<meta name="publisher" content="Eye To Ad Media">
+<meta name="theme-color" content="#FFFFFF">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="RestaurantsSEO.com">
+<meta property="og:title" content="Restaurant Reviews: The Thresholds Moved in 2026">
+<meta property="og:description" content="Rating and recency thresholds, review velocity math, FTC compliance including gating, and how to reply to a bad review.">
+<meta property="og:url" content="https://restaurantsseo.com/restaurant-reviews-seo/">
+<meta property="og:image" content="https://restaurantsseo.com/images/restaurant-seo-hero.png">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Restaurant Reviews: The Thresholds Moved in 2026">
+<meta name="twitter:description" content="Rating and recency thresholds, review math, FTC compliance, and how to reply to a bad review.">
+<meta name="twitter:image" content="https://restaurantsseo.com/images/restaurant-seo-hero.png">
+
+<link rel="icon" type="image/png" href="/images/restaurants-seo-favicon.png">
+<link rel="apple-touch-icon" href="/images/restaurants-seo-favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,300..600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  /* palette derived from the RestaurantsSEO mark: orange on black, on white */
+  --ember:#F26722;
+  --ember-dk:#C74E12;
+  --ember-lt:#FF8A4C;
+  --ember-wash:#FEF2EA;
+  --char:#14110F;
+  --char-2:#241F1B;
+  --slate:#5A544E;
+  --slate-lt:#837B72;
+  --paper:#FFFFFF;
+  --warm:#FAF7F3;
+  --warm-2:#F3EEE7;
+  --rule:#E6E0D8;
+  --rule-dk:#CFC6BA;
+  --kale:#1F5C4A;
+  --kale-lt:#3E8B72;
+
+  --disp:'Archivo',system-ui,-apple-system,sans-serif;
+  --body:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SF Mono',monospace;
+
+  --wrap:1180px;
+  --r:4px;
+  --hdr-h:96px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--hdr-h) + 16px)}
+body{
+  margin:0;background:var(--paper);color:var(--char);
+  font-family:var(--body);font-size:18px;line-height:1.72;font-weight:400;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--ember-dk);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--char)}
+:focus-visible{outline:3px solid var(--ember);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 26px}
+.narrow{max-width:820px}
+.mid{max-width:960px}
+
+h1,h2,h3,h4,h5{font-family:var(--disp);font-weight:800;line-height:1.1;letter-spacing:-.028em;margin:0 0 18px;color:var(--char)}
+h1{font-size:clamp(2.4rem,6vw,4.3rem);letter-spacing:-.042em;line-height:1.02}
+h2{font-size:clamp(1.85rem,4vw,2.85rem);letter-spacing:-.034em}
+h3{font-size:clamp(1.25rem,2.3vw,1.6rem);letter-spacing:-.024em;font-weight:700}
+h4{font-size:1.08rem;letter-spacing:-.014em;font-weight:700}
+p{margin:0 0 20px}
+strong{font-weight:600;color:var(--char)}
+.lede{font-size:clamp(1.1rem,2vw,1.32rem);line-height:1.6;color:var(--slate);font-weight:300}
+.lede strong{font-weight:500;color:var(--char)}
+
+.eyebrow{
+  font-family:var(--mono);font-size:.7rem;font-weight:600;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--ember-dk);margin:0 0 14px;display:block;
+}
+.eyebrow.on-dark{color:var(--ember-lt)}
+.eyebrow.dim{color:var(--slate-lt)}
+
+/* ---------- HEADER : WHITE, blends with logo ---------- */
+.hdr{position:sticky;top:0;z-index:900;background:var(--paper);border-bottom:1px solid var(--rule)}
+.hdr-in{max-width:var(--wrap);margin:0 auto;padding:12px 26px;
+  display:flex;align-items:center;justify-content:space-between;gap:22px}
+.mark{display:block;text-decoration:none;flex-shrink:0;line-height:0}
+.mark img{width:300px;height:auto;max-width:none}
+.nav{display:flex;align-items:center;gap:24px}
+.nav a{font-family:var(--body);font-weight:500;font-size:.9rem;color:var(--char);
+  text-decoration:none;padding:6px 0;border-bottom:2px solid transparent;white-space:nowrap}
+.nav a:hover{border-bottom-color:var(--ember)}
+.hdr-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.tel{display:inline-flex;align-items:center;gap:8px;font-family:var(--disp);font-weight:700;
+  font-size:1rem;color:var(--char);text-decoration:none;white-space:nowrap;letter-spacing:-.02em}
+.tel:hover{color:var(--ember-dk)}
+.tel svg{width:16px;height:16px;flex-shrink:0;fill:var(--ember)}
+.tel span.lbl{display:block;font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--slate-lt);font-weight:500;margin-bottom:1px}
+.tel .telstack{display:flex;flex-direction:column;line-height:1.15}
+
+.burger{display:none;background:none;border:1px solid var(--rule-dk);border-radius:var(--r);
+  width:46px;height:42px;cursor:pointer;flex-direction:column;align-items:center;
+  justify-content:center;gap:5px;padding:0}
+.burger span{display:block;width:20px;height:2px;background:var(--char);border-radius:2px;transition:.22s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobnav{display:none;position:fixed;left:0;right:0;bottom:0;z-index:899;background:var(--paper);
+  border-top:1px solid var(--rule);padding:18px 26px 40px;overflow-y:auto}
+.mobnav.open{display:block}
+.mobnav a{display:block;font-family:var(--disp);font-weight:700;font-size:1.14rem;color:var(--char);
+  padding:15px 0;border-bottom:1px solid var(--rule);text-decoration:none;letter-spacing:-.02em}
+.mobnav .btn{margin-top:22px;border-bottom:none;text-align:center}
+.mobnav .mob-tel{margin-top:12px;border-bottom:none;text-align:center;background:var(--warm);
+  border-radius:var(--r);padding:16px;font-size:1.2rem;color:var(--ember-dk)}
+
+/* ---------- BUTTONS ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:var(--disp);font-weight:700;font-size:.95rem;padding:14px 26px;letter-spacing:-.012em;
+  border-radius:var(--r);border:2px solid transparent;cursor:pointer;
+  text-decoration:none;transition:background .16s,color .16s,border-color .16s}
+.btn:hover{text-decoration:none}
+.btn-p{background:var(--ember);color:#fff;border-color:var(--ember)}
+.btn-p:hover{background:var(--ember-dk);border-color:var(--ember-dk);color:#fff}
+.btn-o{background:transparent;color:var(--char);border-color:var(--char)}
+.btn-o:hover{background:var(--char);color:#fff}
+.btn-o.on-dark{color:#fff;border-color:rgba(255,255,255,.5)}
+.btn-o.on-dark:hover{background:#fff;color:var(--char)}
+.btn-sm{padding:10px 18px;font-size:.86rem}
+.btn-full{width:100%}
+
+/* ---------- SECTIONS ---------- */
+section{padding:82px 0}
+.sec-warm{background:var(--warm)}
+.sec-warm2{background:var(--warm-2)}
+.sec-dark{background:var(--char);color:#fff}
+.sec-dark h1,.sec-dark h2,.sec-dark h3,.sec-dark h4{color:#fff}
+.sec-dark p{color:#CFC7BF}
+.sec-dark .lede{color:#DDD5CD}
+.sec-dark a{color:var(--ember-lt)}
+.sec-dark strong{color:#fff}
+.sec-tight{padding:54px 0}
+.sec-head{max-width:800px;margin:0 0 44px}
+hr.rule{height:1px;background:var(--rule);border:0;margin:0}
+
+/* ---------- HERO ---------- */
+.hero{padding:56px 0 0;background:var(--paper);position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:34px;align-items:center}
+.hero h1 em{font-style:normal;color:var(--ember)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 24px;padding-top:22px;margin-top:26px;
+  border-top:1px solid var(--rule);font-family:var(--mono);font-size:.72rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--slate-lt)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 0}
+
+/* ---------- SIGNATURE : PATHWAY WEB ---------- */
+.web-stage{background:var(--char);border-radius:6px;overflow:hidden;position:relative;
+  border:1px solid var(--char-2)}
+.web-canvas-hold{position:relative;width:100%;aspect-ratio:16/10;min-height:300px}
+#pathweb{display:block;width:100%;height:100%}
+.web-hud{position:absolute;top:16px;left:18px;pointer-events:none;
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#7E756C}
+.web-hud b{display:block;font-family:var(--disp);font-size:1.9rem;letter-spacing:-.03em;
+  color:var(--ember-lt);font-weight:800;margin-top:4px;line-height:1}
+/* controls ALWAYS below the canvas, never overlaid */
+.web-ctrl{background:var(--char-2);border-top:1px solid rgba(255,255,255,.1);padding:20px 22px}
+.web-ctrl-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.web-ctrl label{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;
+  text-transform:uppercase;color:#9E958C;white-space:nowrap}
+.web-ctrl input[type=range]{flex:1;min-width:180px;accent-color:var(--ember);height:26px;cursor:pointer}
+.web-read{font-family:var(--disp);font-weight:700;font-size:.95rem;color:#fff;white-space:nowrap;
+  letter-spacing:-.01em}
+.web-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.web-chip{font-family:var(--mono);font-size:.66rem;letter-spacing:.07em;text-transform:uppercase;
+  padding:5px 10px;border-radius:20px;border:1px solid rgba(255,255,255,.16);color:#6F675F;
+  transition:.3s;background:transparent}
+.web-chip.on{color:var(--char);background:var(--ember-lt);border-color:var(--ember-lt);font-weight:600}
+.web-note{font-size:.9rem;color:#9E958C;margin:14px 0 0;line-height:1.6;font-family:var(--body)}
+
+/* ---------- ANSWER BLOCK (AIO extraction target) ---------- */
+.answer{background:var(--paper);border:1px solid var(--rule);border-left:4px solid var(--ember);
+  border-radius:0 var(--r) var(--r) 0;padding:24px 28px;margin:0 0 26px}
+.answer .q{font-family:var(--disp);font-weight:700;font-size:1.12rem;letter-spacing:-.022em;
+  margin:0 0 12px;color:var(--char);line-height:1.3}
+.answer p{margin:0;font-size:1.04rem;line-height:1.68}
+.answer p+p{margin-top:14px}
+.sec-warm .answer,.sec-warm2 .answer{background:var(--paper)}
+.sec-dark .answer{background:var(--char-2);border-color:rgba(255,255,255,.14);border-left-color:var(--ember)}
+.sec-dark .answer .q{color:#fff}
+
+/* ---------- CARDS ---------- */
+.grid{display:grid;gap:22px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:28px}
+.card h3,.card h4{margin-bottom:11px}
+.card p:last-child{margin-bottom:0}
+.card p{font-size:.97rem;line-height:1.65}
+.sec-dark .card{background:var(--char-2);border-color:rgba(255,255,255,.13)}
+.card-num{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;color:var(--ember-dk);
+  display:block;margin-bottom:10px;font-weight:600}
+.sec-dark .card-num{color:var(--ember-lt)}
+
+/* ---------- SURFACE ROWS ---------- */
+.surf{border-top:1px solid var(--rule)}
+.surf-row{display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:start;
+  padding:26px 0;border-bottom:1px solid var(--rule)}
+.surf-ico{width:46px;height:46px;border-radius:var(--r);background:var(--ember-wash);
+  display:flex;align-items:center;justify-content:center;font-family:var(--disp);
+  font-weight:800;font-size:1.05rem;color:var(--ember-dk);flex-shrink:0}
+.surf-row h3{margin-bottom:8px;font-size:1.22rem}
+.surf-row p{margin:0;font-size:.97rem;line-height:1.65;color:var(--slate)}
+.surf-tag{font-family:var(--mono);font-size:.66rem;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--slate-lt);white-space:nowrap;padding-top:5px}
+
+/* ---------- DATA TABLE ---------- */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper);
+  -webkit-overflow-scrolling:touch}
+table.data{width:100%;border-collapse:collapse;font-size:.93rem;min-width:640px}
+table.data caption{text-align:left;padding:16px 18px;font-family:var(--mono);font-size:.7rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--slate);border-bottom:1px solid var(--rule)}
+table.data th,table.data td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+table.data th{background:var(--char);color:#fff;font-family:var(--mono);font-size:.68rem;
+  letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+table.data tr:last-child td{border-bottom:none}
+table.data td.fig{font-family:var(--mono);font-weight:600;color:var(--ember-dk);white-space:nowrap}
+table.data tbody tr:hover{background:var(--warm)}
+
+/* ---------- LISTS ---------- */
+.check{list-style:none;padding:0;margin:0 0 22px}
+.check li{position:relative;padding:0 0 13px 32px;line-height:1.65;font-size:1rem}
+.check li::before{content:"";position:absolute;left:0;top:7px;width:19px;height:19px;border-radius:3px;
+  background-color:var(--kale);
+  background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 6L9 17l-5-5' fill='none' stroke='%23ffffff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size:13px 13px;background-position:center;background-repeat:no-repeat}
+.check.x li::before{background-color:var(--ember-dk);
+  background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18 6L6 18M6 6l12 12' fill='none' stroke='%23ffffff' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E")}
+.sec-dark .check li{color:#CFC7BF}
+.sec-dark .check li::before{background-color:var(--kale-lt)}
+.sec-dark .check.x li::before{background-color:var(--ember-lt)}
+
+/* ---------- PULL / TAKEAWAY ---------- */
+.pull{border-left:4px solid var(--ember);padding:6px 0 6px 26px;margin:32px 0}
+.pull p{font-family:var(--disp);font-weight:600;font-size:clamp(1.15rem,2.2vw,1.5rem);
+  line-height:1.35;letter-spacing:-.025em;color:var(--char);margin:0}
+.sec-dark .pull p{color:#fff}
+
+.takeaway{background:var(--char);color:#fff;border-radius:var(--r);padding:30px}
+.takeaway h3{color:#fff;font-size:1.2rem;margin-bottom:16px}
+.takeaway ul{list-style:none;padding:0;margin:0}
+.takeaway li{position:relative;padding:0 0 13px 26px;font-size:.98rem;line-height:1.62;color:#CFC7BF}
+.takeaway li:last-child{padding-bottom:0}
+.takeaway li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:8px;
+  border-radius:50%;background:var(--ember)}
+.takeaway li b{color:#fff;font-weight:600}
+
+/* ---------- FIGURES ---------- */
+figure{margin:0 0 26px}
+figure img{border-radius:var(--r);border:1px solid var(--rule);width:100%}
+figcaption{font-family:var(--mono);font-size:.74rem;line-height:1.6;color:var(--slate-lt);
+  margin-top:11px;letter-spacing:.02em}
+.fig-plain img{border:none}
+
+/* ---------- FAQ ---------- */
+.faq{border-top:1px solid var(--rule)}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{cursor:pointer;list-style:none;padding:21px 46px 21px 0;position:relative;
+  font-family:var(--disp);font-weight:700;font-size:1.06rem;line-height:1.4;color:var(--char);
+  letter-spacing:-.018em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:8px;top:27px;width:11px;height:11px;
+  border-right:2px solid var(--ember);border-bottom:2px solid var(--ember);
+  transform:rotate(45deg);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(-135deg);top:31px}
+.faq .faq-a{padding:0 18px 24px 0}
+.faq .faq-a p:last-child{margin-bottom:0}
+.faq .faq-a p{font-size:1rem}
+
+/* ---------- TOOL ---------- */
+.tool{background:var(--paper);border:2px solid var(--char);border-radius:var(--r);overflow:hidden}
+.tool-hd{background:var(--char);color:#fff;padding:22px 28px}
+.tool-hd h3{color:#fff;margin:0 0 5px;font-size:1.32rem}
+.tool-hd p{margin:0;color:#A69D94;font-size:.9rem}
+.tool-bd{padding:28px}
+.qset{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid var(--rule)}
+.qset:last-of-type{border-bottom:none}
+.qset p.qtxt{font-family:var(--disp);font-weight:700;font-size:1rem;margin:0 0 12px;
+  letter-spacing:-.018em;line-height:1.4}
+.opts{display:flex;flex-wrap:wrap;gap:9px}
+.opt{font-family:var(--body);font-size:.9rem;font-weight:500;padding:10px 16px;
+  border:1.5px solid var(--rule-dk);border-radius:var(--r);background:var(--paper);
+  cursor:pointer;transition:.15s;color:var(--char)}
+.opt:hover{border-color:var(--ember)}
+.opt.sel{background:var(--char);color:#fff;border-color:var(--char)}
+.res{border:1px solid var(--rule);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;
+  background:var(--paper)}
+.res.good{border-left:4px solid var(--kale);background:#F2F8F5}
+.res.bad{border-left:4px solid var(--ember);background:var(--ember-wash)}
+.res h4{margin:0 0 6px;font-size:1rem}
+.res p{margin:0;font-size:.93rem;color:var(--slate);line-height:1.6}
+.res .verdict{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+  font-weight:600;display:block;margin-bottom:6px}
+.res.good .verdict{color:var(--kale)}
+.res.bad .verdict{color:var(--ember-dk)}
+.note{font-size:.85rem;color:var(--slate-lt);margin:14px 0 0;line-height:1.6}
+
+/* ---------- CTA BANDS (restrained) ---------- */
+.cta-band{background:var(--warm);border:1px solid var(--rule);border-left:4px solid var(--ember);
+  border-radius:0 var(--r) var(--r) 0;padding:30px;display:grid;
+  grid-template-columns:1fr auto;gap:28px;align-items:center}
+.cta-band h3{margin:0 0 9px;font-size:1.22rem}
+.cta-band p{margin:0;font-size:.97rem;color:var(--slate);line-height:1.64}
+.sec-warm .cta-band{background:var(--paper)}
+.cta-dark{background:var(--char);color:#fff;border:none;border-radius:var(--r);padding:34px;
+  display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+.cta-dark h3{color:#fff;margin:0 0 9px;font-size:1.34rem}
+.cta-dark p{color:#CFC7BF;margin:0;font-size:.98rem;line-height:1.65}
+.cta-dark a{color:var(--ember-lt)}
+
+/* ---------- GUIDE CARDS ---------- */
+.guides{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.guide{display:block;background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);
+  padding:28px;text-decoration:none;transition:border-color .18s,transform .18s}
+.guide:hover{border-color:var(--ember);transform:translateY(-2px)}
+.guide .g-k{font-family:var(--mono);font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--ember-dk);display:block;margin-bottom:11px;font-weight:600}
+.guide h3{margin-bottom:9px;font-size:1.2rem;color:var(--char)}
+.guide p{margin:0;font-size:.94rem;color:var(--slate);line-height:1.6}
+.guide .g-go{font-family:var(--mono);font-size:.72rem;color:var(--char);margin-top:14px;
+  display:block;font-weight:600;letter-spacing:.04em}
+
+/* ---------- NETWORK ---------- */
+.net{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.net a{display:block;background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);
+  padding:22px;text-decoration:none;transition:border-color .16s,transform .16s}
+.net a:hover{border-color:var(--ember);transform:translateY(-2px)}
+.net .net-u{font-family:var(--mono);font-size:.8rem;font-weight:600;color:var(--ember-dk);
+  display:block;margin-bottom:8px;word-break:break-word}
+.net .net-d{font-size:.9rem;color:var(--slate);line-height:1.58;display:block}
+
+/* ---------- TOC ---------- */
+.toc{background:var(--warm);border:1px solid var(--rule);border-radius:var(--r);padding:28px}
+.toc h2{font-size:1.08rem;margin-bottom:18px}
+.toc ol{margin:0;padding:0;list-style:none;columns:2;column-gap:36px;counter-reset:toc}
+.toc li{margin-bottom:10px;break-inside:avoid;font-size:.93rem;counter-increment:toc}
+.toc li::before{content:counter(toc,decimal-leading-zero);font-family:var(--mono);font-size:.7rem;
+  color:var(--slate-lt);margin-right:10px}
+.toc a{text-decoration:none;color:var(--char);border-bottom:1px solid var(--rule-dk)}
+.toc a:hover{border-bottom-color:var(--ember);color:var(--ember-dk)}
+
+/* ---------- FOOTER : WHITE ---------- */
+.ftr{background:var(--paper);border-top:2px solid var(--char);padding:56px 0 30px;color:var(--slate)}
+.ftr h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--char);margin-bottom:16px;font-weight:600}
+.ftr-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:34px;margin-bottom:40px}
+.ftr p{font-size:.9rem;line-height:1.68;color:var(--slate)}
+.ftr ul{list-style:none;padding:0;margin:0}
+.ftr li{margin-bottom:10px}
+.ftr a{color:var(--slate);font-size:.9rem;text-decoration:none}
+.ftr a:hover{color:var(--ember-dk);text-decoration:underline}
+.ftr-logo{width:250px;margin-bottom:16px}
+.ftr-tel{font-family:var(--disp);font-weight:800;font-size:1.3rem;color:var(--char);
+  text-decoration:none;display:inline-block;margin:6px 0 4px;letter-spacing:-.025em}
+.ftr-tel:hover{color:var(--ember-dk)}
+.ftr-btm{border-top:1px solid var(--rule);padding-top:24px;display:flex;
+  justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.84rem;color:var(--slate-lt)}
+.powered{font-family:var(--mono);font-size:.8rem;letter-spacing:.03em}
+.powered a{color:var(--ember-dk);font-weight:600}
+
+/* ---------- MISC ---------- */
+.kicker-band{background:var(--ember-wash);border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);padding:18px 0}
+.kicker-band p{margin:0;font-size:.94rem;color:var(--char);line-height:1.6}
+.kicker-band .mono{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ember-dk);font-weight:600;display:block;margin-bottom:6px}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.stack-lg > * + *{margin-top:22px}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;animation-iteration-count:1!important;
+    transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+@media(max-width:1080px){
+  .nav{gap:16px}
+  .nav a{font-size:.84rem}
+  .mark img{width:250px}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .ftr-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .nav,.hdr-right{display:none}
+  .burger{display:flex}
+  .mark img{width:300px}
+  .g3,.g2{grid-template-columns:1fr}
+  .two-col{grid-template-columns:1fr;gap:30px}
+  .guides{grid-template-columns:1fr}
+  .cta-band,.cta-dark{grid-template-columns:1fr;gap:20px}
+  .toc ol{columns:1}
+}
+@media(max-width:768px){
+  body{font-size:17px}
+  section{padding:58px 0}
+  .sec-tight{padding:42px 0}
+  .card,.tool-bd{padding:22px}
+  .surf-row{grid-template-columns:auto 1fr;gap:16px}
+  .surf-tag{grid-column:2;padding-top:0}
+  .g4{grid-template-columns:1fr}
+  .ftr-grid{grid-template-columns:1fr;gap:28px}
+  .answer{padding:20px 22px}
+}
+@media(max-width:430px){
+  .wrap{padding:0 18px}
+  .mark img{width:300px}
+  .hdr-in{padding:10px 18px}
+  .btn{width:100%}
+  .hero-cta .btn{width:100%}
+  .pull{padding-left:18px}
+}
+</style>
+</head>
+<body>
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a href="/" class="mark" aria-label="RestaurantsSEO.com home">
+      <img src="/images/restaurants-seo-logo.png" width="300" height="102" alt="RestaurantsSEO.com" fetchpriority="high">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="/#basics">Basics</a>
+      <a href="/#surfaces">Where Diners Look</a>
+      <a href="/restaurant-menu-seo/">Menu SEO</a>
+      <a href="/restaurant-ai-search/">AI Search</a>
+      <a href="/#checkup">Free Checkup</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="hdr-right">
+      <a href="tel:+18004818638" class="tel" aria-label="Call 1-800-481-8638">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        <span class="telstack"><span class="lbl">Talk to a human</span>1-800-481-8638</span>
+      </a>
+      <a href="/#checkup" class="btn btn-p btn-sm">Free checkup</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobnav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobnav" id="mobnav" aria-label="Mobile">
+  <a href="/#basics">Restaurant SEO basics</a>
+  <a href="/#surfaces">Where diners look</a>
+  <a href="/restaurant-google-maps/">Google &amp; Maps</a>
+  <a href="/restaurant-menu-seo/">Menu SEO</a>
+  <a href="/restaurant-reviews-seo/">Reviews</a>
+  <a href="/restaurant-ai-search/">AI search</a>
+  <a href="/#agentic">The agentic shift</a>
+  <a href="/#website">Websites &amp; speed</a>
+  <a href="/#cost">Cost &amp; timeline</a>
+  <a href="/#checkup">Free 60-second checkup</a>
+  <a href="#faq">Questions</a>
+  <a href="tel:+18004818638" class="mob-tel">1-800-481-8638</a>
+  <a href="/#checkup" class="btn btn-p">Run the free checkup</a>
+</nav>
+<style>
+/* ---------- REVIEWS PAGE : math projector ---------- */
+.rv{background:var(--char);border-radius:6px;overflow:hidden;border:1px solid var(--char-2)}
+.rv-top{display:grid;grid-template-columns:1.35fr 1fr;gap:0}
+.rv-chart-hold{position:relative;padding:24px;min-height:300px}
+#rvChart{display:block;width:100%;height:280px}
+.rv-clabel{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
+  color:#7E756C;display:block;margin-bottom:14px;font-weight:600}
+.rv-side{border-left:1px solid rgba(255,255,255,.1);padding:24px;display:flex;
+  flex-direction:column;gap:14px;justify-content:center}
+.rv-stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.11);
+  border-radius:var(--r);padding:16px 18px}
+.rv-stat.warn{border-left:3px solid var(--ember);background:rgba(242,103,34,.09)}
+.rv-stat.ok{border-left:3px solid #6ED0AC;background:rgba(110,208,172,.09)}
+.rv-stat span{font-family:var(--mono);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;
+  color:#7E756C;display:block;margin-bottom:7px;font-weight:600}
+.rv-stat b{font-family:var(--disp);font-weight:800;font-size:1.65rem;letter-spacing:-.035em;
+  color:#fff;display:block;line-height:1.05;margin-bottom:5px}
+.rv-stat.warn b{color:var(--ember-lt)}
+.rv-stat.ok b{color:#6ED0AC}
+.rv-stat em{font-style:normal;font-size:.84rem;color:#9E958C;line-height:1.5;display:block}
+
+.rv-ctrl{background:var(--char-2);border-top:1px solid rgba(255,255,255,.1);padding:22px 24px}
+.rv-row{display:grid;grid-template-columns:170px 1fr 74px;gap:16px;align-items:center;margin-bottom:13px}
+.rv-row:last-of-type{margin-bottom:0}
+.rv-row label{font-family:var(--mono);font-size:.67rem;letter-spacing:.12em;text-transform:uppercase;
+  color:#9E958C;line-height:1.4}
+.rv-row input[type=range]{width:100%;accent-color:var(--ember);height:26px;cursor:pointer}
+.rv-row .v{font-family:var(--disp);font-weight:700;font-size:.9rem;color:#fff;text-align:right}
+.rv-note{font-size:.88rem;color:#9E958C;margin:18px 0 0;line-height:1.62;
+  padding-top:16px;border-top:1px solid rgba(255,255,255,.1)}
+.rv-note b{color:#fff}
+@media(max-width:860px){
+  .rv-top{grid-template-columns:1fr}
+  .rv-side{border-left:none;border-top:1px solid rgba(255,255,255,.1)}
+}
+@media(max-width:600px){
+  .rv-row{grid-template-columns:1fr;gap:5px}
+  .rv-row .v{text-align:left}
+}
+
+/* ---------- legal callout ---------- */
+.legal{background:#FFF9F2;border:1px solid #E8D5BC;border-left:4px solid var(--amber,#C2760A);
+  border-radius:0 var(--r) var(--r) 0;padding:26px 28px;margin:0 0 26px}
+.legal .lg-tag{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;
+  color:#9C5E07;font-weight:600;display:block;margin-bottom:12px}
+.legal h3{margin-bottom:11px;font-size:1.16rem}
+.legal p{font-size:.97rem;line-height:1.66;margin-bottom:12px;color:var(--slate)}
+.legal p:last-child{margin-bottom:0}
+.legal strong{color:var(--char)}
+
+/* ---------- reply examples ---------- */
+.reply{border:1px solid var(--rule);border-radius:var(--r);overflow:hidden;background:var(--paper)}
+.reply-head{padding:16px 20px;border-bottom:1px solid var(--rule);background:var(--warm)}
+.reply-head .stars{font-family:var(--mono);font-size:.8rem;color:var(--ember-dk);letter-spacing:.14em;
+  font-weight:600;display:block;margin-bottom:6px}
+.reply-head p{margin:0;font-size:.93rem;line-height:1.6;color:var(--slate);font-style:italic}
+.reply-body{padding:20px}
+.reply-body .rl{font-family:var(--mono);font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;
+  font-weight:600;display:block;margin-bottom:9px}
+.reply-body.bad .rl{color:var(--ember-dk)}
+.reply-body.good .rl{color:var(--kale)}
+.reply-body p{margin:0;font-size:.95rem;line-height:1.65}
+.reply-body + .reply-body{border-top:1px solid var(--rule)}
+.reply-why{font-size:.87rem;color:var(--slate-lt);margin-top:11px;line-height:1.55}
+</style>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section style="padding-top:52px;padding-bottom:40px">
+  <div class="wrap">
+    <div style="max-width:930px">
+      <span class="eyebrow">Guide 03 &middot; <a href="/" style="color:inherit">Restaurant SEO</a> &rsaquo; Reviews</span>
+      <h1>Restaurant reviews: the thresholds moved, and most restaurants have not noticed</h1>
+      <p class="lede">In one year the share of diners who will only use a business rated 4.5 or higher <strong>nearly doubled, from 17% to 31%</strong>. Meanwhile 74% only weigh reviews from the last three months, which means a brilliant rating built on old reviews now reads as a restaurant that used to be good. This guide covers the arithmetic, how to ask without breaking federal rules, and what to write back.</p>
+      <div class="hero-cta">
+        <a href="#math" class="btn btn-p">Run your review math</a>
+        <a href="#legal" class="btn btn-o">What you're not allowed to do</a>
+      </div>
+      <div class="hero-meta">
+        <span>Updated 12 August 2026</span>
+        <span>~27 min read</span>
+        <span>Includes FTC compliance</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SIGNATURE : REVIEW MATH ============ -->
+<section class="sec-tight" id="math" style="padding-top:0">
+  <div class="wrap">
+    <div class="rv">
+      <div class="rv-top">
+        <div class="rv-chart-hold">
+          <span class="rv-clabel">Twelve-month projection</span>
+          <canvas id="rvChart" aria-label="Chart projecting review count and rating over twelve months" role="img"></canvas>
+        </div>
+        <div class="rv-side">
+          <div class="rv-stat" id="rvS1"><span>Reviews in 12 months</span><b>—</b><em></em></div>
+          <div class="rv-stat" id="rvS2"><span>Recency window</span><b>—</b><em></em></div>
+          <div class="rv-stat" id="rvS3"><span>Rating in 12 months</span><b>—</b><em></em></div>
+        </div>
+      </div>
+      <div class="rv-ctrl">
+        <div class="rv-row">
+          <label for="rvCount">Reviews you have now</label>
+          <input type="range" id="rvCount" min="0" max="400" value="46" step="2">
+          <span class="v" id="rvCountV">46</span>
+        </div>
+        <div class="rv-row">
+          <label for="rvRate">New reviews per month</label>
+          <input type="range" id="rvRate" min="0" max="24" value="1" step="1">
+          <span class="v" id="rvRateV">1</span>
+        </div>
+        <div class="rv-row">
+          <label for="rvRating">Your rating today</label>
+          <input type="range" id="rvRating" min="30" max="50" value="42" step="1">
+          <span class="v" id="rvRatingV">4.2</span>
+        </div>
+        <p class="rv-note">Two things move together and most operators only watch one. Volume builds slowly and is easy to see. <b>Recency expires quietly</b> &mdash; if you are collecting fewer than roughly four a month, your newest review keeps drifting outside the ninety-day window that three quarters of diners actually weigh. The rating projection assumes new reviews average 4.7, which is typical for a restaurant that asks its happy guests rather than waiting for volunteers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THRESHOLDS ============ -->
+<section id="thresholds">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">The standards</span>
+      <h2>What diners now require before they will consider you</h2>
+      <p class="lede">These are consumer-behavior thresholds, not ranking factors. Each one is a point at which a measurable share of people stop considering your restaurant &mdash; before they read a word about the food.</p>
+    </div>
+
+    <div class="tbl-wrap" style="margin-bottom:32px">
+      <table class="data">
+        <caption>Restaurant review thresholds and what changed year over year</caption>
+        <thead><tr><th scope="col">Threshold</th><th scope="col">What it means</th><th scope="col">Movement</th></tr></thead>
+        <tbody>
+          <tr><td class="fig">4.0 stars</td><td>68% of consumers require at least a four-star rating before they will consider a business at all.</td><td class="fig">from 55%</td></tr>
+          <tr><td class="fig">4.5 stars</td><td>31% will only use a business rated 4.5 or higher. This is now the working target, not a stretch goal.</td><td class="fig">from 17%</td></tr>
+          <tr><td class="fig">20 reviews</td><td>47% will not use a business with fewer than twenty. Only 9% will use one with five or fewer.</td><td class="fig">volume floor</td></tr>
+          <tr><td class="fig">90 days</td><td>74% only weigh reviews written in the last three months.</td><td class="fig">recency window</td></tr>
+          <tr><td class="fig">14 days</td><td>32% specifically look for reviews from the last two weeks.</td><td class="fig">from 20%</td></tr>
+          <tr><td class="fig">Every reply</td><td>80% are more likely to use a business that answers all its reviews. 42% are unlikely to use one that never replies.</td><td class="fig">response rate</td></tr>
+          <tr><td class="fig">Same day</td><td>19% now expect a same-day response; 81% expect one within a week.</td><td class="fig">from 6%</td></tr>
+          <tr><td class="fig">97% / 41%</td><td>Consumers who read reviews for local businesses, and the share who now &ldquo;always&rdquo; read them before choosing.</td><td class="fig">from 29%</td></tr>
+          <tr><td class="fig">50%</td><td>Consumers put off by generic or templated review responses.</td><td class="fig">reply quality</td></tr>
+          <tr><td class="fig">83%</td><td>Of people who were asked for a review, the share who actually wrote one.</td><td class="fig">the opportunity</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <div class="answer">
+          <p class="q">How many Google reviews does a restaurant need?</p>
+          <p>At least twenty, with fifty or more as a working target. 47% of consumers will not use a business with fewer than twenty reviews, and only 9% will use one with five or fewer. But volume alone is not the goal &mdash; recency matters as much. Because 74% only weigh reviews from the last three months, you need roughly <strong>four new reviews a month, every month</strong>, to keep your newest review inside that window all year. Not a campaign. A habit.</p>
+        </div>
+
+        <p>The reassuring number in that table is the last one. <strong>83% of people who were asked for a review wrote one</strong>, and the share who say they will &ldquo;always&rdquo; write one when asked rose from 16% to 28% in a year.</p>
+
+        <p>The bottleneck is not consumer reluctance. It is that most restaurants never ask, ask once and stop, or ask in a way that is easy to ignore. That is a solvable operational problem rather than a marketing one.</p>
+      </div>
+
+      <div>
+        <figure>
+          <img src="/images/restaurants-seo.jpg" alt="A parent and child sharing pizza at a restaurant table" width="1200" height="800" loading="lazy">
+          <figcaption>The people most likely to write you a good review are sitting in your dining room right now, and most of them will never be asked.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="pull">
+      <p>Volume is visible and builds slowly. Recency expires quietly. Almost every restaurant that plateaus is losing on the second one.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RECENCY ============ -->
+<section class="sec-warm" id="recency">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">The trap</span>
+      <h2>The recency problem that catches good restaurants</h2>
+      <p class="lede">This is the failure mode that specifically punishes restaurants that were doing well. It is worth understanding because the symptom looks like nothing is wrong.</p>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <p>The pattern is consistent. You open. You are excellent. In eighteen months you collect two hundred reviews and settle at a 4.7. Then you get busy running a restaurant, and asking for reviews stops being anybody's job.</p>
+
+        <p>Three years later the number on your profile still says 4.7. Nothing looks broken. But your newest review is eight months old.</p>
+
+        <p>To a diner scanning quickly, that reads as a restaurant that <em>used to be</em> good &mdash; and given that 74% only weigh reviews from the last three months, most of what you earned has quietly stopped counting in their heads. To Google and to AI systems, stale reviews are a weak freshness signal, and freshness has been weighted more heavily since 2026.</p>
+
+        <p>The rating you worked for stops working for you, without ever going down.</p>
+
+        <h3 style="margin-top:30px">Why four a month</h3>
+        <p>The arithmetic is simple. The ninety-day window is about three months. To always have a review inside it, you need reviews arriving at least monthly, and you need enough margin that a slow month does not empty the window entirely.</p>
+
+        <p>Four a month gives you roughly twelve inside the window at any time, which reads as an active restaurant, survives a bad week, and compounds to nearly fifty a year. For most independents that is one review per two hundred covers or so &mdash; a genuinely modest ask.</p>
+
+        <p style="margin-bottom:0">The projector at the top of this page shows what happens at your current rate. If you are below four, the window is where you are losing, regardless of how good your rating is.</p>
+      </div>
+
+      <div>
+        <div class="card">
+          <h4>The other half: rating math</h4>
+          <p>Ratings are averages, which means they get harder to move as volume grows. This is worth internalizing before you set a goal.</p>
+          <p>A restaurant at 4.2 with 40 reviews needs roughly 25 more at five stars to reach 4.5. The same restaurant at 4.2 with 300 reviews needs closer to 190.</p>
+          <p style="margin-bottom:0">Two consequences. Fix the underlying problem first, because adding volume to a broken experience just locks in the average. And if you are early, protect the rating aggressively &mdash; the reviews you collect in your first year set a floor that is expensive to raise later.</p>
+        </div>
+
+        <div class="card" style="margin-top:20px">
+          <h4>A habit that survives a busy Friday</h4>
+          <ul class="check" style="margin-bottom:0">
+            <li><strong>One person owns it.</strong> Not everyone, which means nobody. A manager who asks two tables a shift.</li>
+            <li><strong>Ask at the moment of genuine satisfaction</strong> — when a guest says something kind, not when the check lands.</li>
+            <li><strong>Make it one tap.</strong> A short link or QR on the check presenter, replaced when it looks worn.</li>
+            <li><strong>Check reviews at open and at close.</strong> Ten minutes twice a day beats a quarterly session.</li>
+            <li><strong>Write the monthly count on the same board as covers</strong>, so it is visible when it slips.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEGAL ============ -->
+<section id="legal">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Compliance</span>
+      <h2>What you are not allowed to do, and why it now matters</h2>
+      <p class="lede">Reviews stopped being purely a platform-policy question. There is a federal rule with real penalties attached, and it prohibits several things that reputation software still sells as features.</p>
+    </div>
+
+    <div class="legal">
+      <span class="lg-tag">Not legal advice &middot; verify with your own counsel</span>
+      <h3>The FTC Consumer Review Rule</h3>
+      <p>The Federal Trade Commission finalized its rule on consumer reviews and testimonials in 2024, and on <strong>22 December 2025 took its first enforcement step</strong>, issuing warning letters to ten companies over potential violations. Civil penalties run to <strong>$53,088 per violation</strong> as of 2026, adjusted annually for inflation.</p>
+      <p>There is no small-business exemption. The rule applies to sole proprietors and single-location operators exactly as it applies to chains, and enforcement posture to date suggests each fake review is typically treated as a separate violation.</p>
+      <p>We are a search agency rather than a law firm, so treat this section as an orientation rather than advice. If any of it describes something you are currently doing, that is worth a conversation with an actual attorney.</p>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <span class="card-num">PROHIBITED</span>
+        <h3>Fake reviews, in every direction</h3>
+        <p>Creating, buying, selling or publishing reviews from people who did not use your restaurant, or that misrepresent the reviewer's actual experience. This covers reviews you commission and reviews you post yourself.</p>
+        <p style="margin-bottom:0">Platform detection has also improved sharply &mdash; Google blocked hundreds of millions of policy-violating reviews in a single year, and Google, Amazon and the BBB have filed joint suits against review brokers establishing that buyers face consequences alongside sellers.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-num">PROHIBITED</span>
+        <h3>Incentives tied to sentiment</h3>
+        <p>You may not condition compensation or any incentive on a reviewer expressing a particular sentiment. &ldquo;Free dessert for a five-star review&rdquo; is squarely inside what the rule prohibits.</p>
+        <p style="margin-bottom:0">The narrow version that can be permissible under the rule: an incentive offered for an <em>honest</em> review regardless of what it says, <em>and</em> disclosed in or near the review itself. Both conditions, not one.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-num">PROHIBITED</span>
+        <h3>Undisclosed insider reviews</h3>
+        <p>Reviews written by owners, managers, staff or their immediate relatives without disclosing the relationship. This one catches well-meaning restaurants constantly &mdash; a new place opens, the family writes glowing reviews to get the ball rolling, and nobody thinks of it as deceptive.</p>
+        <p style="margin-bottom:0">It is, under the rule, and it is also easy for platforms to detect from shared devices and networks.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-num">PROHIBITED</span>
+        <h3>Suppressing negative reviews</h3>
+        <p>The rule contains provisions on review suppression, including using unfounded legal threats or intimidation to remove honest negative feedback. It also addresses company-controlled review sites presented as independent.</p>
+        <p style="margin-bottom:0">Practically: you may flag a review that genuinely violates platform policy. You may not lean on a guest to take down an accurate account of a bad night.</p>
+      </div>
+    </div>
+
+    <div class="legal" style="margin-top:30px">
+      <span class="lg-tag">The one most restaurants get wrong</span>
+      <h3>Review gating</h3>
+      <p><strong>Gating is the practice of surveying guests first and routing only the happy ones to a public review link</strong>, while unhappy guests are diverted into a private feedback form. It has been sold as a feature by reputation management software for years, and plenty of restaurants are running it right now without realizing it is a problem.</p>
+      <p>It is prohibited by the major platforms' policies and it sits directly in the territory the FTC rule addresses, because the resulting public rating misrepresents the actual distribution of customer experience. Enforcement posture suggests a gating flow can count as a violation for each affected consumer.</p>
+      <p style="margin-bottom:0">If your review tool asks &ldquo;how was your experience?&rdquo; and then shows the Google link only to people who answered positively, that is gating. Ask everyone, send everyone to the same place.</p>
+    </div>
+
+    <div class="answer" style="margin-top:30px">
+      <p class="q">Can I offer a discount for a Google review?</p>
+      <p>Only under narrow conditions, and platform rules may still prohibit what the federal rule permits. Under the FTC rule an incentive is problematic when it is conditioned on the reviewer expressing a particular sentiment &mdash; so &ldquo;ten percent off for a five-star review&rdquo; is out. An incentive offered for an honest review regardless of what it says, and disclosed in or near the review, is the permissible version. However, Yelp prohibits incentives in its review flow entirely, even disclosed and sentiment-neutral ones, and Google discourages transactional review schemes. Something legal under the FTC rule can still get your listing flagged. The safest and most effective approach is to simply ask, since 83% of people who are asked write one anyway.</p>
+    </div>
+
+    <div class="cta-band" style="margin-top:28px">
+      <div>
+        <h3>Not sure whether your current setup is compliant?</h3>
+        <p>If you are using reputation software and are not certain whether it gates, we will look at the flow and tell you what we see. We are not lawyers and will say so &mdash; but we can tell you whether what you have looks like the pattern above.</p>
+      </div>
+      <a href="tel:+18004818638" class="btn btn-p">Call 1-800-481-8638</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ASKING ============ -->
+<section class="sec-dark" id="asking">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow on-dark">The system</span>
+      <h2>How to actually get reviews, without any of the above</h2>
+      <p class="lede">Everything that works here is unglamorous and free. The constraint is consistency, which is why the goal is a routine rather than a push.</p>
+    </div>
+
+    <div class="grid g3">
+      <div class="card">
+        <span class="card-num">01</span>
+        <h3>Ask in person, at the right moment</h3>
+        <p>The single most effective method and the one restaurants use least. When a guest says something genuinely kind &mdash; about a dish, about the service, about the room &mdash; that is the moment. &ldquo;That means a lot. If you have thirty seconds, a Google review would help us enormously.&rdquo;</p>
+        <p style="margin-bottom:0">Not at the check. Not to every table. From the person they actually connected with.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-num">02</span>
+        <h3>Make it one tap</h3>
+        <p>A short link or QR on the check presenter, a card, or a table tent. Google provides a direct review link from your profile dashboard &mdash; use that rather than sending people to search for you, because every extra step loses a share of them.</p>
+        <p style="margin-bottom:0">Replace the card when it starts looking worn. A greasy, faded QR reads as neglect.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-num">03</span>
+        <h3>Follow up if you have a channel</h3>
+        <p>If you take reservations, run a waitlist, or have an email list, a short message the following day works well. Keep it to two sentences, link directly, and send it to everyone rather than filtering by predicted sentiment.</p>
+        <p style="margin-bottom:0">Once per visit. Restaurants that chase reviews with repeated reminders train people to ignore them.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-num">04</span>
+        <h3>Spread across platforms deliberately</h3>
+        <p>The average diner consults about six sources. Google first, but Yelp, Apple Maps, Tripadvisor and OpenTable all matter, and Yelp content is now licensed into ChatGPT, which quietly makes it part of your AI presence.</p>
+        <p style="margin-bottom:0">A workable approach: default everyone to Google, and when a guest mentions they found you somewhere else, ask for that platform instead.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-num">05</span>
+        <h3>Give staff a reason to care</h3>
+        <p>Reviews that name a server by name are the most persuasive kind, and they are also the most motivating for the person named. Read them out at pre-shift. Post them in the back.</p>
+        <p style="margin-bottom:0">Do not pay per review. It creates exactly the pressure that produces gating, fake accounts and staff soliciting from friends.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-num">06</span>
+        <h3>Fix the thing people complain about</h3>
+        <p>If three reviews in a month mention the wait, no amount of asking will outrun it &mdash; you will just collect more reviews mentioning the wait. Reviews are a measurement instrument before they are a marketing channel.</p>
+        <p style="margin-bottom:0">The restaurants with the best ratings are usually not the best at asking. They are the ones with fewer things to complain about.</p>
+      </div>
+    </div>
+
+    <div class="answer" style="margin-top:34px">
+      <p class="q">How do I get more Google reviews for my restaurant?</p>
+      <p>Ask, consistently, in person, at the moment a guest expresses genuine satisfaction &mdash; and make the act of writing one a single tap via a direct review link on the check presenter. 83% of people who are asked write a review, so the constraint is almost always that nobody is asking rather than that guests are unwilling. Give one manager per shift ownership of asking two tables, track the monthly count somewhere visible, and aim for roughly four a month to stay inside the ninety-day recency window. Do not incentivize by sentiment, do not filter who gets asked, and do not let staff write them.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESPONDING ============ -->
+<section id="responding">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">The reply</span>
+      <h2>Responding: write for the audience, not the reviewer</h2>
+      <p class="lede">The person who wrote a one-star review has largely made up their mind. The fifty people who read your reply have not. That single reframe fixes most bad restaurant replies.</p>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <p>The numbers make the case for replying at all: 80% of consumers are more likely to use a business that answers all its reviews, 42% are unlikely to use one that never replies, and 19% now expect a same-day response &mdash; up from 6% a year earlier.</p>
+
+        <p>Partial response measurably underperforms full response. Answering only the positive ones, or only the negative ones, both score worse than answering everything. And templated replies actively hurt: <strong>50% of consumers are put off by generic responses</strong>, so a canned paragraph under a detailed complaint reads as indifference.</p>
+
+        <p>One 2026 change worth knowing: review replies now pass through a moderation queue before publishing rather than appearing instantly. It usually clears quickly, so do not assume a reply failed to post.</p>
+
+        <h3 style="margin-top:30px">The shape of a good reply to a bad review</h3>
+        <ul class="check">
+          <li><strong>Acknowledge the specific thing.</strong> Not &ldquo;we're sorry you had a bad experience&rdquo; but &ldquo;a forty-minute wait on a Tuesday is not acceptable.&rdquo;</li>
+          <li><strong>Say what you are doing about it</strong>, if there is anything true to say. Vague promises to &ldquo;do better&rdquo; read as filler.</li>
+          <li><strong>Offer to continue off the platform.</strong> A name and an email address, not a phone tree.</li>
+          <li><strong>Stop there.</strong> Short replies read as confident. Long ones read as defensive.</li>
+        </ul>
+
+        <h3 style="margin-top:30px">And what not to do</h3>
+        <ul class="check x" style="margin-bottom:0">
+          <li>Argue about the facts, even when you are right and can prove it</li>
+          <li>Mention what the guest ordered, when they came, or anything that identifies them</li>
+          <li>Imply they are lying, or that they are a competitor</li>
+          <li>Copy the same apology under fifteen different complaints</li>
+          <li>Reply while angry — write it, leave it an hour, then read it as a stranger would</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="reply">
+          <div class="reply-head">
+            <span class="stars">★☆☆☆☆</span>
+            <p>&ldquo;Waited 45 minutes for a table we had reserved, then another 30 for food. The tacos were good but we missed our movie. Won't be back.&rdquo;</p>
+          </div>
+          <div class="reply-body bad">
+            <span class="rl">What not to write</span>
+            <p>&ldquo;We're sorry to hear you had a less than perfect experience. We strive to provide excellent service to all our guests and we hope you'll give us another chance. Please contact us at your convenience.&rdquo;</p>
+            <p class="reply-why">Addresses nothing specific, could be pasted under any complaint, and asks the guest to do the work of following up. This is the reply 50% of readers say puts them off.</p>
+          </div>
+          <div class="reply-body good">
+            <span class="rl">What to write</span>
+            <p>&ldquo;A 45-minute wait on a reservation is a failure on our part, and adding a 30-minute ticket time to it made a bad night worse. We overbooked the 7pm block that Saturday and have cut the number of reservations we take in that window. I'd genuinely like to make it right &mdash; I'm Maria, the GM, at maria@casaverde.com. Glad the tacos held up, at least.&rdquo;</p>
+            <p class="reply-why">Names the specific failures, states a concrete change, gives a real person to contact, and stays short. The reader learns the restaurant noticed and fixed something.</p>
+          </div>
+        </div>
+
+        <div class="answer" style="margin-top:24px">
+          <p class="q">How quickly should a restaurant respond to reviews?</p>
+          <p>Within the week at minimum &mdash; 81% of consumers expect a reply within seven days &mdash; and same-day is now expected by 19%, up sharply from 6% a year earlier. The practical version for a restaurant is ten minutes at open and ten at close, which handles nearly all volume without becoming a project. Batching twenty replies onto one afternoon every few months is visible to anyone reading the profile and reads exactly as what it is.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAKE / UNFAIR ============ -->
+<section class="sec-warm" id="unfair">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Damage control</span>
+      <h2>Reviews you believe are unfair or fake</h2>
+      <p class="lede">Every restaurant eventually gets one: a review from someone who never came in, a competitor, a former employee, or a guest describing an event that did not happen. Here is what can actually be done.</p>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3>What can be removed</h3>
+        <p>Platforms remove reviews that violate their content policies, not reviews that are merely negative or unfair. The categories that genuinely get removed are reasonably narrow:</p>
+        <ul class="check">
+          <li><strong>Clearly not a customer</strong> — describing a business that is not yours, a location you do not have, or an event you can show did not occur</li>
+          <li><strong>Conflict of interest</strong> — competitors, former staff, anyone with a demonstrable stake</li>
+          <li><strong>Off-topic content</strong> — political statements, complaints about a neighboring business, rants unrelated to the dining experience</li>
+          <li><strong>Prohibited content</strong> — harassment, slurs, personal information, threats</li>
+          <li><strong>Spam or duplicates</strong> — the same review posted repeatedly, or obvious bot activity</li>
+        </ul>
+        <p>What does not get removed: a genuine customer describing a genuinely bad night, however unrepresentative you feel it is, and however much detail they got wrong.</p>
+
+        <h3 style="margin-top:30px">How to flag one properly</h3>
+        <p>Flag it through the platform with a specific, factual reason tied to the policy it violates. &ldquo;This is unfair&rdquo; will not work. &ldquo;This review describes a party of twelve on a date we were closed for a private event&rdquo; might.</p>
+        <p>Reply publicly while you wait, calmly and briefly, because the reply is what future readers see regardless of the outcome. Something like: &ldquo;We have no record of this visit and have asked Google to review it. If we have got that wrong, please contact me directly &mdash; I would like to understand what happened.&rdquo;</p>
+        <p style="margin-bottom:0"><strong>What not to do:</strong> threaten legal action to force removal. Beyond rarely working, review suppression through unfounded legal threats is specifically addressed by the FTC rule.</p>
+      </div>
+
+      <div>
+        <div class="card">
+          <h4>The proportionate response</h4>
+          <p>A single one-star review among fifty is statistically invisible and functionally harmless. The reply matters more than the review does.</p>
+          <p>What genuinely damages a restaurant is a pattern &mdash; five recent one-stars all mentioning the same thing. That is not a reputation problem to be managed, it is an operations problem showing up in public.</p>
+          <p style="margin-bottom:0">The best defense against an unfair review is volume of fair ones. A restaurant collecting four a month absorbs a bad one without anyone noticing. A restaurant that has not collected any since spring does not.</p>
+        </div>
+
+        <div class="card" style="margin-top:20px">
+          <h4>Two 2026 changes</h4>
+          <p><strong>Anonymous reviews.</strong> Platforms now permit reviews under pseudonyms in some cases, which raises volume and makes it harder to match a review to your own records. Reply to the substance rather than trying to work out who it was.</p>
+          <p style="margin-bottom:0"><strong>Reply moderation.</strong> Replies pass through a queue before publishing. If yours has not appeared, give it time before rewriting it.</p>
+        </div>
+
+        <figure style="margin-top:22px">
+          <img src="/images/seo-for-restaurants.jpg" alt="A laptop showing analytics charts on a desk" width="1200" height="800" loading="lazy">
+          <figcaption>Watch the pattern, not the individual review. A dashboard is useful for spotting the former; the latter is best handled by reading it and replying like a person.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AI SUMMARIES ============ -->
+<section id="ai-summaries">
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <span class="eyebrow">The new stakes</span>
+        <h2>Your reviews are now the raw material for AI descriptions of you</h2>
+        <p>This is the development most operators have not yet absorbed. <strong>82% of consumers read AI-generated review summaries</strong> &mdash; the automatic synopses that now appear above reviews on major platforms &mdash; and 23% say they would be happy to decide on that summary alone.</p>
+
+        <p>Those summaries are generated from your review text. Which means the sentences your guests write are being synthesized into the description a machine gives of your restaurant, and shown to people who will never scroll down to read the reviews themselves.</p>
+
+        <p>Google went further and replaced its Business Profile Q&amp;A section with Ask Maps, where Gemini answers visitor questions automatically using your profile, your website and your reviews. You can no longer pre-write the answer to &ldquo;is it loud in there?&rdquo; &mdash; but your reviews are one of the three sources that answer gets built from.</p>
+
+        <h3 style="margin-top:30px">What follows from that</h3>
+        <ul class="check">
+          <li><strong>Recent reviews carry disproportionate weight</strong>, because summaries lean on current sentiment. A themed complaint from eighteen months ago that you have since fixed can persist in a summary if nothing newer contradicts it.</li>
+          <li><strong>Specific praise is more useful than generic praise.</strong> &ldquo;Great place&rdquo; gives a summary nothing. &ldquo;The birria is the best I've had in Denver and the patio is quiet&rdquo; supplies attributes that get matched against real queries.</li>
+          <li><strong>Fixing an operational problem now has a compounding payoff</strong> &mdash; you stop generating the complaint, and newer reviews gradually displace it in what the machine says about you.</li>
+          <li><strong>Your replies are part of the record too</strong>, and a pattern of specific, responsive replies reads well to both humans and systems summarizing them.</li>
+        </ul>
+
+        <p style="margin-bottom:0">The full treatment of how assistants use this is in <a href="/restaurant-ai-search/">the AI search guide</a>.</p>
+      </div>
+
+      <div>
+        <figure>
+          <img src="/images/restaurant-marketing.png" alt="Two guests laughing over dinner in a warmly lit restaurant" width="1200" height="800" loading="lazy">
+          <figcaption>What a guest writes about this evening becomes, a few weeks later, part of how a machine describes your restaurant to a stranger.</figcaption>
+        </figure>
+
+        <div class="answer">
+          <p class="q">Do reviews affect whether AI recommends my restaurant?</p>
+          <p>They appear to, in two distinct ways. Reviews are a freshness and prominence signal, so a profile with recent activity looks like an operating business worth recommending. More directly, review text is raw material: AI review summaries are generated from it, and assistants building a recommendation quote attributes that reviewers mention. A restaurant whose recent reviews specifically name dishes, describe the atmosphere, and mention practical details gives an assistant far more to work with than one whose reviews all say &ldquo;great food, will return.&rdquo;</p>
+        </div>
+
+        <div class="cta-band">
+          <div>
+            <h3>Reviews are a system, not a burst</h3>
+            <p>Asking, replying within the week, watching for patterns, keeping four a month coming. It is not hard and it is relentless. We run it for restaurant clients alongside the rest &mdash; or call and we will help you set it up to run yourself.</p>
+          </div>
+          <a href="tel:+18004818638" class="btn btn-p">1-800-481-8638</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MISTAKES ============ -->
+<section class="sec-warm2" id="mistakes">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Field notes</span>
+      <h2>Review mistakes we find most often</h2>
+    </div>
+
+    <div class="grid g3">
+      <div class="card">
+        <span class="card-num">01</span>
+        <h3>Gating without knowing it</h3>
+        <p>Reputation software that surveys first and shows the Google link only to happy respondents. Sold as a feature, prohibited by platforms, and in the territory the FTC rule addresses. Check what your tool actually does.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">02</span>
+        <h3>Asking once, then stopping</h3>
+        <p>A burst of thirty reviews in one month followed by silence looks exactly like what it is, and leaves the recency window empty for the rest of the year.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">03</span>
+        <h3>Replying in batches</h3>
+        <p>Twenty replies posted the same afternoon, months after the reviews. Meanwhile 19% of diners now expect same-day. Ten minutes twice a day handles it.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">04</span>
+        <h3>The same apology fifteen times</h3>
+        <p>Half of consumers are put off by templated replies. A generic paragraph under a specific complaint communicates that nobody read it.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">05</span>
+        <h3>Family and staff reviews at opening</h3>
+        <p>Well-intentioned, easy for platforms to detect from shared devices, and squarely within the undisclosed-insider provision of the FTC rule.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">06</span>
+        <h3>Chasing volume over the actual problem</h3>
+        <p>If the reviews all mention the wait, more reviews just means more mentions of the wait. Reviews are a measurement instrument before they are a marketing channel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap narrow">
+    <div class="sec-head">
+      <span class="eyebrow">Questions</span>
+      <h2>Restaurant review questions</h2>
+    </div>
+    <div class="faq">
+
+      <details><summary>How many Google reviews does a restaurant need?</summary><div class="faq-a"><p>At least twenty, with fifty or more as a working target. 47% of consumers will not use a business with fewer than twenty reviews, and only 9% will use one with five or fewer. Volume alone is not the goal though — because 74% only weigh reviews from the last three months, you need roughly four new reviews a month, every month, to keep your newest review inside that window all year. A restaurant with 200 old reviews and nothing recent performs worse than one with 60 that arrive steadily.</p></div></details>
+
+      <details><summary>What star rating does a restaurant need in 2026?</summary><div class="faq-a"><p>4.0 is the functional minimum and 4.5 is the target. 68% of consumers require at least four stars, up from 55% a year earlier, and 31% will only use a business rated 4.5 or higher, up from 17% — a threshold that nearly doubled in twelve months. Only about 10% insist on a perfect five, so a 4.6 or 4.7 satisfies nearly everyone. The important detail is the speed of that change: a rating that was comfortably acceptable in 2025 may now be disqualifying for almost a third of searchers.</p></div></details>
+
+      <details><summary>How do I get more Google reviews for my restaurant?</summary><div class="faq-a"><p>Ask, consistently, in person, at the moment a guest expresses genuine satisfaction, and make writing one a single tap using the direct review link from your Google profile. 83% of people who are asked write a review, so the constraint is almost always that nobody is asking rather than that guests are unwilling. Give one manager per shift ownership of asking two tables, track the monthly count somewhere visible, and aim for roughly four a month. Do not incentivize by sentiment, do not filter who gets asked, and do not let staff write them.</p></div></details>
+
+      <details><summary>Can I offer a discount for a Google review?</summary><div class="faq-a"><p>Only under narrow conditions, and platform rules may still prohibit what federal rules permit. Under the FTC Consumer Review Rule an incentive is problematic when conditioned on the reviewer expressing a particular sentiment, so a discount for a five-star review is out. An incentive offered for an honest review regardless of what it says, and disclosed in or near the review, is the permissible version. However Yelp prohibits incentives in its review flow entirely, and Google discourages transactional schemes. Something legal federally can still get your listing flagged, so simply asking is safer and works nearly as well.</p></div></details>
+
+      <details><summary>Is review gating illegal?</summary><div class="faq-a"><p>Review gating — surveying guests first and routing only the happy ones to a public review link — is prohibited by major platform policies and sits directly in the territory the FTC Consumer Review Rule addresses, because the resulting public rating misrepresents the actual distribution of customer experience. Enforcement posture suggests a gating flow can count as a violation for each affected consumer, with civil penalties running to $53,088 per violation as of 2026. Plenty of reputation software still sells this as a feature. If your tool shows the Google link only to people who answered positively, that is gating. This is orientation rather than legal advice.</p></div></details>
+
+      <details><summary>How should I respond to a bad restaurant review?</summary><div class="faq-a"><p>Write for the audience rather than the reviewer, because the person who wrote it has largely decided and the people reading your reply have not. Acknowledge the specific failure rather than offering a generic apology, state one concrete thing you have changed if there is anything true to say, give a real name and email to continue off the platform, and stop there. Never argue about facts in public even when you can prove you are right, never identify the guest or what they ordered, and never imply they are lying. Short and specific reads as confident; long and defensive does not.</p></div></details>
+
+      <details><summary>How quickly should a restaurant respond to reviews?</summary><div class="faq-a"><p>Within the week at minimum, since 81% of consumers expect a reply within seven days, and same-day is now expected by 19% — up sharply from 6% a year earlier. The practical version is ten minutes at open and ten at close, which handles nearly all volume without becoming a project. Batching twenty replies onto one afternoon every few months is visible to anyone reading the profile. Note that replies now pass through a moderation queue before publishing, so a short delay before yours appears is normal.</p></div></details>
+
+      <details><summary>Can I get a fake or unfair review removed?</summary><div class="faq-a"><p>Sometimes, if it violates platform policy rather than merely being negative. The categories that genuinely get removed are reviews from people who clearly were not customers, reviews with a conflict of interest such as competitors or former staff, off-topic content, harassment or personal information, and spam or duplicates. A genuine customer describing a genuinely bad night will not be removed however unrepresentative it feels. Flag it with a specific factual reason tied to the policy it breaks, and reply publicly and calmly while you wait. Do not threaten legal action — beyond rarely working, review suppression through unfounded legal threats is addressed by the FTC rule.</p></div></details>
+
+      <details><summary>Do reviews affect whether AI recommends my restaurant?</summary><div class="faq-a"><p>They appear to, in two ways. Reviews are a freshness and prominence signal, so recent activity makes a restaurant look like an operating business worth recommending. More directly, review text is raw material: AI review summaries are generated from it, and 82% of consumers now read those summaries with 23% willing to decide on the summary alone. Assistants building a recommendation quote attributes reviewers mention, so a restaurant whose recent reviews name dishes and describe the atmosphere gives an assistant far more to work with than one whose reviews all say great food, will return.</p></div></details>
+
+      <details><summary>How long does it take to raise a restaurant's star rating?</summary><div class="faq-a"><p>It depends almost entirely on how many reviews you already have, because a rating is an average and averages get harder to move as volume grows. A restaurant at 4.2 with 40 reviews needs roughly 25 more at five stars to reach 4.5. The same restaurant at 4.2 with 300 reviews needs closer to 190. Two consequences follow: fix whatever is generating the low ratings first, since adding volume to a broken experience just locks in the average, and protect the rating aggressively when you are new because early reviews set a floor that is expensive to raise later.</p></div></details>
+
+      <details><summary>Should I ask for reviews on Yelp and Apple Maps too?</summary><div class="faq-a"><p>Yes, though the approach differs. The average diner consults around six sources, and Yelp content is now licensed into ChatGPT, which makes your Yelp listing part of your AI presence whether or not you think about Yelp. Apple Maps usage for finding local businesses nearly doubled to 27% and Apple Business Connect is free to claim. Note that Yelp specifically discourages directly soliciting reviews, so the workable approach is to default everyone to Google and, when a guest mentions they found you on another platform, ask for that one instead.</p></div></details>
+
+      <details><summary>Are anonymous reviews a problem for restaurants?</summary><div class="faq-a"><p>They raise volume and make it harder to match a review to your own records, which is genuinely frustrating when you want to understand what happened on a specific night. The practical adjustment is to reply to the substance rather than trying to identify the reviewer — and to resist the temptation to imply in public that an anonymous reviewer is not a real customer, since that reads badly to everyone else reading and is usually wrong. If a review clearly violates policy you can still flag it; anonymity does not exempt it.</p></div></details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<section class="sec-dark">
+  <div class="wrap">
+    <div class="two-col" style="align-items:center">
+      <div>
+        <span class="eyebrow on-dark">Next step</span>
+        <h2>Four a month, answered within the week</h2>
+        <p>That is the whole strategy, and it is free. Everything else on this page is detail around those two numbers.</p>
+        <p>What defeats restaurants is not difficulty, it is that reviews are nobody's job at eight o'clock on a Friday. If you would rather hand it over &mdash; asking systems, response drafting, pattern monitoring, platform coverage &mdash; that is something we run. And if you would rather set it up and run it yourself, call anyway and we will tell you how we would do it.</p>
+        <p>If you are currently using a tool you suspect might be gating, that is worth a call before it becomes a problem.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px">
+          <a href="tel:+18004818638" class="btn btn-p">Call 1-800-481-8638</a>
+          <a href="https://eyetoad.com/" class="btn btn-o on-dark">Request a review audit</a>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h4>Related reading</h4>
+          <ul class="check" style="margin-bottom:0">
+            <li><a href="/">The complete restaurant SEO guide</a> &mdash; the overview this sits inside, covering all nine surfaces where diners search.</li>
+            <li><a href="/restaurant-google-maps/">Google Maps visibility</a> &mdash; reviews are the prominence signal that carries the most weight in this category.</li>
+            <li><a href="/restaurant-ai-search/">AI search visibility</a> &mdash; how review text becomes the description a machine gives of your restaurant.</li>
+            <li><a href="/restaurant-menu-seo/">Restaurant menu SEO</a> &mdash; so that when a review names a dish, the dish exists in text on your site.</li>
+            <li><a href="/restaurant-seo-statistics/">Statistics and benchmarks</a> &mdash; the sourced data behind every threshold quoted here.</li>
+            <li><a href="https://restaurantsadvertising.com/">Restaurant advertising</a> &mdash; the paid channels, for when you need covers faster than reviews accumulate.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<script>
+(function(){
+"use strict";
+var $=function(id){return document.getElementById(id)};
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- HEADER + MOBILE NAV ---------- */
+var burger=$('burger'),mobnav=$('mobnav'),hdr=$('hdr');
+function measureHeader(){
+  if(!hdr)return;
+  var h=hdr.getBoundingClientRect().height;
+  document.documentElement.style.setProperty('--hdr-h',h+'px');
+  if(mobnav)mobnav.style.top=h+'px';
+}
+measureHeader();
+window.addEventListener('resize',measureHeader);
+window.addEventListener('load',measureHeader);
+if(burger&&mobnav){
+  burger.addEventListener('click',function(){
+    var open=mobnav.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open?'true':'false');
+    burger.setAttribute('aria-label',open?'Close menu':'Open menu');
+    measureHeader();
+  });
+  mobnav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){
+      mobnav.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
+      burger.setAttribute('aria-label','Open menu');
+    }
+  });
+}
+
+/* ================= REVIEW MATH PROJECTOR ================= */
+(function(){
+  var cv=$('rvChart');
+  if(!cv)return;
+  var ctx=cv.getContext('2d');
+  var iC=$('rvCount'),iR=$('rvRate'),iG=$('rvRating');
+  var vC=$('rvCountV'),vR=$('rvRateV'),vG=$('rvRatingV');
+  var s1=$('rvS1'),s2=$('rvS2'),s3=$('rvS3');
+
+  var W=0,H=0,dpr=1;
+  var NEW_AVG=4.7; /* assumed average of newly solicited reviews */
+
+  function size(){
+    var r=cv.getBoundingClientRect();
+    dpr=Math.min(window.devicePixelRatio||1,2);
+    W=r.width;H=r.height||280;
+    cv.width=Math.floor(W*dpr);cv.height=Math.floor(H*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+
+  function compute(){
+    var count=parseInt(iC.value,10);
+    var rate=parseInt(iR.value,10);
+    var rating=parseInt(iG.value,10)/10;
+
+    var you=[],bench=[],ratings=[];
+    for(var m=0;m<=12;m++){
+      you.push(count+rate*m);
+      bench.push(count+4*m);
+      var n=rate*m;
+      var newRating=(count*rating + n*NEW_AVG)/Math.max(count+n,1);
+      ratings.push(newRating);
+    }
+    return {count:count,rate:rate,rating:rating,you:you,bench:bench,ratings:ratings};
+  }
+
+  function draw(){
+    var d=compute();
+    ctx.clearRect(0,0,W,H);
+
+    var padL=38,padR=12,padT=14,padB=26;
+    var cw=W-padL-padR, ch=H-padT-padB;
+    var maxV=Math.max(d.bench[12],d.you[12],10);
+
+    function X(m){return padL + (m/12)*cw;}
+    function Y(v){return padT + ch - (v/maxV)*ch;}
+
+    /* grid */
+    ctx.strokeStyle='rgba(255,255,255,0.07)';ctx.lineWidth=1;
+    ctx.font='500 9px "IBM Plex Mono", monospace';
+    ctx.fillStyle='#6E655B';ctx.textAlign='right';ctx.textBaseline='middle';
+    for(var g=0;g<=4;g++){
+      var v=(maxV/4)*g, y=Y(v);
+      ctx.beginPath();ctx.moveTo(padL,y);ctx.lineTo(W-padR,y);ctx.stroke();
+      ctx.fillText(Math.round(v),padL-7,y);
+    }
+    ctx.textAlign='center';ctx.textBaseline='top';
+    ['now','3mo','6mo','9mo','12mo'].forEach(function(l,i){
+      ctx.fillText(l,X(i*3),padT+ch+7);
+    });
+
+    /* benchmark line (4/month) */
+    ctx.beginPath();
+    d.bench.forEach(function(v,m){ m?ctx.lineTo(X(m),Y(v)):ctx.moveTo(X(m),Y(v)); });
+    ctx.strokeStyle='rgba(255,255,255,0.28)';ctx.lineWidth=1.5;
+    ctx.setLineDash([4,5]);ctx.stroke();ctx.setLineDash([]);
+
+    /* your line */
+    ctx.beginPath();
+    d.you.forEach(function(v,m){ m?ctx.lineTo(X(m),Y(v)):ctx.moveTo(X(m),Y(v)); });
+    ctx.strokeStyle='#F26722';ctx.lineWidth=2.5;ctx.stroke();
+
+    /* fill under yours */
+    ctx.lineTo(X(12),Y(0));ctx.lineTo(X(0),Y(0));ctx.closePath();
+    ctx.fillStyle='rgba(242,103,34,0.13)';ctx.fill();
+
+    /* end dots */
+    ctx.beginPath();ctx.arc(X(12),Y(d.you[12]),4,0,Math.PI*2);
+    ctx.fillStyle='#F26722';ctx.fill();
+
+    /* labels */
+    ctx.font='600 10px "IBM Plex Mono", monospace';
+    ctx.textAlign='right';ctx.textBaseline='bottom';
+    ctx.fillStyle='#F26722';
+    ctx.fillText('you',X(12)-8,Y(d.you[12])-7);
+    if(Math.abs(d.bench[12]-d.you[12])>maxV*0.06){
+      ctx.fillStyle='rgba(255,255,255,0.45)';
+      ctx.fillText('4/mo benchmark',X(12)-8,Y(d.bench[12])-7);
+    }
+  }
+
+  function readouts(){
+    var d=compute();
+    var total=d.you[12];
+    var gained=total-d.count;
+
+    /* stat 1 : volume */
+    var ok1=total>=50;
+    s1.className='rv-stat '+(ok1?'ok':'warn');
+    s1.querySelector('b').textContent=total;
+    s1.querySelector('em').textContent = d.rate===0
+      ? 'No new reviews means no growth and an empty recency window.'
+      : gained+' added over the year at '+d.rate+' a month'+(ok1?'. Clears the 50-review working target.':'. Below the 50-review target.');
+
+    /* stat 2 : recency */
+    var ok2=d.rate>=4;
+    var gapDays = d.rate>0 ? Math.round(30.4/d.rate) : 999;
+    s2.className='rv-stat '+(ok2?'ok':'warn');
+    s2.querySelector('b').textContent = d.rate===0 ? 'Expired' : (ok2?'Held':'At risk');
+    s2.querySelector('em').textContent = d.rate===0
+      ? 'Your newest review keeps ageing. 74% of diners only weigh the last 90 days.'
+      : (ok2
+        ? 'About one review every '+gapDays+' days keeps you comfortably inside the 90-day window.'
+        : 'Roughly one every '+gapDays+' days. A single slow month can empty the 90-day window.');
+
+    /* stat 3 : rating */
+    var end=d.ratings[12];
+    var moved=end-d.rating;
+    var ok3=end>=4.5;
+    s3.className='rv-stat '+(ok3?'ok':'warn');
+    s3.querySelector('b').textContent=end.toFixed(2);
+    if(d.rate===0){
+      s3.querySelector('em').textContent='Unchanged. Ratings only move when new reviews arrive.';
+    }else if(moved>=0.005){
+      s3.querySelector('em').textContent='Up '+moved.toFixed(2)+' from '+d.rating.toFixed(1)+
+        (ok3?'. Clears the 4.5 threshold 31% of diners filter at.':'. Still short of 4.5.');
+    }else if(moved<=-0.005){
+      s3.querySelector('em').textContent='Down '+Math.abs(moved).toFixed(2)+
+        ' — new reviews averaging 4.7 pull a higher rating toward that number.';
+    }else{
+      s3.querySelector('em').textContent='Essentially flat. With '+d.count+
+        ' reviews already in the average, volume moves the needle slowly.';
+    }
+  }
+
+  function refresh(){
+    vC.textContent=iC.value;
+    vR.textContent=iR.value;
+    vG.textContent=(parseInt(iG.value,10)/10).toFixed(1);
+    readouts();
+    draw();
+  }
+
+  [iC,iR,iG].forEach(function(el){ el.addEventListener('input',refresh); });
+
+  size();refresh();
+  var rt;
+  window.addEventListener('resize',function(){
+    clearTimeout(rt);rt=setTimeout(function(){size();draw();},160);
+  });
+})();
+
+})();
+</script>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <img src="/images/restaurants-seo-logo.png" alt="RestaurantsSEO.com" class="ftr-logo" width="250" height="85" loading="lazy">
+        <p>A working guide to restaurant search visibility &mdash; Google, Maps, reviews, menus and AI answers &mdash; written for owners and operators rather than marketers.</p>
+        <a href="tel:+18004818638" class="ftr-tel">1-800-481-8638</a>
+        <p style="margin-bottom:0"><a href="mailto:info@eyetoad.com">info@eyetoad.com</a><br>Denver, Colorado</p>
+      </div>
+      <div>
+        <h4>On this page</h4>
+        <ul>
+          <li><a href="/#basics">What restaurant SEO is</a></li>
+          <li><a href="/#surfaces">Where diners look</a></li>
+          <li><a href="/#google">Google &amp; Maps</a></li>
+          <li><a href="/#menu">Menu SEO</a></li>
+          <li><a href="/restaurant-reviews-seo/">Reviews</a></li>
+          <li><a href="/restaurant-ai-search/">AI search</a></li>
+          <li><a href="/#agentic">Agentic booking</a></li>
+          <li><a href="/#checkup">Free checkup</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guides</h4>
+        <ul>
+          <li><a href="/restaurant-menu-seo/">Restaurant menu SEO</a></li>
+          <li><a href="/restaurant-google-maps/">Google Maps visibility</a></li>
+          <li><a href="/restaurant-reviews-seo/">Reviews &amp; ratings</a></li>
+          <li><a href="/restaurant-ai-search/">AI search visibility</a></li>
+          <li><a href="/restaurant-seo-statistics/">Statistics &amp; benchmarks</a></li>
+          <li><a href="/sitemap/">Site index</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services &amp; network</h4>
+        <ul>
+          <li><a href="https://eyetoad.com/">Eye To Ad Media</a></li>
+          <li><a href="https://searchconverts.com/">Restaurant web design</a></li>
+          <li><a href="https://restaurantsadvertising.com/">Restaurant advertising</a></li>
+          <li><a href="https://linkrestaurants.com/">NFC &amp; digital menus</a></li>
+          <li><a href="https://localfoodnearme.com/">LocalFoodNearMe</a></li>
+          <li><a href="https://bestrestaurantdenver.com/">Best Restaurant Denver</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr-btm">
+      <div>&copy; 2026 RestaurantsSEO.com &middot; Last updated 12 August 2026</div>
+      <div class="powered">Powered by <a href="https://eyetoad.com/">Eye To Ad Media</a></div>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@graph":[
+  {
+   "@type":"Article",
+   "@id":"https://restaurantsseo.com/restaurant-reviews-seo/#article",
+   "headline":"Restaurant reviews: the thresholds moved, and most restaurants have not noticed",
+   "description":"Current restaurant review thresholds, the recency problem, how to ask for reviews without breaking FTC rules, how to respond to negative reviews, and how review text feeds AI descriptions of your restaurant.",
+   "author":{"@id":"https://restaurantsseo.com/#author"},
+   "publisher":{"@id":"https://restaurantsseo.com/#org"},
+   "datePublished":"2026-08-12",
+   "dateModified":"2026-08-12",
+   "inLanguage":"en-US",
+   "isPartOf":{"@id":"https://restaurantsseo.com/#website"},
+   "mainEntityOfPage":{"@id":"https://restaurantsseo.com/restaurant-reviews-seo/#webpage"},
+   "about":[
+    {"@type":"Thing","name":"Online review","sameAs":"https://en.wikipedia.org/wiki/Customer_review"},
+    {"@type":"Thing","name":"Reputation management","sameAs":"https://en.wikipedia.org/wiki/Reputation_management"},
+    {"@type":"Thing","name":"Restaurant","sameAs":"https://en.wikipedia.org/wiki/Restaurant"}
+   ],
+   "citation":[
+    "BrightLocal, Local Consumer Review Survey 2026 (n=1,002 US adults)",
+    "US Federal Trade Commission, Rule on the Use of Consumer Reviews and Testimonials",
+    "US Federal Trade Commission, warning letters to ten companies, 22 December 2025"
+   ]
+  },
+  {
+   "@type":"WebPage",
+   "@id":"https://restaurantsseo.com/restaurant-reviews-seo/#webpage",
+   "url":"https://restaurantsseo.com/restaurant-reviews-seo/",
+   "name":"Restaurant Reviews & Ratings: Thresholds, Asking, Replying, FTC Rules",
+   "description":"A guide to restaurant reviews in 2026: the rating and recency thresholds diners apply, review velocity math, FTC Consumer Review Rule compliance including gating, and how to respond to negative reviews.",
+   "isPartOf":{"@id":"https://restaurantsseo.com/#website"},
+   "author":{"@id":"https://restaurantsseo.com/#author"},
+   "publisher":{"@id":"https://restaurantsseo.com/#org"},
+   "datePublished":"2026-08-12",
+   "dateModified":"2026-08-12",
+   "inLanguage":"en-US",
+   "breadcrumb":{"@id":"https://restaurantsseo.com/restaurant-reviews-seo/#breadcrumb"},
+   "mentions":[
+    {"@type":"Organization","name":"Federal Trade Commission","sameAs":"https://en.wikipedia.org/wiki/Federal_Trade_Commission"},
+    {"@type":"Organization","name":"Google Business Profile","sameAs":"https://en.wikipedia.org/wiki/Google_Business_Profile"},
+    {"@type":"Organization","name":"Yelp","sameAs":"https://en.wikipedia.org/wiki/Yelp"},
+    {"@type":"Organization","name":"Apple Maps","sameAs":"https://en.wikipedia.org/wiki/Apple_Maps"}
+   ],
+   "speakable":{"@type":"SpeakableSpecification","cssSelector":[".answer","h1",".lede"]}
+  },
+  {
+   "@type":"BreadcrumbList",
+   "@id":"https://restaurantsseo.com/restaurant-reviews-seo/#breadcrumb",
+   "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Restaurant SEO","item":"https://restaurantsseo.com/"},
+    {"@type":"ListItem","position":2,"name":"Restaurant Reviews","item":"https://restaurantsseo.com/restaurant-reviews-seo/"}
+   ]
+  },
+  {
+   "@type":"HowTo",
+   "@id":"https://restaurantsseo.com/restaurant-reviews-seo/#howto-reply",
+   "name":"How to respond to a negative restaurant review",
+   "description":"A four-step approach to writing a public reply that works on future readers rather than on the reviewer.",
+   "totalTime":"PT10M",
+   "step":[
+    {"@type":"HowToStep","position":1,"name":"Acknowledge the specific failure","text":"Name the actual thing that went wrong rather than offering a generic apology. A forty-minute wait on a confirmed reservation should be described as exactly that."},
+    {"@type":"HowToStep","position":2,"name":"State one concrete change","text":"Say what you have actually done about it, if there is anything true to say. Vague promises to do better read as filler to everyone reading."},
+    {"@type":"HowToStep","position":3,"name":"Offer a real person to contact","text":"Give a name and a direct email address so the conversation can continue off the platform. Avoid directing the guest to a general phone line or contact form."},
+    {"@type":"HowToStep","position":4,"name":"Stop there","text":"Keep the reply short. Never argue about facts in public, never identify the guest or what they ordered, and never imply they are lying. Short and specific reads as confident."}
+   ]
+  },
+  {
+   "@type":"FAQPage",
+   "@id":"https://restaurantsseo.com/restaurant-reviews-seo/#faq",
+   "isPartOf":{"@id":"https://restaurantsseo.com/restaurant-reviews-seo/#webpage"},
+   "mainEntity":[
+    {"@type":"Question","name":"How many Google reviews does a restaurant need?","acceptedAnswer":{"@type":"Answer","text":"At least twenty, with fifty or more as a working target. 47% of consumers will not use a business with fewer than twenty reviews, and only 9% will use one with five or fewer. Volume alone is not the goal though, because 74% only weigh reviews from the last three months. You need roughly four new reviews a month, every month, to keep your newest review inside that window all year. A restaurant with 200 old reviews and nothing recent performs worse than one with 60 that arrive steadily."}},
+    {"@type":"Question","name":"What star rating does a restaurant need in 2026?","acceptedAnswer":{"@type":"Answer","text":"4.0 is the functional minimum and 4.5 is the target. 68% of consumers require at least four stars, up from 55% a year earlier, and 31% will only use a business rated 4.5 or higher, up from 17%, a threshold that nearly doubled in twelve months. Only about 10% insist on a perfect five, so a 4.6 or 4.7 satisfies nearly everyone. A rating that was comfortably acceptable in 2025 may now be disqualifying for almost a third of searchers."}},
+    {"@type":"Question","name":"How do I get more Google reviews for my restaurant?","acceptedAnswer":{"@type":"Answer","text":"Ask consistently, in person, at the moment a guest expresses genuine satisfaction, and make writing one a single tap using the direct review link from your Google profile. 83% of people who are asked write a review, so the constraint is almost always that nobody is asking rather than that guests are unwilling. Give one manager per shift ownership of asking two tables, track the monthly count somewhere visible, and aim for roughly four a month. Do not incentivize by sentiment, do not filter who gets asked, and do not let staff write them."}},
+    {"@type":"Question","name":"Can I offer a discount for a Google review?","acceptedAnswer":{"@type":"Answer","text":"Only under narrow conditions, and platform rules may still prohibit what federal rules permit. Under the FTC Consumer Review Rule an incentive is problematic when conditioned on the reviewer expressing a particular sentiment, so a discount for a five-star review is out. An incentive offered for an honest review regardless of what it says, and disclosed in or near the review, is the permissible version. However Yelp prohibits incentives in its review flow entirely and Google discourages transactional schemes, so something legal federally can still get your listing flagged."}},
+    {"@type":"Question","name":"Is review gating illegal?","acceptedAnswer":{"@type":"Answer","text":"Review gating, meaning surveying guests first and routing only the happy ones to a public review link, is prohibited by major platform policies and sits directly in the territory the FTC Consumer Review Rule addresses, because the resulting public rating misrepresents the actual distribution of customer experience. Enforcement posture suggests a gating flow can count as a violation for each affected consumer, with civil penalties running to $53,088 per violation as of 2026. Plenty of reputation software still sells this as a feature. This is orientation rather than legal advice."}},
+    {"@type":"Question","name":"How should I respond to a bad restaurant review?","acceptedAnswer":{"@type":"Answer","text":"Write for the audience rather than the reviewer, because the person who wrote it has largely decided and the people reading your reply have not. Acknowledge the specific failure rather than offering a generic apology, state one concrete thing you have changed if there is anything true to say, give a real name and email to continue off the platform, and stop there. Never argue about facts in public even when you can prove you are right, never identify the guest or what they ordered, and never imply they are lying."}},
+    {"@type":"Question","name":"How quickly should a restaurant respond to reviews?","acceptedAnswer":{"@type":"Answer","text":"Within the week at minimum, since 81% of consumers expect a reply within seven days, and same-day is now expected by 19%, up sharply from 6% a year earlier. The practical version is ten minutes at open and ten at close, which handles nearly all volume without becoming a project. Batching twenty replies onto one afternoon every few months is visible to anyone reading the profile. Replies now pass through a moderation queue before publishing, so a short delay is normal."}},
+    {"@type":"Question","name":"Can I get a fake or unfair review removed?","acceptedAnswer":{"@type":"Answer","text":"Sometimes, if it violates platform policy rather than merely being negative. The categories that genuinely get removed are reviews from people who clearly were not customers, reviews with a conflict of interest such as competitors or former staff, off-topic content, harassment or personal information, and spam or duplicates. A genuine customer describing a genuinely bad night will not be removed. Flag it with a specific factual reason tied to the policy it breaks and reply publicly and calmly while you wait. Do not threaten legal action, since review suppression through unfounded legal threats is addressed by the FTC rule."}},
+    {"@type":"Question","name":"Do reviews affect whether AI recommends my restaurant?","acceptedAnswer":{"@type":"Answer","text":"They appear to, in two ways. Reviews are a freshness and prominence signal, so recent activity makes a restaurant look like an operating business worth recommending. More directly, review text is raw material: AI review summaries are generated from it, and 82% of consumers now read those summaries with 23% willing to decide on the summary alone. Assistants building a recommendation quote attributes reviewers mention, so reviews that name dishes and describe the atmosphere give an assistant far more to work with."}},
+    {"@type":"Question","name":"How long does it take to raise a restaurant's star rating?","acceptedAnswer":{"@type":"Answer","text":"It depends almost entirely on how many reviews you already have, because a rating is an average and averages get harder to move as volume grows. A restaurant at 4.2 with 40 reviews needs roughly 25 more at five stars to reach 4.5. The same restaurant at 4.2 with 300 reviews needs closer to 190. Fix whatever is generating the low ratings first, since adding volume to a broken experience just locks in the average, and protect the rating aggressively when you are new because early reviews set a floor."}},
+    {"@type":"Question","name":"Should I ask for reviews on Yelp and Apple Maps too?","acceptedAnswer":{"@type":"Answer","text":"Yes, though the approach differs. The average diner consults around six sources, and Yelp content is now licensed into ChatGPT, which makes your Yelp listing part of your AI presence. Apple Maps usage for finding local businesses nearly doubled to 27% and Apple Business Connect is free to claim. Note that Yelp specifically discourages directly soliciting reviews, so the workable approach is to default everyone to Google and, when a guest mentions they found you on another platform, ask for that one instead."}},
+    {"@type":"Question","name":"Are anonymous reviews a problem for restaurants?","acceptedAnswer":{"@type":"Answer","text":"They raise volume and make it harder to match a review to your own records, which is frustrating when you want to understand what happened on a specific night. The practical adjustment is to reply to the substance rather than trying to identify the reviewer, and to resist implying in public that an anonymous reviewer is not a real customer, since that reads badly to everyone else and is usually wrong. If a review clearly violates policy you can still flag it, because anonymity does not exempt it."}}
+   ]
+  }
+ ]
+}
+</script>
+
+</body>
+</html>
