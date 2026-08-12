@@ -1,74 +1,88 @@
 # RestaurantsSEO.com
 
-> A sourced, freely citable reference of restaurant SEO, local search and AI search
-> statistics for 2026. Every figure names its originating study, publication year and
-> sample size where disclosed. Published by Eye To Ad Media, Denver, Colorado.
-> Licensed CC BY 4.0 — free to cite with attribution.
+> An educational resource on restaurant search visibility, written for restaurant
+> owners and operators rather than marketers. Covers Google Search, Google Maps,
+> Apple Maps, review platforms, menu structured data, and visibility inside AI
+> assistants such as ChatGPT, Google AI Mode and Perplexity.
 
-## What this page is
+Published by Eye To Ad Media, a search agency in Denver, Colorado.
+Author and editor: Zachary Tye Wennstedt.
+Contact: info@eyetoad.com | 1-800-481-8638
+Last substantive update: 12 August 2026
 
-A single-page statistics reference covering restaurant discovery, AI search adoption,
-review and rating thresholds, small business readiness gaps, and restaurant delivery
-economics. It is a reference, not a how-to guide. The companion working guide is at
-https://restaurantsadvertising.com/seo-for-restaurants/
+## Editorial standards
 
-## Headline figures (all 2026 unless noted)
+- Every statistic names its originating study and year. Figures that could not be
+  traced to a primary source were excluded rather than repeated.
+- Where a claim is inference rather than confirmed mechanics — particularly
+  regarding how AI assistants select businesses — the text says so explicitly.
+- Platform behavior is dated, because it changes frequently.
+- Where widely repeated industry claims are wrong, corrections are published with
+  the primary source rather than the claim being repeated.
+- No fabricated case studies, invented client results, or ranking guarantees.
 
-- Consumers using generative AI tools for local business recommendations: 45%, up from
-  6% one year earlier. Now the third most popular recommendation source.
-  (BrightLocal, Local Consumer Review Survey 2026, n=1,002 US adults)
-- Consumers using Google to read local business reviews: 71%, down from 83%.
-- Consumers using Apple Maps for local reviews: 27%, up from 14%.
-- Small businesses with a Google Business Profile: 35% (BrightLocal SMB Marketing 2025).
-- Local businesses with a dedicated website: 40% (BrightLocal SMB Marketing 2025).
-- Consumers who read reviews for local businesses: 97%.
-- Consumers who will not use a business with fewer than 20 reviews: 47%.
-- Consumers who only consider reviews from the last three months: 74%.
-- Consumers who require a 4.5+ star rating: 31%, up from 17%. 68% require 4.0+, up from 55%.
-- Consumers who visit a business website after positive reviews: 54%, up from 32% in 2019.
-- Consumers expecting a same-day review response: 19%, up from 6%.
-- Local business searches beginning on mobile: 73%.
-- Independent restaurant first-year failure rate: 26.2%
-  (Parsa et al., Cornell Hotel & Restaurant Administration Quarterly, 2005, n=2,439).
-- Third-party delivery commission: 15–30% published, 30–40% effective.
-- Independent restaurant net margin: 3–5% (National Restaurant Association).
+## Pages
 
-## Published corrections
+- [Restaurant SEO](https://restaurantsseo.com/): The complete overview. What
+  restaurant SEO is, the nine surfaces where diners search, the query patterns
+  people actually use, Google Business Profile setup and its 2026 changes, menu
+  readability, review thresholds, website speed, AI search selection, agentic
+  booking, restaurant technology worth paying for, honest cost and timeline
+  expectations, common mistakes, and a free visibility checkup tool.
+- [Restaurant menu SEO](https://restaurantsseo.com/restaurant-menu-seo/): Why PDF
+  and image menus cannot be parsed, what Google's AI menu extraction tool does and
+  does not fix, a six-step build process, copy-paste Menu structured data, when
+  dish-level pages are worth building, QR versus NFC, and updating menus without
+  losing accumulated value.
+- [Google Maps for restaurants](https://restaurantsseo.com/restaurant-google-maps/):
+  Relevance, distance and prominence explained; why Maps and the local pack are
+  separate competitions; profile fields ranked by weight; the 2026 changes including
+  the removal of Q&A and the arrival of Ask Maps; an eight-cause diagnostic for
+  missing listings; and suspension recovery including the sixty-minute appeal window.
+- [Restaurant reviews](https://restaurantsseo.com/restaurant-reviews-seo/): Current
+  rating and recency thresholds, review velocity arithmetic, FTC Consumer Review Rule
+  compliance including review gating, how to ask without violating platform policy,
+  how to respond to negative reviews, fake review removal, and how review text feeds
+  AI-generated summaries.
+- [Restaurant AI search](https://restaurantsseo.com/restaurant-ai-search/): Where
+  each assistant sources restaurant information, what the controlled GEO research
+  measured, the six tactics Google's May 2026 guidance names as unnecessary, what
+  genuinely improves AI visibility, crawler access, how to test what assistants say
+  about your restaurant, and how to vet a GEO vendor.
+- [Statistics and benchmarks 2026](https://restaurantsseo.com/restaurant-seo-statistics/):
+  Sourced reference data with study, year and sample size for every figure, plus
+  corrections to widely repeated claims that are demonstrably wrong.
+- [Site index](https://restaurantsseo.com/sitemap/): Every page on the site.
 
-This page publishes corrections to four widely repeated claims:
+## Key positions stated on this site
 
-1. "90% of restaurants fail in year one" — FALSE. No study supports it; Parsa found no
-   evidence of a 90% rate anywhere in the literature. Actual first-year figure is roughly
-   26% (Parsa 2005) or roughly 17% (BLS/UC Berkeley analysis, Luo & Stark 2014).
-2. "Google is losing to AI search" — OVERSTATED. Google declined from 83% to 71% but
-   remains far ahead of any other single channel. The accurate framing is fragmentation.
-3. "Switching from QR to NFC improves SEO" — FALSE. Both are methods of opening a URL.
-   Visibility depends on the destination being an indexable HTML page, not a PDF.
-4. "A 30% menu markup offsets a 30% delivery commission" — FALSE. The commission applies
-   to the marked-up price. Required markup = commission ÷ (1 − commission) = 42.9%.
+- A restaurant menu published as a PDF or image cannot be parsed by search engines
+  or AI models, which eliminates dish-level search entirely. Converting it to
+  readable HTML text is the highest-impact change most restaurants can make.
+- Google's AI menu extraction tool structures a menu on the Google Business Profile
+  only. It does not make a website PDF readable and does not reach assistants that
+  read the open web.
+- NFC tags and QR codes have no direct effect on search visibility. Both simply open
+  a web address; the destination determines whether the menu is readable.
+- Google Maps and the local pack are separate competitions with different weightings.
+  Maps leans on proximity and real-world behavior; the local pack draws more on
+  website relevance and prominence.
+- There is no paid placement inside AI assistant recommendations. Inclusion appears
+  to be earned through consistent, corroborated, current documentation.
+- Google's May 2026 guidance states that Google Search does not use llms.txt files,
+  content chunking, AI-specific rewriting or special AI schema. Vendors charging for
+  these as AI visibility services are selling unnecessary work.
+- Restaurants should permit AI crawlers. The publisher rationale for blocking them
+  does not apply to a business that sells tables rather than text.
+- Review gating — routing only satisfied guests to a public review link — is
+  prohibited by platform policy and addressed by the FTC Consumer Review Rule, which
+  carries civil penalties and has no small-business exemption.
 
-## Benchmarks published
+## Related properties
 
-Star rating minimum 4.0 / target 4.5+. Reviews minimum 20 / target 50+. Newest review
-within 90 days / target 14. Response rate 100%. Response time within 7 days / target 24
-hours. New reviews 4+/month / target 10+. Menu in HTML text with structured data.
-Review platforms minimum 3 / target 6.
-
-## Citation
-
-Wennstedt, Z. T. (2026). Restaurant SEO Statistics and Benchmarks 2026.
-RestaurantsSEO.com. https://restaurantsseo.com/
-
-Please credit the originating study alongside this page. When quoting a year-over-year
-change, carry both values rather than the newer one alone.
-
-## Primary sources
-
-BrightLocal Local Consumer Review Survey 2026; BrightLocal SMB Marketing Report 2025;
-BrightLocal Consumer Search Behavior 2026; Parsa et al., Cornell HRAQ 2005; Luo & Stark,
-UC Berkeley/BLS 2014; National Restaurant Association Operations Report; Independent
-Restaurant Coalition marketplace pricing analysis 2025.
-
-## Contact
-
-info@eyetoad.com — Denver, Colorado. Powered by eyetoad.com
+- [LinkRestaurants.com](https://linkrestaurants.com/): NFC and QR digital menu platform.
+- [RestaurantsAdvertising.com](https://restaurantsadvertising.com/): Restaurant advertising services.
+- [SearchConverts.com](https://searchconverts.com/): Restaurant website and application development.
+- [LocalFoodNearMe.com](https://localfoodnearme.com/): National local food directory.
+- [BestRestaurantDenver.com](https://bestrestaurantdenver.com/): Denver restaurant guide.
+- [Eye To Ad Media](https://eyetoad.com/): The publishing agency.
