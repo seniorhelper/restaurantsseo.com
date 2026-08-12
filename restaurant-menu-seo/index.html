@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Restaurant Menu SEO: Make Every Dish Findable on Google &amp; AI</title>
+<meta name="description" content="How to publish a restaurant menu that Google and AI assistants can actually read. Why PDF and image menus are invisible, what Google's AI menu tool does and does not fix, copy-paste Menu schema, and dish-level SEO.">
+<link rel="canonical" href="https://restaurantsseo.com/restaurant-menu-seo/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="author" content="Zachary Tye Wennstedt">
+<meta name="publisher" content="Eye To Ad Media">
+<meta name="theme-color" content="#FFFFFF">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="RestaurantsSEO.com">
+<meta property="og:title" content="Restaurant Menu SEO: Make Every Dish Findable">
+<meta property="og:description" content="Why PDF and image menus are invisible to Google and AI, and exactly how to fix it. Includes copy-paste Menu structured data.">
+<meta property="og:url" content="https://restaurantsseo.com/restaurant-menu-seo/">
+<meta property="og:image" content="https://restaurantsseo.com/images/restaurant-seo-hero.png">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Restaurant Menu SEO: Make Every Dish Findable">
+<meta name="twitter:description" content="Why PDF and image menus are invisible to Google and AI, and exactly how to fix it.">
+<meta name="twitter:image" content="https://restaurantsseo.com/images/restaurant-seo-hero.png">
+
+<link rel="icon" type="image/png" href="/images/restaurants-seo-favicon.png">
+<link rel="apple-touch-icon" href="/images/restaurants-seo-favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,300..600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  /* palette derived from the RestaurantsSEO mark: orange on black, on white */
+  --ember:#F26722;
+  --ember-dk:#C74E12;
+  --ember-lt:#FF8A4C;
+  --ember-wash:#FEF2EA;
+  --char:#14110F;
+  --char-2:#241F1B;
+  --slate:#5A544E;
+  --slate-lt:#837B72;
+  --paper:#FFFFFF;
+  --warm:#FAF7F3;
+  --warm-2:#F3EEE7;
+  --rule:#E6E0D8;
+  --rule-dk:#CFC6BA;
+  --kale:#1F5C4A;
+  --kale-lt:#3E8B72;
+
+  --disp:'Archivo',system-ui,-apple-system,sans-serif;
+  --body:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SF Mono',monospace;
+
+  --wrap:1180px;
+  --r:4px;
+  --hdr-h:96px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--hdr-h) + 16px)}
+body{
+  margin:0;background:var(--paper);color:var(--char);
+  font-family:var(--body);font-size:18px;line-height:1.72;font-weight:400;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--ember-dk);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--char)}
+:focus-visible{outline:3px solid var(--ember);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 26px}
+.narrow{max-width:820px}
+.mid{max-width:960px}
+
+h1,h2,h3,h4,h5{font-family:var(--disp);font-weight:800;line-height:1.1;letter-spacing:-.028em;margin:0 0 18px;color:var(--char)}
+h1{font-size:clamp(2.4rem,6vw,4.3rem);letter-spacing:-.042em;line-height:1.02}
+h2{font-size:clamp(1.85rem,4vw,2.85rem);letter-spacing:-.034em}
+h3{font-size:clamp(1.25rem,2.3vw,1.6rem);letter-spacing:-.024em;font-weight:700}
+h4{font-size:1.08rem;letter-spacing:-.014em;font-weight:700}
+p{margin:0 0 20px}
+strong{font-weight:600;color:var(--char)}
+.lede{font-size:clamp(1.1rem,2vw,1.32rem);line-height:1.6;color:var(--slate);font-weight:300}
+.lede strong{font-weight:500;color:var(--char)}
+
+.eyebrow{
+  font-family:var(--mono);font-size:.7rem;font-weight:600;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--ember-dk);margin:0 0 14px;display:block;
+}
+.eyebrow.on-dark{color:var(--ember-lt)}
+.eyebrow.dim{color:var(--slate-lt)}
+
+/* ---------- HEADER : WHITE, blends with logo ---------- */
+.hdr{position:sticky;top:0;z-index:900;background:var(--paper);border-bottom:1px solid var(--rule)}
+.hdr-in{max-width:var(--wrap);margin:0 auto;padding:12px 26px;
+  display:flex;align-items:center;justify-content:space-between;gap:22px}
+.mark{display:block;text-decoration:none;flex-shrink:0;line-height:0}
+.mark img{width:300px;height:auto;max-width:none}
+.nav{display:flex;align-items:center;gap:24px}
+.nav a{font-family:var(--body);font-weight:500;font-size:.9rem;color:var(--char);
+  text-decoration:none;padding:6px 0;border-bottom:2px solid transparent;white-space:nowrap}
+.nav a:hover{border-bottom-color:var(--ember)}
+.hdr-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.tel{display:inline-flex;align-items:center;gap:8px;font-family:var(--disp);font-weight:700;
+  font-size:1rem;color:var(--char);text-decoration:none;white-space:nowrap;letter-spacing:-.02em}
+.tel:hover{color:var(--ember-dk)}
+.tel svg{width:16px;height:16px;flex-shrink:0;fill:var(--ember)}
+.tel span.lbl{display:block;font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--slate-lt);font-weight:500;margin-bottom:1px}
+.tel .telstack{display:flex;flex-direction:column;line-height:1.15}
+
+.burger{display:none;background:none;border:1px solid var(--rule-dk);border-radius:var(--r);
+  width:46px;height:42px;cursor:pointer;flex-direction:column;align-items:center;
+  justify-content:center;gap:5px;padding:0}
+.burger span{display:block;width:20px;height:2px;background:var(--char);border-radius:2px;transition:.22s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobnav{display:none;position:fixed;left:0;right:0;bottom:0;z-index:899;background:var(--paper);
+  border-top:1px solid var(--rule);padding:18px 26px 40px;overflow-y:auto}
+.mobnav.open{display:block}
+.mobnav a{display:block;font-family:var(--disp);font-weight:700;font-size:1.14rem;color:var(--char);
+  padding:15px 0;border-bottom:1px solid var(--rule);text-decoration:none;letter-spacing:-.02em}
+.mobnav .btn{margin-top:22px;border-bottom:none;text-align:center}
+.mobnav .mob-tel{margin-top:12px;border-bottom:none;text-align:center;background:var(--warm);
+  border-radius:var(--r);padding:16px;font-size:1.2rem;color:var(--ember-dk)}
+
+/* ---------- BUTTONS ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:var(--disp);font-weight:700;font-size:.95rem;padding:14px 26px;letter-spacing:-.012em;
+  border-radius:var(--r);border:2px solid transparent;cursor:pointer;
+  text-decoration:none;transition:background .16s,color .16s,border-color .16s}
+.btn:hover{text-decoration:none}
+.btn-p{background:var(--ember);color:#fff;border-color:var(--ember)}
+.btn-p:hover{background:var(--ember-dk);border-color:var(--ember-dk);color:#fff}
+.btn-o{background:transparent;color:var(--char);border-color:var(--char)}
+.btn-o:hover{background:var(--char);color:#fff}
+.btn-o.on-dark{color:#fff;border-color:rgba(255,255,255,.5)}
+.btn-o.on-dark:hover{background:#fff;color:var(--char)}
+.btn-sm{padding:10px 18px;font-size:.86rem}
+.btn-full{width:100%}
+
+/* ---------- SECTIONS ---------- */
+section{padding:82px 0}
+.sec-warm{background:var(--warm)}
+.sec-warm2{background:var(--warm-2)}
+.sec-dark{background:var(--char);color:#fff}
+.sec-dark h1,.sec-dark h2,.sec-dark h3,.sec-dark h4{color:#fff}
+.sec-dark p{color:#CFC7BF}
+.sec-dark .lede{color:#DDD5CD}
+.sec-dark a{color:var(--ember-lt)}
+.sec-dark strong{color:#fff}
+.sec-tight{padding:54px 0}
+.sec-head{max-width:800px;margin:0 0 44px}
+hr.rule{height:1px;background:var(--rule);border:0;margin:0}
+
+/* ---------- HERO ---------- */
+.hero{padding:56px 0 0;background:var(--paper);position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:34px;align-items:center}
+.hero h1 em{font-style:normal;color:var(--ember)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 24px;padding-top:22px;margin-top:26px;
+  border-top:1px solid var(--rule);font-family:var(--mono);font-size:.72rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--slate-lt)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 0}
+
+/* ---------- SIGNATURE : PATHWAY WEB ---------- */
+.web-stage{background:var(--char);border-radius:6px;overflow:hidden;position:relative;
+  border:1px solid var(--char-2)}
+.web-canvas-hold{position:relative;width:100%;aspect-ratio:16/10;min-height:300px}
+#pathweb{display:block;width:100%;height:100%}
+.web-hud{position:absolute;top:16px;left:18px;pointer-events:none;
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#7E756C}
+.web-hud b{display:block;font-family:var(--disp);font-size:1.9rem;letter-spacing:-.03em;
+  color:var(--ember-lt);font-weight:800;margin-top:4px;line-height:1}
+/* controls ALWAYS below the canvas, never overlaid */
+.web-ctrl{background:var(--char-2);border-top:1px solid rgba(255,255,255,.1);padding:20px 22px}
+.web-ctrl-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.web-ctrl label{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;
+  text-transform:uppercase;color:#9E958C;white-space:nowrap}
+.web-ctrl input[type=range]{flex:1;min-width:180px;accent-color:var(--ember);height:26px;cursor:pointer}
+.web-read{font-family:var(--disp);font-weight:700;font-size:.95rem;color:#fff;white-space:nowrap;
+  letter-spacing:-.01em}
+.web-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.web-chip{font-family:var(--mono);font-size:.66rem;letter-spacing:.07em;text-transform:uppercase;
+  padding:5px 10px;border-radius:20px;border:1px solid rgba(255,255,255,.16);color:#6F675F;
+  transition:.3s;background:transparent}
+.web-chip.on{color:var(--char);background:var(--ember-lt);border-color:var(--ember-lt);font-weight:600}
+.web-note{font-size:.9rem;color:#9E958C;margin:14px 0 0;line-height:1.6;font-family:var(--body)}
+
+/* ---------- ANSWER BLOCK (AIO extraction target) ---------- */
+.answer{background:var(--paper);border:1px solid var(--rule);border-left:4px solid var(--ember);
+  border-radius:0 var(--r) var(--r) 0;padding:24px 28px;margin:0 0 26px}
+.answer .q{font-family:var(--disp);font-weight:700;font-size:1.12rem;letter-spacing:-.022em;
+  margin:0 0 12px;color:var(--char);line-height:1.3}
+.answer p{margin:0;font-size:1.04rem;line-height:1.68}
+.answer p+p{margin-top:14px}
+.sec-warm .answer,.sec-warm2 .answer{background:var(--paper)}
+.sec-dark .answer{background:var(--char-2);border-color:rgba(255,255,255,.14);border-left-color:var(--ember)}
+.sec-dark .answer .q{color:#fff}
+
+/* ---------- CARDS ---------- */
+.grid{display:grid;gap:22px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:28px}
+.card h3,.card h4{margin-bottom:11px}
+.card p:last-child{margin-bottom:0}
+.card p{font-size:.97rem;line-height:1.65}
+.sec-dark .card{background:var(--char-2);border-color:rgba(255,255,255,.13)}
+.card-num{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;color:var(--ember-dk);
+  display:block;margin-bottom:10px;font-weight:600}
+.sec-dark .card-num{color:var(--ember-lt)}
+
+/* ---------- SURFACE ROWS ---------- */
+.surf{border-top:1px solid var(--rule)}
+.surf-row{display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:start;
+  padding:26px 0;border-bottom:1px solid var(--rule)}
+.surf-ico{width:46px;height:46px;border-radius:var(--r);background:var(--ember-wash);
+  display:flex;align-items:center;justify-content:center;font-family:var(--disp);
+  font-weight:800;font-size:1.05rem;color:var(--ember-dk);flex-shrink:0}
+.surf-row h3{margin-bottom:8px;font-size:1.22rem}
+.surf-row p{margin:0;font-size:.97rem;line-height:1.65;color:var(--slate)}
+.surf-tag{font-family:var(--mono);font-size:.66rem;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--slate-lt);white-space:nowrap;padding-top:5px}
+
+/* ---------- DATA TABLE ---------- */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper);
+  -webkit-overflow-scrolling:touch}
+table.data{width:100%;border-collapse:collapse;font-size:.93rem;min-width:640px}
+table.data caption{text-align:left;padding:16px 18px;font-family:var(--mono);font-size:.7rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--slate);border-bottom:1px solid var(--rule)}
+table.data th,table.data td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+table.data th{background:var(--char);color:#fff;font-family:var(--mono);font-size:.68rem;
+  letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+table.data tr:last-child td{border-bottom:none}
+table.data td.fig{font-family:var(--mono);font-weight:600;color:var(--ember-dk);white-space:nowrap}
+table.data tbody tr:hover{background:var(--warm)}
+
+/* ---------- LISTS ---------- */
+.check{list-style:none;padding:0;margin:0 0 22px}
+.check li{position:relative;padding:0 0 13px 32px;line-height:1.65;font-size:1rem}
+.check li::before{content:"";position:absolute;left:0;top:7px;width:19px;height:19px;border-radius:3px;
+  background-color:var(--kale);
+  background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 6L9 17l-5-5' fill='none' stroke='%23ffffff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size:13px 13px;background-position:center;background-repeat:no-repeat}
+.check.x li::before{background-color:var(--ember-dk);
+  background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18 6L6 18M6 6l12 12' fill='none' stroke='%23ffffff' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E")}
+.sec-dark .check li{color:#CFC7BF}
+.sec-dark .check li::before{background-color:var(--kale-lt)}
+.sec-dark .check.x li::before{background-color:var(--ember-lt)}
+
+/* ---------- PULL / TAKEAWAY ---------- */
+.pull{border-left:4px solid var(--ember);padding:6px 0 6px 26px;margin:32px 0}
+.pull p{font-family:var(--disp);font-weight:600;font-size:clamp(1.15rem,2.2vw,1.5rem);
+  line-height:1.35;letter-spacing:-.025em;color:var(--char);margin:0}
+.sec-dark .pull p{color:#fff}
+
+.takeaway{background:var(--char);color:#fff;border-radius:var(--r);padding:30px}
+.takeaway h3{color:#fff;font-size:1.2rem;margin-bottom:16px}
+.takeaway ul{list-style:none;padding:0;margin:0}
+.takeaway li{position:relative;padding:0 0 13px 26px;font-size:.98rem;line-height:1.62;color:#CFC7BF}
+.takeaway li:last-child{padding-bottom:0}
+.takeaway li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:8px;
+  border-radius:50%;background:var(--ember)}
+.takeaway li b{color:#fff;font-weight:600}
+
+/* ---------- FIGURES ---------- */
+figure{margin:0 0 26px}
+figure img{border-radius:var(--r);border:1px solid var(--rule);width:100%}
+figcaption{font-family:var(--mono);font-size:.74rem;line-height:1.6;color:var(--slate-lt);
+  margin-top:11px;letter-spacing:.02em}
+.fig-plain img{border:none}
+
+/* ---------- FAQ ---------- */
+.faq{border-top:1px solid var(--rule)}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{cursor:pointer;list-style:none;padding:21px 46px 21px 0;position:relative;
+  font-family:var(--disp);font-weight:700;font-size:1.06rem;line-height:1.4;color:var(--char);
+  letter-spacing:-.018em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:8px;top:27px;width:11px;height:11px;
+  border-right:2px solid var(--ember);border-bottom:2px solid var(--ember);
+  transform:rotate(45deg);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(-135deg);top:31px}
+.faq .faq-a{padding:0 18px 24px 0}
+.faq .faq-a p:last-child{margin-bottom:0}
+.faq .faq-a p{font-size:1rem}
+
+/* ---------- TOOL ---------- */
+.tool{background:var(--paper);border:2px solid var(--char);border-radius:var(--r);overflow:hidden}
+.tool-hd{background:var(--char);color:#fff;padding:22px 28px}
+.tool-hd h3{color:#fff;margin:0 0 5px;font-size:1.32rem}
+.tool-hd p{margin:0;color:#A69D94;font-size:.9rem}
+.tool-bd{padding:28px}
+.qset{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid var(--rule)}
+.qset:last-of-type{border-bottom:none}
+.qset p.qtxt{font-family:var(--disp);font-weight:700;font-size:1rem;margin:0 0 12px;
+  letter-spacing:-.018em;line-height:1.4}
+.opts{display:flex;flex-wrap:wrap;gap:9px}
+.opt{font-family:var(--body);font-size:.9rem;font-weight:500;padding:10px 16px;
+  border:1.5px solid var(--rule-dk);border-radius:var(--r);background:var(--paper);
+  cursor:pointer;transition:.15s;color:var(--char)}
+.opt:hover{border-color:var(--ember)}
+.opt.sel{background:var(--char);color:#fff;border-color:var(--char)}
+.res{border:1px solid var(--rule);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;
+  background:var(--paper)}
+.res.good{border-left:4px solid var(--kale);background:#F2F8F5}
+.res.bad{border-left:4px solid var(--ember);background:var(--ember-wash)}
+.res h4{margin:0 0 6px;font-size:1rem}
+.res p{margin:0;font-size:.93rem;color:var(--slate);line-height:1.6}
+.res .verdict{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+  font-weight:600;display:block;margin-bottom:6px}
+.res.good .verdict{color:var(--kale)}
+.res.bad .verdict{color:var(--ember-dk)}
+.note{font-size:.85rem;color:var(--slate-lt);margin:14px 0 0;line-height:1.6}
+
+/* ---------- CTA BANDS (restrained) ---------- */
+.cta-band{background:var(--warm);border:1px solid var(--rule);border-left:4px solid var(--ember);
+  border-radius:0 var(--r) var(--r) 0;padding:30px;display:grid;
+  grid-template-columns:1fr auto;gap:28px;align-items:center}
+.cta-band h3{margin:0 0 9px;font-size:1.22rem}
+.cta-band p{margin:0;font-size:.97rem;color:var(--slate);line-height:1.64}
+.sec-warm .cta-band{background:var(--paper)}
+.cta-dark{background:var(--char);color:#fff;border:none;border-radius:var(--r);padding:34px;
+  display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+.cta-dark h3{color:#fff;margin:0 0 9px;font-size:1.34rem}
+.cta-dark p{color:#CFC7BF;margin:0;font-size:.98rem;line-height:1.65}
+.cta-dark a{color:var(--ember-lt)}
+
+/* ---------- GUIDE CARDS ---------- */
+.guides{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.guide{display:block;background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);
+  padding:28px;text-decoration:none;transition:border-color .18s,transform .18s}
+.guide:hover{border-color:var(--ember);transform:translateY(-2px)}
+.guide .g-k{font-family:var(--mono);font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--ember-dk);display:block;margin-bottom:11px;font-weight:600}
+.guide h3{margin-bottom:9px;font-size:1.2rem;color:var(--char)}
+.guide p{margin:0;font-size:.94rem;color:var(--slate);line-height:1.6}
+.guide .g-go{font-family:var(--mono);font-size:.72rem;color:var(--char);margin-top:14px;
+  display:block;font-weight:600;letter-spacing:.04em}
+
+/* ---------- NETWORK ---------- */
+.net{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.net a{display:block;background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);
+  padding:22px;text-decoration:none;transition:border-color .16s,transform .16s}
+.net a:hover{border-color:var(--ember);transform:translateY(-2px)}
+.net .net-u{font-family:var(--mono);font-size:.8rem;font-weight:600;color:var(--ember-dk);
+  display:block;margin-bottom:8px;word-break:break-word}
+.net .net-d{font-size:.9rem;color:var(--slate);line-height:1.58;display:block}
+
+/* ---------- TOC ---------- */
+.toc{background:var(--warm);border:1px solid var(--rule);border-radius:var(--r);padding:28px}
+.toc h2{font-size:1.08rem;margin-bottom:18px}
+.toc ol{margin:0;padding:0;list-style:none;columns:2;column-gap:36px;counter-reset:toc}
+.toc li{margin-bottom:10px;break-inside:avoid;font-size:.93rem;counter-increment:toc}
+.toc li::before{content:counter(toc,decimal-leading-zero);font-family:var(--mono);font-size:.7rem;
+  color:var(--slate-lt);margin-right:10px}
+.toc a{text-decoration:none;color:var(--char);border-bottom:1px solid var(--rule-dk)}
+.toc a:hover{border-bottom-color:var(--ember);color:var(--ember-dk)}
+
+/* ---------- FOOTER : WHITE ---------- */
+.ftr{background:var(--paper);border-top:2px solid var(--char);padding:56px 0 30px;color:var(--slate)}
+.ftr h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--char);margin-bottom:16px;font-weight:600}
+.ftr-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:34px;margin-bottom:40px}
+.ftr p{font-size:.9rem;line-height:1.68;color:var(--slate)}
+.ftr ul{list-style:none;padding:0;margin:0}
+.ftr li{margin-bottom:10px}
+.ftr a{color:var(--slate);font-size:.9rem;text-decoration:none}
+.ftr a:hover{color:var(--ember-dk);text-decoration:underline}
+.ftr-logo{width:250px;margin-bottom:16px}
+.ftr-tel{font-family:var(--disp);font-weight:800;font-size:1.3rem;color:var(--char);
+  text-decoration:none;display:inline-block;margin:6px 0 4px;letter-spacing:-.025em}
+.ftr-tel:hover{color:var(--ember-dk)}
+.ftr-btm{border-top:1px solid var(--rule);padding-top:24px;display:flex;
+  justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.84rem;color:var(--slate-lt)}
+.powered{font-family:var(--mono);font-size:.8rem;letter-spacing:.03em}
+.powered a{color:var(--ember-dk);font-weight:600}
+
+/* ---------- MISC ---------- */
+.kicker-band{background:var(--ember-wash);border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);padding:18px 0}
+.kicker-band p{margin:0;font-size:.94rem;color:var(--char);line-height:1.6}
+.kicker-band .mono{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ember-dk);font-weight:600;display:block;margin-bottom:6px}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.stack-lg > * + *{margin-top:22px}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;animation-iteration-count:1!important;
+    transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+@media(max-width:1080px){
+  .nav{gap:16px}
+  .nav a{font-size:.84rem}
+  .mark img{width:250px}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .ftr-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .nav,.hdr-right{display:none}
+  .burger{display:flex}
+  .mark img{width:300px}
+  .g3,.g2{grid-template-columns:1fr}
+  .two-col{grid-template-columns:1fr;gap:30px}
+  .guides{grid-template-columns:1fr}
+  .cta-band,.cta-dark{grid-template-columns:1fr;gap:20px}
+  .toc ol{columns:1}
+}
+@media(max-width:768px){
+  body{font-size:17px}
+  section{padding:58px 0}
+  .sec-tight{padding:42px 0}
+  .card,.tool-bd{padding:22px}
+  .surf-row{grid-template-columns:auto 1fr;gap:16px}
+  .surf-tag{grid-column:2;padding-top:0}
+  .g4{grid-template-columns:1fr}
+  .ftr-grid{grid-template-columns:1fr;gap:28px}
+  .answer{padding:20px 22px}
+}
+@media(max-width:430px){
+  .wrap{padding:0 18px}
+  .mark img{width:300px}
+  .hdr-in{padding:10px 18px}
+  .btn{width:100%}
+  .hero-cta .btn{width:100%}
+  .pull{padding-left:18px}
+}
+</style>
+</head>
+<body>
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a href="/" class="mark" aria-label="RestaurantsSEO.com home">
+      <img src="/images/restaurants-seo-logo.png" width="300" height="102" alt="RestaurantsSEO.com" fetchpriority="high">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="/#basics">Basics</a>
+      <a href="/#surfaces">Where Diners Look</a>
+      <a href="/restaurant-menu-seo/">Menu SEO</a>
+      <a href="/restaurant-ai-search/">AI Search</a>
+      <a href="/#checkup">Free Checkup</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="hdr-right">
+      <a href="tel:+18004818638" class="tel" aria-label="Call 1-800-481-8638">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        <span class="telstack"><span class="lbl">Talk to a human</span>1-800-481-8638</span>
+      </a>
+      <a href="/#checkup" class="btn btn-p btn-sm">Free checkup</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobnav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobnav" id="mobnav" aria-label="Mobile">
+  <a href="/#basics">Restaurant SEO basics</a>
+  <a href="/#surfaces">Where diners look</a>
+  <a href="/#google">Google &amp; Maps</a>
+  <a href="/restaurant-menu-seo/">Menu SEO</a>
+  <a href="/#reviews">Reviews</a>
+  <a href="/restaurant-ai-search/">AI search</a>
+  <a href="/#agentic">The agentic shift</a>
+  <a href="/#website">Websites &amp; speed</a>
+  <a href="/#cost">Cost &amp; timeline</a>
+  <a href="/#checkup">Free 60-second checkup</a>
+  <a href="#faq">Questions</a>
+  <a href="tel:+18004818638" class="mob-tel">1-800-481-8638</a>
+  <a href="/#checkup" class="btn btn-p">Run the free checkup</a>
+</nav>
+<style>
+/* ---------- MENU PAGE : machine reader ---------- */
+.reader{background:var(--char);border-radius:6px;overflow:hidden;border:1px solid var(--char-2)}
+.reader-tabs{display:flex;background:var(--char-2);border-bottom:1px solid rgba(255,255,255,.1)}
+.reader-tab{flex:1;background:none;border:none;cursor:pointer;padding:16px 12px;
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;
+  color:#7E756C;transition:.18s;border-bottom:3px solid transparent;font-weight:600}
+.reader-tab:hover{color:#BDB4AB}
+.reader-tab.on{color:#fff;border-bottom-color:var(--ember);background:rgba(242,103,34,.08)}
+.reader-body{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.reader-pane{padding:26px}
+.reader-pane+.reader-pane{border-left:1px solid rgba(255,255,255,.1)}
+.reader-lbl{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;
+  color:#7E756C;display:block;margin-bottom:14px;font-weight:600}
+.menu-mock{background:#FDFBF7;border-radius:3px;padding:20px;min-height:250px;color:#2A2520;
+  font-family:Georgia,serif}
+.menu-mock.blur{filter:blur(1.4px) contrast(.85);opacity:.72}
+.menu-mock h5{font-family:Georgia,serif;font-size:.95rem;margin:0 0 12px;text-align:center;
+  letter-spacing:.14em;text-transform:uppercase;color:#2A2520;font-weight:700}
+.menu-mock .mrow{display:flex;justify-content:space-between;gap:12px;font-size:.8rem;
+  padding:4px 0;line-height:1.4}
+.menu-mock .msec{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#8A7F72;
+  margin:14px 0 6px;border-bottom:1px solid #E0D8CC;padding-bottom:4px}
+.menu-mock .mdesc{font-size:.68rem;color:#6E655B;font-style:italic;line-height:1.35}
+.pdf-chrome{background:#3A3632;border-radius:3px 3px 0 0;padding:7px 12px;font-family:var(--mono);
+  font-size:.6rem;color:#9E958C;letter-spacing:.06em}
+.readout{background:#0B0908;border:1px solid rgba(255,255,255,.12);border-radius:3px;padding:18px;
+  min-height:250px;font-family:var(--mono);font-size:.74rem;line-height:1.75;color:#8FE3C4;
+  white-space:pre-wrap;word-break:break-word;overflow-x:auto}
+.readout .err{color:#FF8A4C}
+.readout .dim{color:#5A544E}
+.readout .key{color:#FFD9C2}
+.reader-verdict{padding:18px 26px;border-top:1px solid rgba(255,255,255,.1);background:var(--char-2)}
+.reader-verdict p{margin:0;font-size:.94rem;line-height:1.62;color:#CFC7BF}
+.reader-verdict b{color:#fff}
+.reader-verdict .flag{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;
+  text-transform:uppercase;font-weight:600;display:block;margin-bottom:8px}
+.flag.no{color:var(--ember-lt)}
+.flag.yes{color:#6ED0AC}
+@media(max-width:820px){
+  .reader-body{grid-template-columns:1fr}
+  .reader-pane+.reader-pane{border-left:none;border-top:1px solid rgba(255,255,255,.1)}
+  .reader-tab{font-size:.6rem;padding:13px 6px;letter-spacing:.08em}
+}
+
+/* ---------- code block ---------- */
+.code{background:var(--char);border-radius:var(--r);padding:22px;overflow-x:auto;
+  font-family:var(--mono);font-size:.78rem;line-height:1.7;color:#CFC7BF;
+  -webkit-overflow-scrolling:touch;margin:0 0 8px}
+.code .k{color:#FF8A4C}
+.code .s{color:#8FE3C4}
+.code .c{color:#6E655B;font-style:italic}
+.code-cap{font-family:var(--mono);font-size:.72rem;color:var(--slate-lt);margin:0 0 24px;line-height:1.6}
+
+/* ---------- calculator ---------- */
+.calc-out{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.calc-cell{background:var(--char);border-radius:var(--r);padding:20px;text-align:center}
+.calc-cell b{display:block;font-family:var(--disp);font-weight:800;font-size:2rem;
+  color:var(--ember-lt);letter-spacing:-.035em;line-height:1;margin-bottom:8px}
+.calc-cell span{font-family:var(--mono);font-size:.64rem;letter-spacing:.11em;
+  text-transform:uppercase;color:#9E958C;line-height:1.5;display:block}
+@media(max-width:600px){.calc-out{grid-template-columns:1fr}}
+
+/* ---------- step list ---------- */
+.steps{counter-reset:st;list-style:none;padding:0;margin:0}
+.steps > li{counter-increment:st;position:relative;padding:0 0 30px 62px;margin:0}
+.steps > li::before{content:counter(st,decimal-leading-zero);position:absolute;left:0;top:0;
+  font-family:var(--mono);font-size:.82rem;font-weight:600;color:var(--ember-dk);
+  border:1.5px solid var(--rule-dk);border-radius:var(--r);width:44px;height:44px;
+  display:flex;align-items:center;justify-content:center;background:var(--paper)}
+.steps > li h3{margin-bottom:9px;font-size:1.15rem}
+.steps > li p{font-size:.98rem;line-height:1.68}
+.steps > li p:last-child{margin-bottom:0}
+.steps > li::after{content:"";position:absolute;left:22px;top:52px;bottom:8px;width:1px;
+  background:var(--rule)}
+.steps > li:last-child::after{display:none}
+@media(max-width:600px){
+  .steps > li{padding-left:52px}
+  .steps > li::before{width:38px;height:38px;font-size:.74rem}
+  .steps > li::after{left:19px;top:46px}
+}
+</style>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section style="padding-top:52px;padding-bottom:44px">
+  <div class="wrap">
+    <div style="max-width:920px">
+      <span class="eyebrow">Guide 01 &middot; <a href="/" style="color:inherit">Restaurant SEO</a> &rsaquo; Menu SEO</span>
+      <h1>Restaurant menu SEO: how to make every dish you sell findable</h1>
+      <p class="lede">Your menu is the densest, most search-relevant document your restaurant will ever produce &mdash; sixty to ninety dish names, ingredients, prices, dietary markers, all of it describing exactly what people are searching for. <strong>Most restaurants have saved it as a picture.</strong> This guide explains what that costs, what to do instead, and how to do it without hiring anyone if you would rather not.</p>
+      <div class="hero-cta">
+        <a href="#reader" class="btn btn-p">See what a machine reads</a>
+        <a href="#build" class="btn btn-o">Skip to the how-to</a>
+      </div>
+      <div class="hero-meta">
+        <span>Updated 12 August 2026</span>
+        <span>~25 min read</span>
+        <span>Includes copy-paste code</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SIGNATURE : MACHINE READER ============ -->
+<section class="sec-tight" id="reader" style="padding-top:0">
+  <div class="wrap">
+    <div class="reader">
+      <div class="reader-tabs" aria-label="Menu format">
+        <button class="reader-tab on" type="button" aria-pressed="true" data-fmt="photo">Photographed menu</button>
+        <button class="reader-tab" type="button" aria-pressed="false" data-fmt="pdf">PDF menu</button>
+        <button class="reader-tab" type="button" aria-pressed="false" data-fmt="html">HTML menu + schema</button>
+      </div>
+      <div class="reader-body">
+        <div class="reader-pane">
+          <span class="reader-lbl">What your guest sees</span>
+          <div id="menuMock"></div>
+        </div>
+        <div class="reader-pane">
+          <span class="reader-lbl">What Google and ChatGPT extract</span>
+          <div class="readout" id="menuRead" aria-live="polite"></div>
+        </div>
+      </div>
+      <div class="reader-verdict" id="menuVerdict"></div>
+    </div>
+    <p class="note" style="max-width:820px">An illustration, not a live crawl &mdash; but the failure modes shown are the real ones. The identical menu, in three formats, produces three completely different amounts of machine-readable information.</p>
+  </div>
+</section>
+
+<!-- ============ WHAT IT IS ============ -->
+<section id="what">
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <div class="answer">
+          <p class="q">What is restaurant menu SEO?</p>
+          <p>Restaurant menu SEO is the practice of publishing your menu as readable text on your own website, structured so search engines and AI assistants can identify each dish, its description, its price and its dietary attributes. In practice that means an HTML page rather than a PDF or photograph, organized with real headings and sections, supported by Menu structured data. The purpose is to make every item you sell into a phrase your restaurant can be found for &mdash; particularly in dish-level searches, which carry the highest purchase intent in the category.</p>
+        </div>
+
+        <p>Here is the arithmetic that makes this the highest-leverage change most restaurants can make. A typical independent restaurant sells somewhere between sixty and ninety distinct items. Each one has a name. Many have a regional or specific name that people search by &mdash; birria, khao soi, cacio e pepe, oxtail, shakshuka. Each has ingredients. Many carry a dietary attribute that somebody is specifically hunting for.</p>
+
+        <p>Published as text, all of that becomes findable. Published as a photograph, none of it does. There is no partial credit and no gradual penalty. The words are either words or they are pixels.</p>
+
+        <p>The cruel part is that this usually happens to restaurants that are trying hard. Somebody paid a designer for a beautiful menu. The designer delivered a PDF, because that is what designers deliver. Somebody uploaded it to the website because it looked exactly like the printed one. Every step was reasonable and the result is that the restaurant is invisible for its own signature dish.</p>
+      </div>
+
+      <div>
+        <div class="takeaway">
+          <h3>What this guide covers</h3>
+          <ul>
+            <li><b>What machines actually extract</b> from photo, PDF and HTML menus &mdash; demonstrated above rather than asserted.</li>
+            <li><b>The Google menu tool nuance</b> that most advice gets wrong, including what it does and does not fix.</li>
+            <li><b>A step-by-step build</b> you can hand to whoever runs your website, or follow yourself.</li>
+            <li><b>Copy-paste structured data</b> for menus, sections, items, prices and dietary flags.</li>
+            <li><b>Dish-level pages</b>, when they are worth it and when they are keyword spam.</li>
+            <li><b>Updating prices</b> without losing what you built.</li>
+          </ul>
+        </div>
+
+        <div class="cta-band" style="margin-top:22px">
+          <div>
+            <h3>Would rather it was just done?</h3>
+            <p>We convert menus to structured, indexable pages as a fixed-scope project &mdash; usually a few days, not a retainer. Call and describe your menu; we will tell you what it involves before quoting anything.</p>
+          </div>
+          <a href="tel:+18004818638" class="btn btn-p">1-800-481-8638</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pull">
+      <p>A menu is not a design asset that happens to be online. It is a database of everything you sell, and its format decides whether that database exists.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE COST ============ -->
+<section class="sec-warm" id="cost">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">The stakes</span>
+      <h2>What an unreadable menu actually costs</h2>
+      <p class="lede">Not in vague visibility terms. In specific, nameable searches you cannot appear for, and specific guests who leave.</p>
+    </div>
+
+    <div class="grid g3">
+      <div class="card">
+        <span class="card-num">LOSS 01</span>
+        <h3>Every dish-level search</h3>
+        <p>Someone searching <em>birria tacos near me</em> has already decided what they want to eat. They are only choosing where. That is the highest-intent search in the restaurant category and it is decided almost entirely by menu text. If your dishes are pixels, you are not a candidate.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">LOSS 02</span>
+        <h3>Dietary and allergen searches</h3>
+        <p>A guest with celiac disease searching for genuinely gluten-free options is a high-loyalty repeat customer who brings a table with them. They filter by what they can verify before arriving. An unreadable menu makes verification impossible, so they choose the restaurant that told them.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">LOSS 03</span>
+        <h3>Accurate AI recommendations</h3>
+        <p>When an assistant builds a recommendation it needs something to say about each option. A restaurant with a readable menu supplies dishes, prices and dietary detail. A restaurant with a photographed menu supplies a name and an address, which is not enough to recommend confidently.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">LOSS 04</span>
+        <h3>Guests who simply give up</h3>
+        <p>A PDF on a phone means a download, a wait, then pinching and dragging around a page designed for paper. A meaningful share of people abandon it. You never hear about this because nobody emails a restaurant to report that they gave up on the menu.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">LOSS 05</span>
+        <h3>Accessibility, and the exposure with it</h3>
+        <p>A screen reader cannot read a photograph of a menu, and often handles an untagged PDF badly. Beyond excluding guests who want to spend money with you, restaurant website accessibility has been an active area of ADA litigation for years.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">LOSS 06</span>
+        <h3>The ability to change a price</h3>
+        <p>When the menu is an image, every price change is a design job. So prices drift out of date, guests arrive expecting last year's numbers, and the gap between your website and your reality becomes a service problem at the table.</p>
+      </div>
+    </div>
+
+    <div class="answer" style="margin-top:34px">
+      <p class="q">Are image menus bad for SEO?</p>
+      <p>Yes, and more completely than most people assume. A photographed or fully designed image menu contains no text at all from a machine's point of view &mdash; the dish names are shapes. Search engines can run image recognition and sometimes guess at content, but they cannot reliably associate a dish with a price, a section, or a dietary attribute, and they will not confidently surface your restaurant for a dish they only think they saw. The fix is not better image quality. It is publishing the same content as text.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GOOGLE MENU TOOL ============ -->
+<section id="google-tool">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">A nuance worth understanding</span>
+      <h2>&ldquo;But Google can generate a menu from my photo now&rdquo;</h2>
+      <p class="lede">True, and it is genuinely useful. It also does not solve the problem most people think it solves, and understanding why makes the whole picture clearer.</p>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <p>Google added an AI tool inside the Business Profile dashboard that takes an uploaded photo or PDF of your menu and converts it into a structured menu on your profile &mdash; item names, descriptions and prices, laid out properly. You find it under <strong>Edit menu &rarr; Photos of menu &rarr; Generate a menu</strong>, review what it produced, and publish.</p>
+
+        <p>You should absolutely use it. It is free, it takes minutes, and menu content on your profile helps Google match you to dish and cuisine queries in Search and Maps.</p>
+
+        <p>But notice exactly what happened there. <strong>Google could not use your menu until it had been converted into structured data.</strong> The company with the best document understanding in the world built a dedicated AI tool whose entire job is turning your picture into machine-readable fields, because the picture on its own was not usable. That is not an argument that format does not matter. It is the strongest possible confirmation that it does.</p>
+
+        <h3 style="margin-top:32px">Three things the tool does not do</h3>
+        <p><strong>It does not fix your website.</strong> The structured menu lives on your Google Business Profile. The PDF on your own site is still a PDF, still unreadable, still contributing nothing to your own domain's ability to rank for dish searches.</p>
+
+        <p><strong>It does not reach the other assistants.</strong> ChatGPT does not read your Google Business Profile menu. Neither does Perplexity. They read the open web &mdash; which means your website. Publishing the menu properly on your own domain is what makes it available everywhere rather than on one platform.</p>
+
+        <p><strong>It is a one-way, manual sync.</strong> The extraction is experimental, historically limited to one image at a time, and it does not update itself when your menu changes. Every price change means repeating the process, on top of whatever you did on your own site.</p>
+
+        <p style="margin-bottom:0">The right way to use it: publish a proper HTML menu on your website as the source of truth, <em>and</em> populate the Google menu from the same content. Two surfaces, one set of facts, both readable.</p>
+      </div>
+
+      <div>
+        <div class="card">
+          <h4>Where your menu should exist</h4>
+          <ul class="check" style="margin-bottom:0">
+            <li><strong>Your own website, as HTML text</strong> &mdash; the source of truth, readable by every search engine and every AI assistant.</li>
+            <li><strong>Menu structured data on that page</strong> &mdash; so machines read fields rather than guessing from layout.</li>
+            <li><strong>The menu URL field on your Google profile</strong> &mdash; pointing at that page, not a PDF.</li>
+            <li><strong>The Google detailed menu</strong> &mdash; generated from the same content, published on the profile.</li>
+            <li><strong>Anywhere guests tap at the table</strong> &mdash; QR or NFC, both opening the same real page.</li>
+          </ul>
+        </div>
+
+        <div class="answer">
+          <p class="q">Should I still upload a menu photo to my Google profile?</p>
+          <p>Yes. Photos of the physical menu are useful to guests and give Google's tool something to work from. The mistake is treating the photo as your menu rather than as an image of it. Upload the photo, generate the detailed menu from it, and separately publish the real text version on your website. They serve different purposes and you want both.</p>
+        </div>
+
+        <div class="cta-band">
+          <div>
+            <h3>One menu, published everywhere it needs to be</h3>
+            <p><a href="https://linkrestaurants.com/">LinkRestaurants publishes digital restaurant menus</a> as real indexable pages with structured data built in, with tap-to-open NFC or QR for the table. Update a price once and every surface reflects it.</p>
+          </div>
+          <a href="https://linkrestaurants.com/" class="btn btn-p">See how it works</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BUILD ============ -->
+<section class="sec-warm" id="build">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">The how-to</span>
+      <h2>Building a menu page that machines can read</h2>
+      <p class="lede">Six steps. None of them require a redesign, and most can be done by whoever currently updates your website. If nobody currently updates your website, that is the actual problem and step six addresses it.</p>
+    </div>
+
+    <div class="mid">
+      <ol class="steps">
+        <li>
+          <h3>Put the menu on its own page, on your own domain</h3>
+          <p>A dedicated URL like <code>/menu/</code> rather than a section buried on the homepage, and definitely not a link out to a delivery marketplace. This gives you a page that can rank in its own right, that you can link to from your Google profile, and that you control completely.</p>
+          <p>If you run several distinct menus &mdash; dinner, brunch, bar, catering &mdash; give each its own page. They serve different searches at different times of day and they will compete with each other if crammed together.</p>
+        </li>
+
+        <li>
+          <h3>Type the menu as real text, with real headings</h3>
+          <p>Each menu section becomes an actual heading in the page &mdash; Starters, Tacos, From the Grill, Desserts. Each dish is text: the name, a short description, the price. This is the entire technical requirement and it is genuinely as simple as it sounds.</p>
+          <p>Resist the temptation to reproduce the printed design exactly. The printed menu was laid out for a piece of paper held at a table. The web version is read on a phone by someone who may be standing outside deciding whether to come in. Clean, scannable, sectioned text beats a faithful reproduction every time.</p>
+        </li>
+
+        <li>
+          <h3>Write descriptions that say what things actually are</h3>
+          <p>&ldquo;Chef's special preparation&rdquo; is invisible. &ldquo;Slow-braised beef shank with guajillo, served with consomm&eacute; for dipping&rdquo; contains half a dozen phrases people search for and tells a guest whether they want it.</p>
+          <p>Include the regional or traditional name alongside a plain-language description where they differ. Somebody searching <em>khao soi</em> and somebody searching <em>Thai curry noodle soup</em> are looking for the same bowl and should both find you. Write for the guest first; the search benefit follows automatically because guests and search engines want the same clarity.</p>
+        </li>
+
+        <li>
+          <h3>Mark dietary attributes explicitly and honestly</h3>
+          <p>Vegetarian, vegan, gluten-free, contains nuts, spicy. Use plain words on the page rather than a legend of symbols &mdash; symbols do not carry meaning to a machine and are frequently missed by guests too.</p>
+          <p>Be precise about what you can guarantee. &ldquo;Made without gluten ingredients, prepared in a kitchen that handles flour&rdquo; is more useful and far safer than a bare &ldquo;gluten free&rdquo; label. Guests with real allergies read that distinction carefully and trust the restaurant that made it.</p>
+        </li>
+
+        <li>
+          <h3>Add Menu structured data</h3>
+          <p>A block of JSON-LD in the page that states explicitly what a machine would otherwise have to infer: this is a menu, these are sections, this is an item, this is its price, this one suits a vegan diet. Full code in the next section.</p>
+          <p>Start light if the full version is daunting: adding <code>hasMenu</code> to your Restaurant markup, pointing at the menu page URL, already helps considerably. Expand into item-level markup for signature and dietary-flagged dishes where it matters most.</p>
+        </li>
+
+        <li>
+          <h3>Make sure someone can update it in five minutes</h3>
+          <p>This is the step that decides whether any of the previous five survive. If changing a price requires emailing an agency and waiting three days, the menu will drift out of date within a season and everything above becomes wrong information published very legibly.</p>
+          <p>Whoever runs your floor should be able to change a price, 86 an item, or add a special without asking permission. If your current setup does not allow that, fixing it is worth more than any optimization on this page.</p>
+        </li>
+      </ol>
+    </div>
+
+    <div class="cta-band" style="margin-top:12px">
+      <div>
+        <h3>Step six is where most restaurants get stuck</h3>
+        <p>If nobody at your restaurant can edit the website, that is fixable and it is not expensive. <a href="https://searchconverts.com/">Search Converts builds restaurant websites</a> on static HTML, WordPress, Shopify or fully custom &mdash; including direct ordering apps that keep the commission in your business instead of a marketplace.</p>
+      </div>
+      <a href="https://searchconverts.com/" class="btn btn-p">Talk about a build</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCHEMA ============ -->
+<section id="schema">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Technical</span>
+      <h2>Menu structured data, with code you can copy</h2>
+      <p class="lede">Structured data is invisible to your guests and decisive for machines. It removes every guess: this string is a dish, this number is a price, this item suits a vegan diet.</p>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3>The lightweight version</h3>
+        <p>If you do nothing else, do this. It tells search engines your restaurant has a menu and exactly where to find it, inside the Restaurant markup that should already exist on your site.</p>
+
+        <div class="code"><span class="c">// inside your Restaurant schema</span>
+{
+  <span class="k">"@context"</span>: <span class="s">"https://schema.org"</span>,
+  <span class="k">"@type"</span>: <span class="s">"Restaurant"</span>,
+  <span class="k">"name"</span>: <span class="s">"Casa Verde"</span>,
+  <span class="k">"servesCuisine"</span>: <span class="s">"Mexican"</span>,
+  <span class="k">"priceRange"</span>: <span class="s">"$$"</span>,
+  <span class="k">"telephone"</span>: <span class="s">"+13035551234"</span>,
+  <span class="k">"hasMenu"</span>: <span class="s">"https://example.com/menu/"</span>,
+  <span class="k">"acceptsReservations"</span>: <span class="s">"True"</span>
+}</div>
+        <p class="code-cap">Note: schema.org superseded <code>menu</code> with <code>hasMenu</code>, but both function identically and Google's documentation still references either. Use a fully qualified URL.</p>
+
+        <h3 style="margin-top:34px">Why bother with the detailed version</h3>
+        <p>The lightweight version tells a machine where to look. The detailed version tells it what it will find, item by item, without having to parse a layout. That difference matters most for AI assistants building a recommendation, because it gives them individual dishes with prices and dietary flags they can quote directly rather than inferred from prose.</p>
+
+        <p>A reasonable middle path for most restaurants: light markup site-wide, plus detailed item markup for your signature dishes and anything carrying a dietary attribute. Those are the items most likely to be searched by name.</p>
+
+        <div class="answer">
+          <p class="q">Does menu schema still work now that FAQ rich results are gone?</p>
+          <p>Yes, and the two are separate things. Google deprecated FAQ rich results in May 2026, so the expandable question boxes no longer appear in search results &mdash; but Google confirmed it still parses FAQPage markup to understand pages, and that markup is now primarily valuable for AI citation rather than SERP display. Menu structured data was never a FAQ feature and remains actively used. More broadly, the value of structured data has shifted from &ldquo;earns a visual rich result&rdquo; to &ldquo;gives AI systems facts they can quote accurately,&rdquo; which for restaurants is the more valuable of the two anyway.</p>
+        </div>
+      </div>
+
+      <div>
+        <h3>The detailed version</h3>
+        <p>Nested sections and items with prices and dietary flags. Trimmed here to two sections for readability &mdash; the pattern repeats for as many as you have.</p>
+
+        <div class="code">{
+  <span class="k">"@context"</span>: <span class="s">"https://schema.org"</span>,
+  <span class="k">"@type"</span>: <span class="s">"Menu"</span>,
+  <span class="k">"name"</span>: <span class="s">"Dinner Menu"</span>,
+  <span class="k">"inLanguage"</span>: <span class="s">"en-US"</span>,
+  <span class="k">"hasMenuSection"</span>: [
+    {
+      <span class="k">"@type"</span>: <span class="s">"MenuSection"</span>,
+      <span class="k">"name"</span>: <span class="s">"Tacos"</span>,
+      <span class="k">"hasMenuItem"</span>: [
+        {
+          <span class="k">"@type"</span>: <span class="s">"MenuItem"</span>,
+          <span class="k">"name"</span>: <span class="s">"Birria Tacos"</span>,
+          <span class="k">"description"</span>: <span class="s">"Slow-braised beef shank with guajillo, three per order, consommé for dipping"</span>,
+          <span class="k">"offers"</span>: {
+            <span class="k">"@type"</span>: <span class="s">"Offer"</span>,
+            <span class="k">"price"</span>: <span class="s">"16.00"</span>,
+            <span class="k">"priceCurrency"</span>: <span class="s">"USD"</span>
+          }
+        },
+        {
+          <span class="k">"@type"</span>: <span class="s">"MenuItem"</span>,
+          <span class="k">"name"</span>: <span class="s">"Hongos Tacos"</span>,
+          <span class="k">"description"</span>: <span class="s">"Roasted mushrooms, salsa verde, pickled onion"</span>,
+          <span class="k">"suitableForDiet"</span>: [
+            <span class="s">"https://schema.org/VeganDiet"</span>,
+            <span class="s">"https://schema.org/GlutenFreeDiet"</span>
+          ],
+          <span class="k">"offers"</span>: {
+            <span class="k">"@type"</span>: <span class="s">"Offer"</span>,
+            <span class="k">"price"</span>: <span class="s">"14.00"</span>,
+            <span class="k">"priceCurrency"</span>: <span class="s">"USD"</span>
+          }
+        }
+      ]
+    },
+    {
+      <span class="k">"@type"</span>: <span class="s">"MenuSection"</span>,
+      <span class="k">"name"</span>: <span class="s">"Postres"</span>,
+      <span class="k">"hasMenuItem"</span>: [
+        {
+          <span class="k">"@type"</span>: <span class="s">"MenuItem"</span>,
+          <span class="k">"name"</span>: <span class="s">"Tres Leches"</span>,
+          <span class="k">"description"</span>: <span class="s">"House cake soaked in three milks, cinnamon cream"</span>,
+          <span class="k">"suitableForDiet"</span>: <span class="s">"https://schema.org/VegetarianDiet"</span>,
+          <span class="k">"offers"</span>: {
+            <span class="k">"@type"</span>: <span class="s">"Offer"</span>,
+            <span class="k">"price"</span>: <span class="s">"9.00"</span>,
+            <span class="k">"priceCurrency"</span>: <span class="s">"USD"</span>
+          }
+        }
+      ]
+    }
+  ]
+}</div>
+        <p class="code-cap">Validate in Google's Rich Results Test and the Schema Markup Validator before publishing. Keep it to one JSON-LD block per page and strip comments.</p>
+
+        <div class="card">
+          <h4>Allergens: the honest limitation</h4>
+          <p>Schema.org has no native allergen type as of 2026. <code>suitableForDiet</code> covers the diet-based cases &mdash; <code>VeganDiet</code>, <code>VegetarianDiet</code>, <code>GlutenFreeDiet</code>, <code>HalalDiet</code>, <code>KosherDiet</code>, <code>LowLactoseDiet</code> &mdash; but does not express shellfish, egg or tree nut. The established workaround is <code>additionalProperty</code> with a <code>PropertyValue</code>.</p>
+          <p style="margin-bottom:0">Whatever you mark up, the plain text on the page still has to say it. Structured data that contradicts or exceeds what a guest can read is against Google's policies and, far more importantly, is dangerous when the subject is allergens.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="answer" style="margin-top:32px">
+      <p class="q">Will menu structured data get me a rich result?</p>
+      <p>Possibly, but that is no longer the main reason to do it. Google shows menu information in Search and Maps for many restaurants, largely drawn from Business Profile data and crawled menu pages. The more durable benefit in 2026 is accuracy in AI answers: when someone asks an assistant what you serve, whether you have vegan options, or what your tacos cost, structured data is what lets it answer correctly and confidently instead of vaguely or not at all. Treat rich results as a bonus and machine comprehension as the point.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DISH PAGES ============ -->
+<section class="sec-warm" id="dish-pages">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Going further</span>
+      <h2>Dish-level pages: when they work and when they are spam</h2>
+      <p class="lede">A recurring piece of advice is to build a separate page for every dish. Sometimes that is genuinely powerful. Usually it produces sixty thin pages that help nobody.</p>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3>The honest test</h3>
+        <p>Ask whether you could write something substantial and true about the dish that would not fit on the menu page. Not padding &mdash; actual content a curious person would want.</p>
+
+        <p>For your signature item, frequently yes. The dish has a story: where the recipe came from, how long the braise takes, why you use that chili, what makes yours different from the version down the street. Photographs. What to order with it. That is a real page and it can rank for a real search.</p>
+
+        <p>For your side salad, no. There is nothing to say beyond what the menu line already says, and a page saying it again in more words is exactly the thin content Google has spent years demoting.</p>
+
+        <p><strong>A workable rule:</strong> dedicated pages for the three to six dishes you are actually known for, plus any dish with genuine search demand in your area. Everything else lives on the menu page, which is entirely sufficient for it to be findable.</p>
+
+        <h3 style="margin-top:32px">What belongs on a dish page</h3>
+        <ul class="check">
+          <li>The dish name as the page heading, plus regional or alternate names in the text</li>
+          <li>What is actually in it and how it is made, in enough detail to be interesting</li>
+          <li>Real photographs of your version, not stock imagery</li>
+          <li>Price, availability, and whether it is seasonal or limited</li>
+          <li>Dietary information stated precisely</li>
+          <li>Links back to the full menu and to reservations or ordering</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="answer">
+          <p class="q">How do I rank for a specific dish in my city?</p>
+          <p>The requirements are ordinary and most restaurants miss the first one. The dish must appear as text on your website, ideally with a description containing the words people use for it. Your restaurant needs the ordinary local signals &mdash; a complete Google Business Profile, reviews, a correct address. It helps considerably if reviews or local coverage mention the dish by name, because that is independent corroboration rather than your own claim. And for competitive dishes in competitive cities, a dedicated page with real substance outperforms a menu line. Note the order: publishing the dish as text is the prerequisite, not the optimization.</p>
+        </div>
+
+        <div class="card">
+          <h4>The mistake to avoid</h4>
+          <p>Building near-identical pages that swap one dish name &mdash; &ldquo;Best Birria Tacos in Denver,&rdquo; &ldquo;Best Carnitas Tacos in Denver,&rdquo; &ldquo;Best Al Pastor Tacos in Denver&rdquo; &mdash; with the same three paragraphs rearranged.</p>
+          <p style="margin-bottom:0">This pattern was mildly effective years ago and now reliably produces a set of pages that either rank for nothing or drag down the pages that would otherwise have ranked. If you cannot write genuinely different content for each, you do not want each.</p>
+        </div>
+
+        <figure style="margin-top:22px">
+          <img src="/images/restaurant-seo-agency.jpg" alt="A finished dish being plated in a restaurant kitchen" width="1200" height="800" loading="lazy">
+          <figcaption>The dishes worth a dedicated page are the ones you would tell a guest about unprompted. That instinct is a better guide than a keyword tool.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QR VS NFC ============ -->
+<section id="qr-nfc">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">At the table</span>
+      <h2>QR menus, NFC tags, and what neither of them does</h2>
+      <p class="lede">This comes up in almost every conversation, usually because a vendor has framed it as a search decision. It is not one, and being clear about that saves money.</p>
+    </div>
+
+    <div class="answer" style="margin-bottom:32px">
+      <p class="q">Do NFC menus improve SEO compared to QR codes?</p>
+      <p>No. Both are simply methods of opening a web address at the table &mdash; one by camera, one by tap. Neither is read by a search engine and neither affects rankings in any way. What determines whether your menu is searchable is the destination they open. An NFC tag pointing at a PDF is exactly as invisible as a QR code pointing at the same PDF. Choose between them on guest experience and durability, and make the SEO decision separately, about the page.</p>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <h3>QR codes</h3>
+        <p><strong>Works with:</strong> any phone camera, no app, universally understood since 2020.</p>
+        <p><strong>Costs:</strong> effectively nothing. You can print them yourself.</p>
+        <p><strong>Struggles with:</strong> dim rooms, glare on a laminated card, guests who need to find their camera app, and worn or scratched table tents. Also carries a slight association with cost-cutting for some diners.</p>
+        <p style="margin-bottom:0"><strong>Best for:</strong> casual rooms, patios, high-turnover service, anywhere you want the cheapest thing that works everywhere.</p>
+      </div>
+
+      <div class="card">
+        <h3>NFC tags</h3>
+        <p><strong>Works with:</strong> a tap, no camera, no app, no aiming. Reliable in low light where a code is hard to scan.</p>
+        <p><strong>Costs:</strong> more than printing, but modest per table.</p>
+        <p><strong>Struggles with:</strong> a small number of older devices, and guests who have not encountered it before and need a one-line prompt on the tag.</p>
+        <p style="margin-bottom:0"><strong>Best for:</strong> dim or upscale rooms, bar tops, anywhere the physical experience is part of what you are selling and a printed code would look cheap.</p>
+      </div>
+    </div>
+
+    <div class="pull">
+      <p>Vendors selling the tag as an SEO product are selling the wrong half of the solution. The tag is hardware. The page is the asset.</p>
+    </div>
+
+    <div class="cta-band">
+      <div>
+        <h3>If you want both halves</h3>
+        <p><a href="https://linkrestaurants.com/">LinkRestaurants provides NFC restaurant menus</a> where the tag opens a real indexable page with structured data already in place &mdash; so the same asset serves the guest at the table and the search engines at the same time. Setup, tags, and unlimited menu changes are handled.</p>
+      </div>
+      <a href="https://linkrestaurants.com/" class="btn btn-p">See menu pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UPDATING ============ -->
+<section class="sec-dark" id="updating">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow on-dark">Maintenance</span>
+      <h2>Changing your menu without losing what you built</h2>
+      <p class="lede">Menus change constantly &mdash; seasons, costs, a cook who left with the recipe. The goal is a page that absorbs change rather than one that breaks every time you raise a price.</p>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3>Keep the URL, change the contents</h3>
+        <p>The single most common self-inflicted wound is changing the menu page's address. A restaurant moves from <code>/menu/</code> to <code>/fall-menu-2026/</code> and every link, every search ranking, and every reference built up over years now points at nothing.</p>
+        <p>Keep one stable URL per menu type. The dinner menu lives at <code>/menu/</code> or <code>/dinner-menu/</code> forever, and the contents change underneath it. If you genuinely must move a page, set up a 301 redirect from the old address to the new one so the accumulated value transfers.</p>
+
+        <h3 style="margin-top:30px">Seasonal menus</h3>
+        <p>Handle seasonality inside the permanent page rather than by creating and deleting pages. A section headed &ldquo;Autumn additions&rdquo; on the main menu page works better than an <code>/autumn-menu/</code> page that gets deleted in November and takes its rankings with it.</p>
+        <p>The exception is a genuinely separate service &mdash; brunch, a tasting menu, catering. Those are permanent categories that deserve permanent pages, even if the dishes inside them rotate.</p>
+      </div>
+
+      <div>
+        <div class="card">
+          <h4>A maintenance rhythm that holds</h4>
+          <ul class="check" style="margin-bottom:0">
+            <li><strong>Same day:</strong> price changes and 86'd items. A wrong price on the website is a service problem waiting at the table.</li>
+            <li><strong>Weekly:</strong> specials and rotating items, if you publish them.</li>
+            <li><strong>Each season:</strong> full read-through for dishes you quietly stopped serving. These accumulate invisibly.</li>
+            <li><strong>Twice yearly:</strong> confirm the structured data still matches the visible menu, and that the Google profile menu has not drifted from the site.</li>
+          </ul>
+        </div>
+
+        <div class="answer">
+          <p class="q">Will changing my menu hurt my search rankings?</p>
+          <p>Changing the contents of a stable page will not. Search engines expect a restaurant menu to change and a page that updates regularly reads as a live business rather than an abandoned one. What does cause damage is changing the page's URL without a redirect, deleting pages that had accumulated value, or letting the page go untouched for years until it describes a restaurant that no longer exists. Update freely; just keep the address.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALCULATOR ============ -->
+<section id="calculator">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Free tool</span>
+      <h2>What is currently locked inside your menu?</h2>
+      <p class="lede">A rough count of the searchable material sitting in a menu that machines cannot read. Not a traffic projection &mdash; a count of phrases that either exist in text or do not.</p>
+    </div>
+
+    <div class="tool" style="max-width:860px">
+      <div class="tool-hd">
+        <h3>Menu content estimator</h3>
+        <p>Two numbers, and how your menu is currently published.</p>
+      </div>
+      <div class="tool-bd">
+        <div class="tool-row" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:20px">
+          <div class="fld">
+            <label for="mDishes">Roughly how many dishes on your menu?</label>
+            <input type="number" id="mDishes" value="62" min="1" max="500" inputmode="numeric">
+          </div>
+          <div class="fld">
+            <label for="mDiet">How many carry a dietary attribute?</label>
+            <input type="number" id="mDiet" value="14" min="0" max="500" inputmode="numeric">
+          </div>
+          <div class="fld">
+            <label for="mFmt">How is it published today?</label>
+            <select id="mFmt">
+              <option value="0">PDF, image, or no online menu</option>
+              <option value="1">Text on a web page</option>
+              <option value="2">Text with structured data</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-p btn-full" id="mBtn" type="button">Estimate my menu</button>
+
+        <div id="mOut" style="display:none;margin-top:24px">
+          <div class="calc-out">
+            <div class="calc-cell"><b id="mA">0</b><span>Dish names<br>machines can read</span></div>
+            <div class="calc-cell"><b id="mB">0</b><span>Dietary items<br>filterable</span></div>
+            <div class="calc-cell"><b id="mC">0</b><span>Searchable phrases<br>currently locked</span></div>
+          </div>
+          <div id="mMsg" style="margin-top:20px"></div>
+          <p class="note">Phrase estimate assumes roughly three searchable variants per dish &mdash; the item name, a key ingredient or preparation, and a cuisine or course association. Deliberately conservative; a descriptive menu produces considerably more.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MISTAKES ============ -->
+<section class="sec-warm" id="mistakes">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Field notes</span>
+      <h2>Menu mistakes we find in nearly every audit</h2>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <span class="card-num">01</span>
+        <h3>The menu links to a delivery marketplace</h3>
+        <p>The website's menu button opens DoorDash. The restaurant has handed its most valuable content, and the order, to a platform charging commission. Publish your own menu and link ordering separately.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">02</span>
+        <h3>Prices removed &ldquo;so we can change them&rdquo;</h3>
+        <p>Understandable and counterproductive. Price is one of the strongest filters diners apply, and a menu without prices reads as expensive or evasive. It also removes a field AI assistants use for budget-constrained queries. Publish prices and make them easy to edit.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">03</span>
+        <h3>Dietary information hidden in a symbol legend</h3>
+        <p>A small V, GF or leaf next to a dish, explained in a footnote. Machines read none of it and a fair number of guests miss it too. Use words in the item description.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">04</span>
+        <h3>The menu opens in a viewer or lightbox</h3>
+        <p>Some site builders display menus inside an embedded document viewer that loads content via script after the page renders. Guests can read it; crawlers frequently cannot. If your menu text does not appear when you view the page source, treat it as an image.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">05</span>
+        <h3>One page holding four different menus</h3>
+        <p>Dinner, brunch, happy hour and catering stacked on a single page compete with each other and rank for none of them cleanly. Split them, link them to each other, and note the serving times on each.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">06</span>
+        <h3>Structured data that contradicts the page</h3>
+        <p>Markup listing dishes or prices that are not visible to a guest. This is a policy violation that can earn a manual action, and it usually happens accidentally when the markup is not updated alongside the menu. Keep them in sync or keep the markup light.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap narrow">
+    <div class="sec-head">
+      <span class="eyebrow">Questions</span>
+      <h2>Restaurant menu SEO questions</h2>
+    </div>
+    <div class="faq">
+
+      <details><summary>What is restaurant menu SEO?</summary><div class="faq-a"><p>Restaurant menu SEO is publishing your menu as readable text on your own website, structured so search engines and AI assistants can identify each dish, its description, its price and its dietary attributes. In practice that means an HTML page rather than a PDF or photograph, organized with real headings, supported by Menu structured data. The purpose is to make every item you sell into a phrase your restaurant can be found for, particularly in dish-level searches, which carry the highest purchase intent in the category.</p></div></details>
+
+      <details><summary>Can Google read a PDF menu?</summary><div class="faq-a"><p>Poorly, and often not at all. Google can sometimes extract raw text from a PDF but cannot reliably interpret its structure — which line is a dish, which number is a price, which heading is a section, which item is vegetarian. A photographed or fully designed menu is worse, because the words are pixels rather than text. AI assistants hit exactly the same wall. Google's own AI menu tool exists specifically to convert these files into structured fields, which is the clearest evidence that the raw file is not usable on its own.</p></div></details>
+
+      <details><summary>Are image menus bad for SEO?</summary><div class="faq-a"><p>Yes, and completely rather than partially. A photographed or designed image menu contains no text from a machine's point of view — the dish names are shapes. Search engines can attempt image recognition but will not confidently surface your restaurant for a dish they only think they saw, and they cannot associate that dish with a price, a section or a dietary attribute. The fix is not a higher-resolution image; it is publishing the same content as text.</p></div></details>
+
+      <details><summary>How do I make my restaurant menu searchable on Google?</summary><div class="faq-a"><p>Put it on its own page on your own domain as real text, with each section as a heading and each dish written out with a description and a price. Add Menu structured data to the page. Point the menu URL field on your Google Business Profile at that page rather than a PDF. Then separately use Google's Edit menu tool to generate a detailed menu on the profile itself from a photo or PDF, so both surfaces carry the information. The website version is the one that reaches AI assistants and other search engines.</p></div></details>
+
+      <details><summary>Does Google's AI menu generator fix my PDF problem?</summary><div class="faq-a"><p>Only on Google's own surface. The tool converts an uploaded photo or PDF into a structured menu displayed on your Google Business Profile, which is genuinely useful for Search and Maps. It does not change the PDF on your website, which remains unreadable, and it does not reach ChatGPT, Perplexity or other assistants that read the open web rather than your Google profile. Use it, but publish a proper HTML menu on your own site as the source of truth.</p></div></details>
+
+      <details><summary>Do NFC menus improve SEO compared to QR codes?</summary><div class="faq-a"><p>No. Both are simply ways of opening a web address at the table, one by camera and one by tap. Neither is read by a search engine and neither affects rankings. What determines whether your menu is searchable is the destination: an NFC tag pointing at a PDF is exactly as invisible as a QR code pointing at the same PDF. Choose between them on guest experience — NFC suits dim or upscale rooms, QR is free and works on any camera — and make the SEO decision separately, about the page they open.</p></div></details>
+
+      <details><summary>What structured data should a restaurant menu use?</summary><div class="faq-a"><p>At minimum, the hasMenu property on your Restaurant schema pointing at the menu page URL. Beyond that, the nested pattern is Menu, then hasMenuSection with MenuSection, then hasMenuItem with MenuItem, each item carrying a name, description and an Offer containing price and priceCurrency. Dietary attributes use suitableForDiet with values such as VeganDiet, VegetarianDiet or GlutenFreeDiet. Schema.org has no native allergen type as of 2026, so specific allergens are typically expressed with additionalProperty. Validate everything in Google's Rich Results Test before publishing.</p></div></details>
+
+      <details><summary>Should I create a separate page for every dish?</summary><div class="faq-a"><p>No. Build dedicated pages only for dishes you can write something substantial and true about — usually your three to six signature items, plus anything with real search demand locally. A page for your side salad has nothing to say that the menu line does not, and sixty near-identical pages that swap one dish name is the thin-content pattern Google has spent years demoting. Everything else belongs on the menu page, which is entirely sufficient for those dishes to be findable.</p></div></details>
+
+      <details><summary>Should I put prices on my online menu?</summary><div class="faq-a"><p>Yes. Price is one of the strongest filters diners apply, and a menu without prices reads as either expensive or evasive — many people will skip you rather than call to ask. It also removes a field AI assistants rely on when someone asks for somewhere under a certain budget. The usual objection is that prices change, which is really an argument for a menu you can edit in five minutes rather than an argument against publishing them.</p></div></details>
+
+      <details><summary>Will changing my menu hurt my rankings?</summary><div class="faq-a"><p>Changing the contents of a stable page will not — search engines expect a restaurant menu to change, and a regularly updated page reads as a live business. What causes damage is changing the page's URL without a 301 redirect, deleting seasonal pages that had accumulated value, or leaving the page untouched for years until it describes a restaurant that no longer exists. Keep one permanent URL per menu type and change what sits underneath it freely.</p></div></details>
+
+      <details><summary>How long does it take to see results from fixing a menu?</summary><div class="faq-a"><p>The page itself typically begins being crawled and reflected within two to six weeks. Dish-level searches often move first because there is usually little competition for them — you may be the only restaurant in your area that has actually published a given dish as text. Broader cuisine and category terms take longer and depend on the rest of your local signals. AI assistant accuracy tends to improve as the page is recrawled and corroborated elsewhere, but that timing is not predictable.</p></div></details>
+
+      <details><summary>Can I do this myself or do I need a developer?</summary><div class="faq-a"><p>Typing the menu as text on a page is something most people can do in whatever system already runs the website — it is ordinary content editing, not development. The structured data is a block of code that needs to be pasted into the page correctly, which is straightforward for anyone comfortable with HTML and awkward for anyone who is not. The realistic split is that you can do the content and may want help with the markup, or with the underlying problem if your site is one nobody at the restaurant can edit at all.</p></div></details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING CTA ============ -->
+<section class="sec-dark">
+  <div class="wrap">
+    <div class="two-col" style="align-items:center">
+      <div>
+        <span class="eyebrow on-dark">Next step</span>
+        <h2>Menus are the fastest fix we do</h2>
+        <p>Of everything covered across this site, menu conversion is the change with the shortest path between doing it and seeing something happen. It is a fixed-scope project rather than a retainer, it usually takes days, and afterwards you own an asset that works on every surface at once.</p>
+        <p>Call and describe your menu &mdash; how many items, where it currently lives, who can edit your website. We will tell you what is involved and roughly what it costs before anyone quotes anything. If the answer is that you can do it yourself with this guide, we will tell you that too.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px">
+          <a href="tel:+18004818638" class="btn btn-p">Call 1-800-481-8638</a>
+          <a href="https://eyetoad.com/" class="btn btn-o on-dark">Request an audit</a>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h4>Related reading</h4>
+          <ul class="check" style="margin-bottom:0">
+            <li><a href="/">The complete restaurant SEO guide</a> &mdash; the overview this page sits inside, covering all nine surfaces where diners search.</li>
+            <li><a href="/restaurant-ai-search/">AI search visibility</a> &mdash; how assistants choose which restaurants to name, and why menu data feeds it.</li>
+            <li><a href="/restaurant-google-maps/">Google Maps visibility</a> &mdash; the profile side, including the menu fields on your listing.</li>
+            <li><a href="/restaurant-seo-statistics/">Statistics and benchmarks</a> &mdash; the sourced data behind the figures quoted here.</li>
+            <li><a href="https://searchconverts.com/">Restaurant website design</a> &mdash; if the underlying site is the obstacle.</li>
+            <li><a href="https://restaurantsadvertising.com/">Marketing for restaurants</a> &mdash; the paid side, once the foundation is readable.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<script>
+(function(){
+"use strict";
+var $=function(id){return document.getElementById(id)};
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- HEADER + MOBILE NAV ---------- */
+var burger=$('burger'),mobnav=$('mobnav'),hdr=$('hdr');
+function measureHeader(){
+  if(!hdr)return;
+  var h=hdr.getBoundingClientRect().height;
+  document.documentElement.style.setProperty('--hdr-h',h+'px');
+  if(mobnav)mobnav.style.top=h+'px';
+}
+measureHeader();
+window.addEventListener('resize',measureHeader);
+window.addEventListener('load',measureHeader);
+if(burger&&mobnav){
+  burger.addEventListener('click',function(){
+    var open=mobnav.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open?'true':'false');
+    burger.setAttribute('aria-label',open?'Close menu':'Open menu');
+    measureHeader();
+  });
+  mobnav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){
+      mobnav.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
+      burger.setAttribute('aria-label','Open menu');
+    }
+  });
+}
+
+/* ================= MACHINE READER ================= */
+(function(){
+  var mock=$('menuMock'),read=$('menuRead'),verdict=$('menuVerdict');
+  if(!mock||!read)return;
+
+  var MENU_HTML=''+
+    '<h5>Casa Verde</h5>'+
+    '<div class="msec">Tacos</div>'+
+    '<div class="mrow"><span>Birria</span><span>16</span></div>'+
+    '<div class="mdesc">Slow-braised beef shank, guajillo, consommé for dipping</div>'+
+    '<div class="mrow"><span>Hongos &nbsp;<em>v / gf</em></span><span>14</span></div>'+
+    '<div class="mdesc">Roasted mushrooms, salsa verde, pickled onion</div>'+
+    '<div class="mrow"><span>Al Pastor</span><span>15</span></div>'+
+    '<div class="mdesc">Pork shoulder, pineapple, cilantro, white onion</div>'+
+    '<div class="msec">Postres</div>'+
+    '<div class="mrow"><span>Tres Leches</span><span>9</span></div>'+
+    '<div class="mdesc">House cake soaked in three milks, cinnamon cream</div>';
+
+  var FORMATS={
+    photo:{
+      mockClass:'menu-mock blur',
+      chrome:false,
+      out:[
+        ['dim','$ crawler fetch https://example.com/menu/'],
+        ['dim','  content-type: text/html'],
+        ['dim','  → single <img> element, 1.9 MB'],
+        ['',''],
+        ['key','EXTRACTED TEXT:'],
+        ['err','  (none — image contains no text layer)'],
+        ['',''],
+        ['key','DISHES IDENTIFIED:'],
+        ['err','  0'],
+        ['',''],
+        ['key','PRICES IDENTIFIED:'],
+        ['err','  0'],
+        ['',''],
+        ['key','DIETARY ATTRIBUTES:'],
+        ['err','  0'],
+        ['',''],
+        ['err','! alt text: "menu"'],
+        ['err','! no machine-readable content available']
+      ],
+      verdict:['no','Nothing.','A photographed menu contains no text layer at all. Every dish name, every price and every dietary marker is a shape. The restaurant cannot appear for a single dish it sells, and an AI assistant asked what this place serves has nothing to answer with.']
+    },
+    pdf:{
+      mockClass:'menu-mock',
+      chrome:true,
+      out:[
+        ['dim','$ crawler fetch https://example.com/menu.pdf'],
+        ['dim','  content-type: application/pdf'],
+        ['dim','  → 4 pages, embedded fonts, 2 columns'],
+        ['',''],
+        ['key','EXTRACTED TEXT (partial, unordered):'],
+        ['','  "CASA VERDE  TACOS  Birria 16"'],
+        ['','  "Slow-braised beef  Hongos v/gf 14"'],
+        ['','  "shank, guajillo,  Roasted mushrooms,"'],
+        ['','  "consommé for  salsa verde, pickled"'],
+        ['','  "dipping  onion  Al Pastor 15"'],
+        ['','  "POSTRES  Tres Leches 9  Pork"'],
+        ['','',''],
+        ['key','STRUCTURE:'],
+        ['err','  ? column order ambiguous'],
+        ['err','  ? cannot bind price to item reliably'],
+        ['err','  ? "v/gf" unrecognized token'],
+        ['err','  ? section boundaries inferred, low confidence'],
+        ['',''],
+        ['err','! partial data — not surfaced with confidence']
+      ],
+      verdict:['no','Fragments, in the wrong order.','Text exists but structure does not survive. Multi-column layouts interleave, descriptions detach from their dishes, and prices cannot be reliably bound to items. Symbol legends like "v/gf" mean nothing. A system that is not confident will simply decline to use the data rather than risk quoting a wrong price.']
+    },
+    html:{
+      mockClass:'menu-mock',
+      chrome:false,
+      out:[
+        ['dim','$ crawler fetch https://example.com/menu/'],
+        ['dim','  content-type: text/html'],
+        ['dim','  → JSON-LD @type: Menu detected'],
+        ['',''],
+        ['key','MENU: Dinner Menu'],
+        ['key','SECTION: Tacos'],
+        ['','  • Birria — $16.00'],
+        ['','    "Slow-braised beef shank, guajillo,'],
+        ['','     consommé for dipping"'],
+        ['','  • Hongos — $14.00'],
+        ['','    "Roasted mushrooms, salsa verde,'],
+        ['','     pickled onion"'],
+        ['','    diet: VeganDiet, GlutenFreeDiet'],
+        ['','  • Al Pastor — $15.00'],
+        ['','    "Pork shoulder, pineapple, cilantro"'],
+        ['key','SECTION: Postres'],
+        ['','  • Tres Leches — $9.00'],
+        ['','    diet: VegetarianDiet'],
+        ['','',''],
+        ['key','4 items · 4 prices · 3 dietary flags'],
+        ['key','✓ quotable with confidence']
+      ],
+      verdict:['yes','Everything, unambiguously.','Every dish is bound to its price, its description and its dietary attributes. A search engine can surface this restaurant for "birria tacos," a diner filtering for vegan options finds the mushroom tacos, and an assistant asked "somewhere with good vegan tacos under $15" has an exact answer with a name and a number attached.']
+    }
+  };
+
+  var typing=null;
+
+  function render(fmt){
+    var F=FORMATS[fmt];
+    mock.innerHTML=(F.chrome?'<div class="pdf-chrome">menu.pdf &mdash; 4 pages</div>':'')+
+      '<div class="'+F.mockClass+'"'+(F.chrome?' style="border-radius:0 0 3px 3px"':'')+'>'+MENU_HTML+'</div>';
+
+    verdict.innerHTML='<span class="flag '+F.verdict[0]+'">What the machine got: '+F.verdict[1]+'</span>'+
+      '<p>'+F.verdict[2]+'</p>';
+
+    if(typing){clearInterval(typing);typing=null;}
+    read.innerHTML='';
+
+    var lines=F.out;
+    if(reduce){
+      read.innerHTML=lines.map(function(l){
+        return l[0]?'<span class="'+l[0]+'">'+l[1]+'</span>':l[1];
+      }).join('\n');
+      return;
+    }
+    var i=0;
+    typing=setInterval(function(){
+      if(i>=lines.length){clearInterval(typing);typing=null;return;}
+      var l=lines[i];
+      read.innerHTML+=(l[0]?'<span class="'+l[0]+'">'+l[1]+'</span>':l[1])+'\n';
+      i++;
+    },55);
+  }
+
+  document.querySelectorAll('.reader-tab').forEach(function(tab){
+    tab.addEventListener('click',function(){
+      document.querySelectorAll('.reader-tab').forEach(function(t){
+        t.classList.remove('on');t.setAttribute('aria-pressed','false');
+      });
+      tab.classList.add('on');tab.setAttribute('aria-pressed','true');
+      render(tab.getAttribute('data-fmt'));
+    });
+  });
+
+  render('photo');
+})();
+
+/* ================= MENU CONTENT ESTIMATOR ================= */
+(function(){
+  var btn=$('mBtn');
+  if(!btn)return;
+  btn.addEventListener('click',function(){
+    var dishes=Math.max(1,parseInt($('mDishes').value,10)||0);
+    var diet=Math.max(0,Math.min(dishes,parseInt($('mDiet').value,10)||0));
+    var fmt=parseInt($('mFmt').value,10)||0;
+
+    var readableDishes = fmt===0?0:dishes;
+    var filterable     = fmt===2?diet:(fmt===1?Math.round(diet*0.4):0);
+    var phrases        = dishes*3;
+    var locked         = fmt===0?phrases:(fmt===1?Math.round(phrases*0.25):0);
+
+    $('mA').textContent=readableDishes;
+    $('mB').textContent=filterable;
+    $('mC').textContent=locked;
+
+    var msg;
+    if(fmt===0){
+      msg='<div class="res bad"><span class="verdict">Locked</span><h4>None of your menu is currently readable</h4>'+
+        '<p>All '+dishes+' dishes and roughly '+phrases+' searchable phrases exist only as pixels. This includes '+diet+
+        ' items with dietary attributes that guests are actively filtering for. Converting the menu to text is the single change '+
+        'that unlocks every one of them, and it does not require redesigning anything else on your site.</p></div>';
+    }else if(fmt===1){
+      msg='<div class="res good"><span class="verdict">Readable</span><h4>Your dishes are findable</h4>'+
+        '<p>All '+dishes+' dish names are in text, which is the hard part and you have done it. Machines can read them.</p></div>'+
+        '<div class="res bad"><span class="verdict">Remaining</span><h4>Structure is still being inferred</h4>'+
+        '<p>Without structured data, a machine still has to guess which number is a price, which line is a section, and what "GF" means. '+
+        'Roughly '+locked+' phrases remain ambiguous and only about '+filterable+' of your '+diet+' dietary items are reliably filterable. '+
+        'Adding Menu markup is a one-time job that removes the guesswork.</p></div>';
+    }else{
+      msg='<div class="res good"><span class="verdict">Fully readable</span><h4>Your menu is doing its job</h4>'+
+        '<p>All '+dishes+' dishes are bound to prices and descriptions, and '+diet+' dietary items are explicitly filterable. '+
+        'Search engines and AI assistants can quote your menu with confidence. The remaining work is maintenance: keep the markup '+
+        'in sync with the visible page whenever prices change, and check it twice a year.</p></div>';
+    }
+    $('mMsg').innerHTML=msg;
+    $('mOut').style.display='block';
+  });
+})();
+
+})();
+</script>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <img src="/images/restaurants-seo-logo.png" alt="RestaurantsSEO.com" class="ftr-logo" width="250" height="85" loading="lazy">
+        <p>A working guide to restaurant search visibility &mdash; Google, Maps, reviews, menus and AI answers &mdash; written for owners and operators rather than marketers.</p>
+        <a href="tel:+18004818638" class="ftr-tel">1-800-481-8638</a>
+        <p style="margin-bottom:0"><a href="mailto:info@eyetoad.com">info@eyetoad.com</a><br>Denver, Colorado</p>
+      </div>
+      <div>
+        <h4>On this page</h4>
+        <ul>
+          <li><a href="/#basics">What restaurant SEO is</a></li>
+          <li><a href="/#surfaces">Where diners look</a></li>
+          <li><a href="/#google">Google &amp; Maps</a></li>
+          <li><a href="/#menu">Menu SEO</a></li>
+          <li><a href="/#reviews">Reviews</a></li>
+          <li><a href="/#ai">AI search</a></li>
+          <li><a href="/#agentic">Agentic booking</a></li>
+          <li><a href="/#checkup">Free checkup</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guides</h4>
+        <ul>
+          <li><a href="/restaurant-menu-seo/">Restaurant menu SEO</a></li>
+          <li><a href="/restaurant-google-maps/">Google Maps visibility</a></li>
+          <li><a href="/restaurant-reviews-seo/">Reviews &amp; ratings</a></li>
+          <li><a href="/restaurant-ai-search/">AI search visibility</a></li>
+          <li><a href="/restaurant-seo-statistics/">Statistics &amp; benchmarks</a></li>
+          <li><a href="/sitemap/">Site index</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services &amp; network</h4>
+        <ul>
+          <li><a href="https://eyetoad.com/">Eye To Ad Media</a></li>
+          <li><a href="https://searchconverts.com/">Restaurant web design</a></li>
+          <li><a href="https://restaurantsadvertising.com/">Restaurant advertising</a></li>
+          <li><a href="https://linkrestaurants.com/">NFC &amp; digital menus</a></li>
+          <li><a href="https://localfoodnearme.com/">LocalFoodNearMe</a></li>
+          <li><a href="https://bestrestaurantdenver.com/">Best Restaurant Denver</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr-btm">
+      <div>&copy; 2026 RestaurantsSEO.com &middot; Last updated 12 August 2026</div>
+      <div class="powered">Powered by <a href="https://eyetoad.com/">Eye To Ad Media</a></div>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@graph":[
+  {
+   "@type":"Article",
+   "@id":"https://restaurantsseo.com/restaurant-menu-seo/#article",
+   "headline":"Restaurant menu SEO: how to make every dish you sell findable",
+   "description":"How to publish a restaurant menu that search engines and AI assistants can read, why PDF and image menus are invisible, what Google's AI menu tool does and does not fix, and copy-paste Menu structured data.",
+   "author":{"@id":"https://restaurantsseo.com/#author"},
+   "publisher":{"@id":"https://restaurantsseo.com/#org"},
+   "datePublished":"2026-08-12",
+   "dateModified":"2026-08-12",
+   "inLanguage":"en-US",
+   "isPartOf":{"@id":"https://restaurantsseo.com/#website"},
+   "mainEntityOfPage":{"@id":"https://restaurantsseo.com/restaurant-menu-seo/#webpage"},
+   "about":[
+    {"@type":"Thing","name":"Restaurant menu"},
+    {"@type":"Thing","name":"Structured data","sameAs":"https://en.wikipedia.org/wiki/Structured_data"},
+    {"@type":"Thing","name":"Search engine optimization","sameAs":"https://en.wikipedia.org/wiki/Search_engine_optimization"}
+   ]
+  },
+  {
+   "@type":"WebPage",
+   "@id":"https://restaurantsseo.com/restaurant-menu-seo/#webpage",
+   "url":"https://restaurantsseo.com/restaurant-menu-seo/",
+   "name":"Restaurant Menu SEO: Make Every Dish Findable on Google & AI",
+   "description":"A complete guide to restaurant menu SEO: why PDF and image menus cannot be read, how to publish a readable menu, Menu structured data with code, dish-level pages, and QR versus NFC.",
+   "isPartOf":{"@id":"https://restaurantsseo.com/#website"},
+   "author":{"@id":"https://restaurantsseo.com/#author"},
+   "publisher":{"@id":"https://restaurantsseo.com/#org"},
+   "datePublished":"2026-08-12",
+   "dateModified":"2026-08-12",
+   "inLanguage":"en-US",
+   "breadcrumb":{"@id":"https://restaurantsseo.com/restaurant-menu-seo/#breadcrumb"},
+   "mentions":[
+    {"@type":"Organization","name":"Google Business Profile","sameAs":"https://en.wikipedia.org/wiki/Google_Business_Profile"},
+    {"@type":"SoftwareApplication","name":"ChatGPT","sameAs":"https://en.wikipedia.org/wiki/ChatGPT"},
+    {"@type":"Thing","name":"Near-field communication","sameAs":"https://en.wikipedia.org/wiki/Near-field_communication"},
+    {"@type":"Thing","name":"QR code","sameAs":"https://en.wikipedia.org/wiki/QR_code"},
+    {"@type":"Thing","name":"JSON-LD","sameAs":"https://en.wikipedia.org/wiki/JSON-LD"}
+   ],
+   "speakable":{"@type":"SpeakableSpecification","cssSelector":[".answer","h1",".lede"]}
+  },
+  {
+   "@type":"BreadcrumbList",
+   "@id":"https://restaurantsseo.com/restaurant-menu-seo/#breadcrumb",
+   "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Restaurant SEO","item":"https://restaurantsseo.com/"},
+    {"@type":"ListItem","position":2,"name":"Restaurant Menu SEO","item":"https://restaurantsseo.com/restaurant-menu-seo/"}
+   ]
+  },
+  {
+   "@type":"HowTo",
+   "@id":"https://restaurantsseo.com/restaurant-menu-seo/#howto",
+   "name":"How to build a restaurant menu page that search engines and AI can read",
+   "description":"A six-step process for converting a PDF or image restaurant menu into a readable, structured web page.",
+   "totalTime":"PT4H",
+   "step":[
+    {"@type":"HowToStep","position":1,"name":"Give the menu its own page","text":"Publish the menu at a dedicated URL on your own domain rather than a section of the homepage or a link to a delivery marketplace. Give each distinct menu — dinner, brunch, bar, catering — its own page so they do not compete with each other."},
+    {"@type":"HowToStep","position":2,"name":"Type the menu as real text","text":"Make each menu section an actual heading in the page and each dish plain text with a name, description and price. Do not reproduce the printed layout; structure it for a phone screen instead."},
+    {"@type":"HowToStep","position":3,"name":"Write descriptive dish copy","text":"Describe what each dish actually is rather than using vague phrases. Include both the traditional name and a plain-language description where they differ, so people searching either term find you."},
+    {"@type":"HowToStep","position":4,"name":"State dietary attributes in words","text":"Write vegetarian, vegan, gluten-free or contains nuts as text in the item description rather than relying on a symbol legend. Be precise about what you can actually guarantee in your kitchen."},
+    {"@type":"HowToStep","position":5,"name":"Add Menu structured data","text":"Add JSON-LD to the page declaring the Menu, its MenuSections, and each MenuItem with name, description and an Offer containing price and currency. Use suitableForDiet for dietary attributes. Validate in Google's Rich Results Test."},
+    {"@type":"HowToStep","position":6,"name":"Make it editable in five minutes","text":"Ensure someone at the restaurant can change a price, remove an item or add a special without contacting an agency. A menu that cannot be updated quickly will drift out of date and publish wrong information legibly."}
+   ]
+  },
+  {
+   "@type":"FAQPage",
+   "@id":"https://restaurantsseo.com/restaurant-menu-seo/#faq",
+   "isPartOf":{"@id":"https://restaurantsseo.com/restaurant-menu-seo/#webpage"},
+   "mainEntity":[
+    {"@type":"Question","name":"What is restaurant menu SEO?","acceptedAnswer":{"@type":"Answer","text":"Restaurant menu SEO is publishing your menu as readable text on your own website, structured so search engines and AI assistants can identify each dish, its description, its price and its dietary attributes. In practice that means an HTML page rather than a PDF or photograph, organized with real headings, supported by Menu structured data. The purpose is to make every item you sell into a phrase your restaurant can be found for, particularly in dish-level searches, which carry the highest purchase intent in the category."}},
+    {"@type":"Question","name":"Can Google read a PDF menu?","acceptedAnswer":{"@type":"Answer","text":"Poorly, and often not at all. Google can sometimes extract raw text from a PDF but cannot reliably interpret its structure: which line is a dish, which number is a price, which heading is a section, which item is vegetarian. A photographed or fully designed menu is worse, because the words are pixels rather than text. AI assistants hit exactly the same wall. Google's own AI menu tool exists specifically to convert these files into structured fields, which is the clearest evidence that the raw file is not usable on its own."}},
+    {"@type":"Question","name":"Are image menus bad for SEO?","acceptedAnswer":{"@type":"Answer","text":"Yes, and completely rather than partially. A photographed or designed image menu contains no text from a machine's point of view because the dish names are shapes. Search engines can attempt image recognition but will not confidently surface your restaurant for a dish they only think they saw, and they cannot associate that dish with a price, a section or a dietary attribute. The fix is not a higher-resolution image; it is publishing the same content as text."}},
+    {"@type":"Question","name":"How do I make my restaurant menu searchable on Google?","acceptedAnswer":{"@type":"Answer","text":"Put it on its own page on your own domain as real text, with each section as a heading and each dish written out with a description and a price. Add Menu structured data to the page. Point the menu URL field on your Google Business Profile at that page rather than a PDF. Then separately use Google's Edit menu tool to generate a detailed menu on the profile itself, so both surfaces carry the information. The website version is the one that reaches AI assistants and other search engines."}},
+    {"@type":"Question","name":"Does Google's AI menu generator fix my PDF problem?","acceptedAnswer":{"@type":"Answer","text":"Only on Google's own surface. The tool converts an uploaded photo or PDF into a structured menu displayed on your Google Business Profile, which is genuinely useful for Search and Maps. It does not change the PDF on your website, which remains unreadable, and it does not reach ChatGPT, Perplexity or other assistants that read the open web rather than your Google profile. Use it, but publish a proper HTML menu on your own site as the source of truth."}},
+    {"@type":"Question","name":"Do NFC menus improve SEO compared to QR codes?","acceptedAnswer":{"@type":"Answer","text":"No. Both are simply ways of opening a web address at the table, one by camera and one by tap. Neither is read by a search engine and neither affects rankings. What determines whether your menu is searchable is the destination: an NFC tag pointing at a PDF is exactly as invisible as a QR code pointing at the same PDF. Choose between them on guest experience and make the SEO decision separately, about the page they open."}},
+    {"@type":"Question","name":"What structured data should a restaurant menu use?","acceptedAnswer":{"@type":"Answer","text":"At minimum, the hasMenu property on your Restaurant schema pointing at the menu page URL. Beyond that, the nested pattern is Menu, then hasMenuSection with MenuSection, then hasMenuItem with MenuItem, each item carrying a name, description and an Offer containing price and priceCurrency. Dietary attributes use suitableForDiet with values such as VeganDiet, VegetarianDiet or GlutenFreeDiet. Schema.org has no native allergen type as of 2026, so specific allergens are typically expressed with additionalProperty."}},
+    {"@type":"Question","name":"Should I create a separate page for every dish?","acceptedAnswer":{"@type":"Answer","text":"No. Build dedicated pages only for dishes you can write something substantial and true about, usually your three to six signature items plus anything with real local search demand. A page for your side salad has nothing to say that the menu line does not, and sixty near-identical pages that swap one dish name is the thin-content pattern Google has spent years demoting. Everything else belongs on the menu page, which is sufficient for those dishes to be findable."}},
+    {"@type":"Question","name":"Should I put prices on my online menu?","acceptedAnswer":{"@type":"Answer","text":"Yes. Price is one of the strongest filters diners apply, and a menu without prices reads as either expensive or evasive, so many people will skip you rather than call to ask. It also removes a field AI assistants rely on when someone asks for somewhere under a certain budget. The usual objection is that prices change, which is really an argument for a menu you can edit in five minutes rather than an argument against publishing them."}},
+    {"@type":"Question","name":"Will changing my menu hurt my rankings?","acceptedAnswer":{"@type":"Answer","text":"Changing the contents of a stable page will not, because search engines expect a restaurant menu to change and a regularly updated page reads as a live business. What causes damage is changing the page's URL without a 301 redirect, deleting seasonal pages that had accumulated value, or leaving the page untouched for years until it describes a restaurant that no longer exists. Keep one permanent URL per menu type and change what sits underneath it freely."}},
+    {"@type":"Question","name":"How long does it take to see results from fixing a menu?","acceptedAnswer":{"@type":"Answer","text":"The page itself typically begins being crawled and reflected within two to six weeks. Dish-level searches often move first because there is usually little competition for them, since you may be the only restaurant in your area that has published a given dish as text. Broader cuisine and category terms take longer and depend on the rest of your local signals. AI assistant accuracy improves as the page is recrawled and corroborated elsewhere, but that timing is not predictable."}},
+    {"@type":"Question","name":"Can I do this myself or do I need a developer?","acceptedAnswer":{"@type":"Answer","text":"Typing the menu as text on a page is ordinary content editing rather than development, and most people can do it in whatever system already runs their website. The structured data is a block of code that needs to be pasted into the page correctly, which is straightforward for anyone comfortable with HTML and awkward for anyone who is not. The realistic split is that you can do the content and may want help with the markup, or with the underlying problem if nobody at the restaurant can edit the site at all."}}
+   ]
+  }
+ ]
+}
+</script>
+
+</body>
+</html>
