@@ -1299,7 +1299,7 @@ if(burger&&mobnav){
         <img src="/images/restaurants-seo-logo.png" alt="RestaurantsSEO.com" class="ftr-logo" width="250" height="85" loading="lazy">
         <p>A working guide to restaurant search visibility &mdash; Google, Maps, reviews, menus and AI answers &mdash; written for owners and operators rather than marketers.</p>
         <a href="tel:+18004818638" class="ftr-tel">1-800-481-8638</a>
-        <p style="margin-bottom:0"><a href="mailto:info@eyetoad.com">info@eyetoad.com</a><br>Denver, Colorado</p>
+        <p style="margin-bottom:0"><a class="eml" data-a="aW5mbw==" data-b="ZXlldG9hZC5jb20=" data-show href="tel:+18004818638">email us</a><br>Denver, Colorado</p>
       </div>
       <div>
         <h4>On this page</h4>
@@ -1437,5 +1437,6 @@ if(burger&&mobnav){
 }
 </script>
 
+<script>document.querySelectorAll("a.eml").forEach(function(a){var e=atob(a.dataset.a)+String.fromCharCode(64)+atob(a.dataset.b);a.href="mailto:"+e;if(a.hasAttribute("data-show"))a.textContent=e;});</script>
 </body>
 </html>

@@ -1526,6 +1526,14 @@ figcaption{font-family:var(--mono);font-size:.74rem;line-height:1.6;color:var(--
         <span class="g-go">Open the statistics reference &rarr;</span>
       </a>
     </div>
+    <div style="margin-top:20px">
+      <a href="/restaurant-hours-google/" class="guide" style="display:block">
+        <span class="g-k">Guide 05</span>
+        <h3>Restaurant hours on Google</h3>
+        <p>Regular, kitchen and takeout hours, holiday and special hours set before the day, temporarily versus permanently closed, why hours change without you, and opening hours in structured data.</p>
+        <span class="g-go">Read the hours guide &rarr;</span>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -1638,7 +1646,7 @@ figcaption{font-family:var(--mono);font-size:.74rem;line-height:1.6;color:var(--
         <div class="card">
           <h4>Contact</h4>
           <p style="margin-bottom:12px"><a href="tel:+18004818638" style="font-family:var(--disp);font-weight:800;font-size:1.4rem;letter-spacing:-.03em">1-800-481-8638</a></p>
-          <p style="margin-bottom:8px"><a href="mailto:info@eyetoad.com">info@eyetoad.com</a></p>
+          <p style="margin-bottom:8px"><a class="eml" data-a="aW5mbw==" data-b="ZXlldG9hZC5jb20=" data-show href="tel:+18004818638">email us</a></p>
           <p style="margin-bottom:0">Eye To Ad Media<br>1001 Bannock St #660<br>Denver, CO 80204</p>
         </div>
 
@@ -1675,7 +1683,7 @@ figcaption{font-family:var(--mono);font-size:.74rem;line-height:1.6;color:var(--
         <img src="/images/restaurants-seo-logo.png" alt="RestaurantsSEO.com" class="ftr-logo" width="250" height="85" loading="lazy">
         <p>A working guide to restaurant search visibility &mdash; Google, Maps, reviews, menus and AI answers &mdash; written for owners and operators rather than marketers.</p>
         <a href="tel:+18004818638" class="ftr-tel">1-800-481-8638</a>
-        <p style="margin-bottom:0"><a href="mailto:info@eyetoad.com">info@eyetoad.com</a><br>Denver, Colorado</p>
+        <p style="margin-bottom:0"><a class="eml" data-a="aW5mbw==" data-b="ZXlldG9hZC5jb20=" data-show href="tel:+18004818638">email us</a><br>Denver, Colorado</p>
       </div>
       <div>
         <h4>On this page</h4>
@@ -2266,5 +2274,6 @@ function copyText(txt,ok,fail){
  ]
 }
 </script>
+<script>document.querySelectorAll("a.eml").forEach(function(a){var e=atob(a.dataset.a)+String.fromCharCode(64)+atob(a.dataset.b);a.href="mailto:"+e;if(a.hasAttribute("data-show"))a.textContent=e;});</script>
 </body>
 </html>

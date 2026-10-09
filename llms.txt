@@ -39,6 +39,9 @@ Last substantive update: 12 August 2026
   separate competitions; profile fields ranked by weight; the 2026 changes including
   the removal of Q&A and the arrival of Ask Maps; an eight-cause diagnostic for
   missing listings; and suspension recovery including the sixty-minute appeal window.
+- [Restaurant hours on Google](https://restaurantsseo.com/restaurant-hours-google/): Regular,
+  kitchen and takeout hours, holiday and special hours, temporary versus permanent
+  closure, suggested edits, and openingHoursSpecification structured data.
 - [Restaurant reviews](https://restaurantsseo.com/restaurant-reviews-seo/): Current
   rating and recency thresholds, review velocity arithmetic, FTC Consumer Review Rule
   compliance including review gating, how to ask without violating platform policy,

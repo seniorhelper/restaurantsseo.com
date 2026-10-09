@@ -989,7 +989,7 @@ figcaption{font-family:var(--mono);font-size:.74rem;line-height:1.6;color:var(--
 
     <div class="answer" style="margin-top:30px">
       <p class="q">We intend to close some of these gaps with primary research.</p>
-      <p>The most tractable is the first: auditing a defined market to measure how many restaurants are named by AI assistants, how consistent those selections are across repeat queries and across models, and what the named restaurants have in common. If you operate a restaurant and would be willing to be included in a market audit, or you are a researcher working on adjacent questions, we would like to hear from you at <a href="mailto:info@eyetoad.com">info@eyetoad.com</a> or on <a href="tel:+18004818638">1-800-481-8638</a>.</p>
+      <p>The most tractable is the first: auditing a defined market to measure how many restaurants are named by AI assistants, how consistent those selections are across repeat queries and across models, and what the named restaurants have in common. If you operate a restaurant and would be willing to be included in a market audit, or you are a researcher working on adjacent questions, we would like to hear from you at <a class="eml" data-a="aW5mbw==" data-b="ZXlldG9hZC5jb20=" data-show href="tel:+18004818638">email us</a> or on <a href="tel:+18004818638">1-800-481-8638</a>.</p>
     </div>
   </div>
 </section>
@@ -1083,7 +1083,7 @@ figcaption{font-family:var(--mono);font-size:.74rem;line-height:1.6;color:var(--
         <p style="margin-bottom:0">We state these limitations because a reference that hides them is not a reference.</p>
 
         <h3 style="margin-top:30px;font-size:1.12rem">Corrections and updates</h3>
-        <p style="margin-bottom:0">This page is reviewed when the underlying studies publish new editions. BrightLocal's Local Consumer Review Survey runs annually, typically in February. If you believe a figure here is wrong or has been superseded, tell us at <a href="mailto:info@eyetoad.com">info@eyetoad.com</a> and we will check it and correct the page rather than leave it standing.</p>
+        <p style="margin-bottom:0">This page is reviewed when the underlying studies publish new editions. BrightLocal's Local Consumer Review Survey runs annually, typically in February. If you believe a figure here is wrong or has been superseded, tell us at <a class="eml" data-a="aW5mbw==" data-b="ZXlldG9hZC5jb20=" data-show href="tel:+18004818638">email us</a> and we will check it and correct the page rather than leave it standing.</p>
       </div>
 
       <div id="cite">
@@ -1272,7 +1272,7 @@ if($('citeBtn')){
         <img src="/images/restaurants-seo-logo.png" alt="RestaurantsSEO.com" class="ftr-logo" width="250" height="85" loading="lazy">
         <p>A working guide to restaurant search visibility &mdash; Google, Maps, reviews, menus and AI answers &mdash; written for owners and operators rather than marketers.</p>
         <a href="tel:+18004818638" class="ftr-tel">1-800-481-8638</a>
-        <p style="margin-bottom:0"><a href="mailto:info@eyetoad.com">info@eyetoad.com</a><br>Denver, Colorado</p>
+        <p style="margin-bottom:0"><a class="eml" data-a="aW5mbw==" data-b="ZXlldG9hZC5jb20=" data-show href="tel:+18004818638">email us</a><br>Denver, Colorado</p>
       </div>
       <div>
         <h4>On this page</h4>
@@ -1517,5 +1517,6 @@ if($('citeBtn')){
 }
 </script>
 
+<script>document.querySelectorAll("a.eml").forEach(function(a){var e=atob(a.dataset.a)+String.fromCharCode(64)+atob(a.dataset.b);a.href="mailto:"+e;if(a.hasAttribute("data-show"))a.textContent=e;});</script>
 </body>
 </html>
