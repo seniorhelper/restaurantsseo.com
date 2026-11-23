@@ -8,7 +8,7 @@
 Published by Eye To Ad Media, a search agency in Denver, Colorado.
 Author and editor: Zachary Tye Wennstedt.
 Contact: info@eyetoad.com | 1-800-481-8638
-Last substantive update: 12 August 2026
+Last substantive update: 23 November 2026
 
 ## Editorial standards
 
@@ -42,6 +42,12 @@ Last substantive update: 12 August 2026
 - [Restaurant hours on Google](https://restaurantsseo.com/restaurant-hours-google/): Regular,
   kitchen and takeout hours, holiday and special hours, temporary versus permanent
   closure, suggested edits, and openingHoursSpecification structured data.
+- [Wrong menu on Google](https://restaurantsseo.com/restaurant-wrong-menu-on-google/): How to find every
+  copy of a restaurant menu, then fix wrong items, prices and photos in the Google menu editor,
+  menu photos, menu link, delivery apps and the restaurant website, with Google's stated wait times.
+- [Restaurant schema markup](https://restaurantsseo.com/restaurant-schema-markup/): The Restaurant
+  properties Google documents as required and recommended, a copy-paste JSON-LD example with menu
+  and hours, and how to validate it.
 - [Restaurant reviews](https://restaurantsseo.com/restaurant-reviews-seo/): Current
   rating and recency thresholds, review velocity arithmetic, FTC Consumer Review Rule
   compliance including review gating, how to ask without violating platform policy,

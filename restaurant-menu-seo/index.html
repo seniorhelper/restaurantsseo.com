@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Restaurant Menu SEO: Make Every Dish Findable on Google &amp; AI</title>
-<meta name="description" content="How to publish a restaurant menu that Google and AI assistants can actually read. Why PDF and image menus are invisible, what Google's AI menu tool does and does not fix, copy-paste Menu schema, and dish-level SEO.">
+<meta name="description" content="Make your restaurant menu readable to Google and AI: why PDF and image menus fail, Business Profile menu editor steps, Menu schema and a checklist.">
 <link rel="canonical" href="https://restaurantsseo.com/restaurant-menu-seo/">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="author" content="Zachary Tye Wennstedt">
@@ -567,12 +567,17 @@ figcaption{font-family:var(--mono);font-size:.74rem;line-height:1.6;color:var(--
       <span class="eyebrow">Guide 01 &middot; <a href="/" style="color:inherit">Restaurant SEO</a> &rsaquo; Menu SEO</span>
       <h1>Restaurant menu SEO: how to make every dish you sell findable</h1>
       <p class="lede">Your menu is the densest, most search-relevant document your restaurant will ever produce &mdash; sixty to ninety dish names, ingredients, prices, dietary markers, all of it describing exactly what people are searching for. <strong>Most restaurants have saved it as a picture.</strong> This guide explains what that costs, what to do instead, and how to do it without hiring anyone if you would rather not.</p>
+      <div class="answer" style="margin:26px 0 0">
+        <p class="q">The short answer</p>
+        <p>Put your menu on your website as real text, one page per menu, with a price on every dish. Do not use a PDF or a photo as the menu. Then copy the same items into the Google Business Profile menu editor, point your profile's menu link at the text page, and add Menu structured data that matches what visitors can read. Keep all copies the same.</p>
+      </div>
       <div class="hero-cta">
         <a href="#reader" class="btn btn-p">See what a machine reads</a>
         <a href="#build" class="btn btn-o">Skip to the how-to</a>
       </div>
       <div class="hero-meta">
-        <span>Updated 12 August 2026</span>
+        <span>Updated November 23, 2026</span>
+        <span>Google steps last checked November 2026</span>
         <span>~25 min read</span>
         <span>Includes copy-paste code</span>
       </div>
@@ -756,6 +761,42 @@ figcaption{font-family:var(--mono);font-size:.74rem;line-height:1.6;color:var(--
   </div>
 </section>
 
+<!-- ============ GBP MENU EDITOR ============ -->
+<section id="gbp-editor">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Google Business Profile</span>
+      <h2>The Google menu editor, step by step</h2>
+      <p class="lede">Checked November 2026 against <a href="https://support.google.com/business/answer/9455840?hl=en" rel="noopener">Google's menu help page</a>. Google changes its labels often. If one differs, trust the help page.</p>
+    </div>
+    <div class="mid">
+      <ol class="steps">
+        <li>
+          <h3>Open the editor</h3>
+          <p>Sign in at business.google.com and find your profile. Above the search results, select <strong>Edit menu</strong>. The editor is for food and drink businesses, and it may be missing if a provider supplies your menu through the Business Profile API.</p>
+        </li>
+        <li>
+          <h3>Build sections, then items</h3>
+          <p>Select <strong>Add menu section</strong>, name it, add a first item and select <strong>Save</strong>. For more dishes, select <strong>Add menu item</strong> and fill in the details. Use the same names, descriptions and prices as your website page.</p>
+        </li>
+        <li>
+          <h3>Or start from a photo</h3>
+          <p>Choose <strong>Photos of menu</strong>, then <strong>Select photos</strong>, then <strong>Generate a menu</strong>. Review every line, then select <strong>Publish and edit</strong>. Google calls this feature experimental and says the full menu must fit on one page in one photo.</p>
+        </li>
+        <li>
+          <h3>Point the menu link at your text page</h3>
+          <p>Select <strong>Edit profile</strong>, <strong>Business information</strong>, <strong>Contact</strong>, <strong>Menu link</strong>. Enter the address of your readable menu page, then <strong>Save</strong>.</p>
+        </li>
+        <li>
+          <h3>Pick a preferred source if Google lists several</h3>
+          <p>On the <strong>Full menu</strong> tab, choose the source you trust and save. Then give it 24 to 48 hours, the time Google states for changes to show on Maps and Search.</p>
+        </li>
+      </ol>
+      <p>Something already wrong on Google? Follow <a href="/restaurant-wrong-menu-on-google/">how to fix a wrong menu, price or photo</a> instead.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ============ BUILD ============ -->
 <section class="sec-warm" id="build">
   <div class="wrap">
@@ -840,7 +881,7 @@ figcaption{font-family:var(--mono);font-size:.74rem;line-height:1.6;color:var(--
   <span class="k">"hasMenu"</span>: <span class="s">"https://example.com/menu/"</span>,
   <span class="k">"acceptsReservations"</span>: <span class="s">"True"</span>
 }</div>
-        <p class="code-cap">Note: schema.org superseded <code>menu</code> with <code>hasMenu</code>, but both function identically and Google's documentation still references either. Use a fully qualified URL.</p>
+        <p class="code-cap">Google's Local business documentation names the <code>menu</code> property (the fully qualified URL of the menu). Schema.org also defines <code>hasMenu</code>. Use either, with a fully qualified URL, and point it at a text page. Checked November 2026. See the <a href="/restaurant-schema-markup/">full Restaurant schema example</a>.</p>
 
         <h3 style="margin-top:34px">Why bother with the detailed version</h3>
         <p>The lightweight version tells a machine where to look. The detailed version tells it what it will find, item by item, without having to parse a layout. That difference matters most for AI assistants building a recommendation, because it gives them individual dishes with prices and dietary flags they can quote directly rather than inferred from prose.</p>
@@ -855,7 +896,15 @@ figcaption{font-family:var(--mono);font-size:.74rem;line-height:1.6;color:var(--
 
       <div>
         <h3>The detailed version</h3>
-        <p>Nested sections and items with prices and dietary flags. Trimmed here to two sections for readability &mdash; the pattern repeats for as many as you have.</p>
+        <p>Nested sections and items with prices and dietary flags. Markup must describe what visitors can read, so the code below matches this sample page, line for line. Trimmed to two sections for readability. The pattern repeats for as many as you have.</p>
+        <div class="card" style="margin-bottom:22px">
+          <h4>Dinner Menu (as shown on the page)</h4>
+          <p style="margin-bottom:8px"><strong>Tacos</strong></p>
+          <p style="margin-bottom:8px">Birria Tacos, $16.00. Slow-braised beef shank with guajillo, three per order, consomm&eacute; for dipping.</p>
+          <p style="margin-bottom:8px">Hongos Tacos, $14.00. Roasted mushrooms, salsa verde, pickled onion. Vegan, gluten-free.</p>
+          <p style="margin-bottom:8px"><strong>Postres</strong></p>
+          <p style="margin-bottom:0">Tres Leches, $9.00. House cake soaked in three milks, cinnamon cream. Vegetarian.</p>
+        </div>
 
         <div class="code">{
   <span class="k">"@context"</span>: <span class="s">"https://schema.org"</span>,
@@ -1160,6 +1209,54 @@ figcaption{font-family:var(--mono);font-size:.74rem;line-height:1.6;color:var(--
 </section>
 
 <!-- ============ FAQ ============ -->
+<!-- ============ AI ANSWERS + CHECKLIST ============ -->
+<section id="ai-menu">
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <span class="eyebrow">AI answers</span>
+        <h2>How your menu shows up in AI answers</h2>
+        <p>An assistant can only quote what it can read. When a diner asks, &ldquo;Which place near me has a gluten-free pasta under $20?&rdquo;, an answer built on your menu needs your dish names, prices and dietary notes as text. No assistant publishes exactly how it picks dishes, so treat the rest of this section as what we observe and infer, and test your own.</p>
+        <div class="tbl-wrap">
+          <table class="data">
+            <caption>What an assistant can quote from each menu format</caption>
+            <thead><tr><th>Menu format</th><th>Dish names</th><th>Prices</th><th>Diet notes</th></tr></thead>
+            <tbody>
+              <tr><td>HTML page with text</td><td>Yes</td><td>Yes</td><td>Yes, if written in words</td></tr>
+              <tr><td>Text PDF</td><td>Sometimes</td><td>Unreliable</td><td>Unreliable</td></tr>
+              <tr><td>Image or photo</td><td>No</td><td>No</td><td>No</td></tr>
+              <tr><td>Google menu editor</td><td>On Google only</td><td>On Google only</td><td>On Google only</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 style="margin-top:30px">A ten-minute test</h3>
+        <p>Ask Google AI Mode, ChatGPT and Perplexity three questions about your restaurant: a signature dish by name, a price, and a dietary option. Write down each answer. Compare it to your live menu. If an assistant is wrong, look for the stale copy it read, such as an old PDF, a delivery app or a third-party listing. Fix that copy. Run the test again in a few weeks. Google's own May 2026 guidance says normal SEO fundamentals are what AI features need, so this is the same work as everything above. See <a href="/restaurant-ai-search/">restaurant AI search</a> for more.</p>
+      </div>
+      <div>
+        <div class="card">
+          <h4>Menu SEO checklist</h4>
+          <ul class="check" style="margin-bottom:0">
+            <li>The menu is text on your own domain, not a PDF or photo.</li>
+            <li>Each menu type has its own stable page address.</li>
+            <li>Every dish has a name, a plain description and a price.</li>
+            <li>Diet notes are written in words, not symbols.</li>
+            <li>Menu schema matches the visible menu exactly.</li>
+            <li>The Google menu and menu link match the website.</li>
+            <li>Delivery app prices are intentional and explained.</li>
+            <li>One person updates every copy on the same day.</li>
+          </ul>
+        </div>
+        <div class="cta-band" style="margin-top:22px">
+          <div>
+            <h3>Copies drifting apart?</h3>
+            <p>Read <a href="/restaurant-wrong-menu-on-google/">how to fix a wrong menu on Google</a> and <a href="/restaurant-schema-markup/">how to write Restaurant schema</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="faq">
   <div class="wrap narrow">
     <div class="sec-head">
@@ -1191,6 +1288,12 @@ figcaption{font-family:var(--mono);font-size:.74rem;line-height:1.6;color:var(--
       <details><summary>How long does it take to see results from fixing a menu?</summary><div class="faq-a"><p>The page itself typically begins being crawled and reflected within two to six weeks. Dish-level searches often move first because there is usually little competition for them — you may be the only restaurant in your area that has actually published a given dish as text. Broader cuisine and category terms take longer and depend on the rest of your local signals. AI assistant accuracy tends to improve as the page is recrawled and corroborated elsewhere, but that timing is not predictable.</p></div></details>
 
       <details><summary>Can I do this myself or do I need a developer?</summary><div class="faq-a"><p>Typing the menu as text on a page is something most people can do in whatever system already runs the website — it is ordinary content editing, not development. The structured data is a block of code that needs to be pasted into the page correctly, which is straightforward for anyone comfortable with HTML and awkward for anyone who is not. The realistic split is that you can do the content and may want help with the markup, or with the underlying problem if your site is one nobody at the restaurant can edit at all.</p></div></details>
+
+      <details><summary>Where do I add my menu on Google Business Profile?</summary><div class="faq-a"><p>Sign in at business.google.com, find your profile and select Edit menu above the search results. Add a section, then add items with names, descriptions and prices, and save. You can also start from a photo with Generate a menu, which Google calls experimental. Changes can take 24 to 48 hours to show on Maps and Search. The editor is for food and drink businesses.</p></div></details>
+
+      <details><summary>Should my menu link on Google point to a PDF or a web page?</summary><div class="faq-a"><p>A web page with the menu as text. A PDF is hard for machines to read reliably, and it is easy to forget when prices change. In your profile, go to Edit profile, Business information, Contact, Menu link, and enter the address of your readable menu page. Keep that page current, because it is the copy you control.</p></div></details>
+
+      <details><summary>Will an AI assistant quote my menu prices?</summary><div class="faq-a"><p>It can only quote prices it can read. A text menu on your website, with a price on each dish, gives an assistant something exact to use. A photo gives it nothing. No assistant publishes how it chooses dishes, so test it: ask Google AI Mode, ChatGPT and Perplexity about one dish and one price, then fix any stale copy they used.</p></div></details>
 
     </div>
   </div>
@@ -1479,6 +1582,8 @@ if(burger&&mobnav){
           <li><a href="/restaurant-reviews-seo/">Reviews &amp; ratings</a></li>
           <li><a href="/restaurant-ai-search/">AI search visibility</a></li>
           <li><a href="/restaurant-seo-statistics/">Statistics &amp; benchmarks</a></li>
+          <li><a href="/restaurant-wrong-menu-on-google/">Wrong menu on Google</a></li>
+          <li><a href="/restaurant-schema-markup/">Restaurant schema markup</a></li>
           <li><a href="/sitemap/">Site index</a></li>
         </ul>
       </div>
@@ -1495,7 +1600,7 @@ if(burger&&mobnav){
       </div>
     </div>
     <div class="ftr-btm">
-      <div>&copy; 2026 RestaurantsSEO.com &middot; Last updated 12 August 2026</div>
+      <div>&copy; 2026 RestaurantsSEO.com &middot; Last updated November 23, 2026</div>
       <div class="powered">Powered by <a href="https://eyetoad.com/" rel="nofollow">Eye To Ad Media</a></div>
     </div>
   </div>
@@ -1513,7 +1618,7 @@ if(burger&&mobnav){
    "author":{"@id":"https://restaurantsseo.com/#author"},
    "publisher":{"@id":"https://restaurantsseo.com/#org"},
    "datePublished":"2026-08-12",
-   "dateModified":"2026-08-12",
+   "dateModified":"2026-11-23",
    "inLanguage":"en-US",
    "isPartOf":{"@id":"https://restaurantsseo.com/#website"},
    "mainEntityOfPage":{"@id":"https://restaurantsseo.com/restaurant-menu-seo/#webpage"},
@@ -1533,7 +1638,7 @@ if(burger&&mobnav){
    "author":{"@id":"https://restaurantsseo.com/#author"},
    "publisher":{"@id":"https://restaurantsseo.com/#org"},
    "datePublished":"2026-08-12",
-   "dateModified":"2026-08-12",
+   "dateModified":"2026-11-23",
    "inLanguage":"en-US",
    "breadcrumb":{"@id":"https://restaurantsseo.com/restaurant-menu-seo/#breadcrumb"},
    "mentions":[
@@ -1584,7 +1689,10 @@ if(burger&&mobnav){
     {"@type":"Question","name":"Should I put prices on my online menu?","acceptedAnswer":{"@type":"Answer","text":"Yes. Price is one of the strongest filters diners apply, and a menu without prices reads as either expensive or evasive, so many people will skip you rather than call to ask. It also removes a field AI assistants rely on when someone asks for somewhere under a certain budget. The usual objection is that prices change, which is really an argument for a menu you can edit in five minutes rather than an argument against publishing them."}},
     {"@type":"Question","name":"Will changing my menu hurt my rankings?","acceptedAnswer":{"@type":"Answer","text":"Changing the contents of a stable page will not, because search engines expect a restaurant menu to change and a regularly updated page reads as a live business. What causes damage is changing the page's URL without a 301 redirect, deleting seasonal pages that had accumulated value, or leaving the page untouched for years until it describes a restaurant that no longer exists. Keep one permanent URL per menu type and change what sits underneath it freely."}},
     {"@type":"Question","name":"How long does it take to see results from fixing a menu?","acceptedAnswer":{"@type":"Answer","text":"The page itself typically begins being crawled and reflected within two to six weeks. Dish-level searches often move first because there is usually little competition for them, since you may be the only restaurant in your area that has published a given dish as text. Broader cuisine and category terms take longer and depend on the rest of your local signals. AI assistant accuracy improves as the page is recrawled and corroborated elsewhere, but that timing is not predictable."}},
-    {"@type":"Question","name":"Can I do this myself or do I need a developer?","acceptedAnswer":{"@type":"Answer","text":"Typing the menu as text on a page is ordinary content editing rather than development, and most people can do it in whatever system already runs their website. The structured data is a block of code that needs to be pasted into the page correctly, which is straightforward for anyone comfortable with HTML and awkward for anyone who is not. The realistic split is that you can do the content and may want help with the markup, or with the underlying problem if nobody at the restaurant can edit the site at all."}}
+    {"@type":"Question","name":"Can I do this myself or do I need a developer?","acceptedAnswer":{"@type":"Answer","text":"Typing the menu as text on a page is ordinary content editing rather than development, and most people can do it in whatever system already runs their website. The structured data is a block of code that needs to be pasted into the page correctly, which is straightforward for anyone comfortable with HTML and awkward for anyone who is not. The realistic split is that you can do the content and may want help with the markup, or with the underlying problem if nobody at the restaurant can edit the site at all."}},
+    {"@type":"Question","name":"Where do I add my menu on Google Business Profile?","acceptedAnswer":{"@type":"Answer","text":"Sign in at business.google.com, find your profile and select Edit menu above the search results. Add a section, then add items with names, descriptions and prices, and save. You can also start from a photo with Generate a menu, which Google calls experimental. Changes can take 24 to 48 hours to show on Maps and Search. The editor is for food and drink businesses."}},
+    {"@type":"Question","name":"Should my menu link on Google point to a PDF or a web page?","acceptedAnswer":{"@type":"Answer","text":"A web page with the menu as text. A PDF is hard for machines to read reliably, and it is easy to forget when prices change. In your profile, go to Edit profile, Business information, Contact, Menu link, and enter the address of your readable menu page. Keep that page current, because it is the copy you control."}},
+    {"@type":"Question","name":"Will an AI assistant quote my menu prices?","acceptedAnswer":{"@type":"Answer","text":"It can only quote prices it can read. A text menu on your website, with a price on each dish, gives an assistant something exact to use. A photo gives it nothing. No assistant publishes how it chooses dishes, so test it: ask Google AI Mode, ChatGPT and Perplexity about one dish and one price, then fix any stale copy they used."}}
    ]
   }
  ]
