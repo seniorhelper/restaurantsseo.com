@@ -48,6 +48,9 @@ Last substantive update: 23 November 2026
 - [Restaurant schema markup](https://restaurantsseo.com/restaurant-schema-markup/): The Restaurant
   properties Google documents as required and recommended, a copy-paste JSON-LD example with menu
   and hours, and how to validate it.
+- [Google categories and attributes for restaurants](https://restaurantsseo.com/restaurant-google-categories-attributes/): How to set the
+  primary and additional category and the attributes in a Business Profile, with the edit timing and
+  limits Google states and who else can change them.
 - [Restaurant reviews](https://restaurantsseo.com/restaurant-reviews-seo/): Current
   rating and recency thresholds, review velocity arithmetic, FTC Consumer Review Rule
   compliance including review gating, how to ask without violating platform policy,

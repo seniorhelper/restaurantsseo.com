@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Restaurant Google Categories and Attributes: How to Set</title>
+<meta name="description" content="How to choose your restaurant primary and additional categories on Google, set attributes, and what changes when guests or Google edit them.">
+<link rel="canonical" href="https://restaurantsseo.com/restaurant-google-categories-attributes/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="author" content="Zachary Tye Wennstedt">
+<meta name="publisher" content="Eye To Ad Media">
+<meta name="theme-color" content="#FFFFFF">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="RestaurantsSEO.com">
+<meta property="og:title" content="Restaurant Google Categories and Attributes">
+<meta property="og:description" content="Exact steps to set your restaurant category and attributes on Google, with the edit timing and limits Google states.">
+<meta property="og:url" content="https://restaurantsseo.com/restaurant-google-categories-attributes/">
+<meta property="og:image" content="https://restaurantsseo.com/images/restaurant-seo-hero.png">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Restaurant Google Categories and Attributes">
+<meta name="twitter:description" content="Exact steps to set your restaurant category and attributes on Google, with the edit timing and limits Google states.">
+<meta name="twitter:image" content="https://restaurantsseo.com/images/restaurant-seo-hero.png">
+
+<link rel="icon" type="image/png" href="/images/restaurants-seo-favicon.png">
+<link rel="apple-touch-icon" href="/images/restaurants-seo-favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,300..600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  /* palette derived from the RestaurantsSEO mark: orange on black, on white */
+  --ember:#F26722;
+  --ember-dk:#C74E12;
+  --ember-lt:#FF8A4C;
+  --ember-wash:#FEF2EA;
+  --char:#14110F;
+  --char-2:#241F1B;
+  --slate:#5A544E;
+  --slate-lt:#837B72;
+  --paper:#FFFFFF;
+  --warm:#FAF7F3;
+  --warm-2:#F3EEE7;
+  --rule:#E6E0D8;
+  --rule-dk:#CFC6BA;
+  --kale:#1F5C4A;
+  --kale-lt:#3E8B72;
+
+  --disp:'Archivo',system-ui,-apple-system,sans-serif;
+  --body:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SF Mono',monospace;
+
+  --wrap:1180px;
+  --r:4px;
+  --hdr-h:96px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--hdr-h) + 16px)}
+body{
+  margin:0;background:var(--paper);color:var(--char);
+  font-family:var(--body);font-size:18px;line-height:1.72;font-weight:400;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--ember-dk);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--char)}
+:focus-visible{outline:3px solid var(--ember);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 26px}
+.narrow{max-width:820px}
+.mid{max-width:960px}
+
+h1,h2,h3,h4,h5{font-family:var(--disp);font-weight:800;line-height:1.1;letter-spacing:-.028em;margin:0 0 18px;color:var(--char)}
+h1{font-size:clamp(2.4rem,6vw,4.3rem);letter-spacing:-.042em;line-height:1.02}
+h2{font-size:clamp(1.85rem,4vw,2.85rem);letter-spacing:-.034em}
+h3{font-size:clamp(1.25rem,2.3vw,1.6rem);letter-spacing:-.024em;font-weight:700}
+h4{font-size:1.08rem;letter-spacing:-.014em;font-weight:700}
+p{margin:0 0 20px}
+strong{font-weight:600;color:var(--char)}
+.lede{font-size:clamp(1.1rem,2vw,1.32rem);line-height:1.6;color:var(--slate);font-weight:300}
+.lede strong{font-weight:500;color:var(--char)}
+
+.eyebrow{
+  font-family:var(--mono);font-size:.7rem;font-weight:600;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--ember-dk);margin:0 0 14px;display:block;
+}
+.eyebrow.on-dark{color:var(--ember-lt)}
+.eyebrow.dim{color:var(--slate-lt)}
+
+/* ---------- HEADER : WHITE, blends with logo ---------- */
+.hdr{position:sticky;top:0;z-index:900;background:var(--paper);border-bottom:1px solid var(--rule)}
+.hdr-in{max-width:var(--wrap);margin:0 auto;padding:12px 26px;
+  display:flex;align-items:center;justify-content:space-between;gap:22px}
+.mark{display:block;text-decoration:none;flex-shrink:0;line-height:0}
+.mark img{width:300px;height:auto;max-width:none}
+.nav{display:flex;align-items:center;gap:24px}
+.nav a{font-family:var(--body);font-weight:500;font-size:.9rem;color:var(--char);
+  text-decoration:none;padding:6px 0;border-bottom:2px solid transparent;white-space:nowrap}
+.nav a:hover{border-bottom-color:var(--ember)}
+.hdr-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.tel{display:inline-flex;align-items:center;gap:8px;font-family:var(--disp);font-weight:700;
+  font-size:1rem;color:var(--char);text-decoration:none;white-space:nowrap;letter-spacing:-.02em}
+.tel:hover{color:var(--ember-dk)}
+.tel svg{width:16px;height:16px;flex-shrink:0;fill:var(--ember)}
+.tel span.lbl{display:block;font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--slate-lt);font-weight:500;margin-bottom:1px}
+.tel .telstack{display:flex;flex-direction:column;line-height:1.15}
+
+.burger{display:none;background:none;border:1px solid var(--rule-dk);border-radius:var(--r);
+  width:46px;height:42px;cursor:pointer;flex-direction:column;align-items:center;
+  justify-content:center;gap:5px;padding:0}
+.burger span{display:block;width:20px;height:2px;background:var(--char);border-radius:2px;transition:.22s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobnav{display:none;position:fixed;left:0;right:0;bottom:0;z-index:899;background:var(--paper);
+  border-top:1px solid var(--rule);padding:18px 26px 40px;overflow-y:auto}
+.mobnav.open{display:block}
+.mobnav a{display:block;font-family:var(--disp);font-weight:700;font-size:1.14rem;color:var(--char);
+  padding:15px 0;border-bottom:1px solid var(--rule);text-decoration:none;letter-spacing:-.02em}
+.mobnav .btn{margin-top:22px;border-bottom:none;text-align:center}
+.mobnav .mob-tel{margin-top:12px;border-bottom:none;text-align:center;background:var(--warm);
+  border-radius:var(--r);padding:16px;font-size:1.2rem;color:var(--ember-dk)}
+
+/* ---------- BUTTONS ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:var(--disp);font-weight:700;font-size:.95rem;padding:14px 26px;letter-spacing:-.012em;
+  border-radius:var(--r);border:2px solid transparent;cursor:pointer;
+  text-decoration:none;transition:background .16s,color .16s,border-color .16s}
+.btn:hover{text-decoration:none}
+.btn-p{background:var(--ember);color:#fff;border-color:var(--ember)}
+.btn-p:hover{background:var(--ember-dk);border-color:var(--ember-dk);color:#fff}
+.btn-o{background:transparent;color:var(--char);border-color:var(--char)}
+.btn-o:hover{background:var(--char);color:#fff}
+.btn-o.on-dark{color:#fff;border-color:rgba(255,255,255,.5)}
+.btn-o.on-dark:hover{background:#fff;color:var(--char)}
+.btn-sm{padding:10px 18px;font-size:.86rem}
+.btn-full{width:100%}
+
+/* ---------- SECTIONS ---------- */
+section{padding:82px 0}
+.sec-warm{background:var(--warm)}
+.sec-warm2{background:var(--warm-2)}
+.sec-dark{background:var(--char);color:#fff}
+.sec-dark h1,.sec-dark h2,.sec-dark h3,.sec-dark h4{color:#fff}
+.sec-dark p{color:#CFC7BF}
+.sec-dark .lede{color:#DDD5CD}
+.sec-dark a{color:var(--ember-lt)}
+.sec-dark strong{color:#fff}
+.sec-tight{padding:54px 0}
+.sec-head{max-width:800px;margin:0 0 44px}
+hr.rule{height:1px;background:var(--rule);border:0;margin:0}
+
+/* ---------- HERO ---------- */
+.hero{padding:56px 0 0;background:var(--paper);position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:34px;align-items:center}
+.hero h1 em{font-style:normal;color:var(--ember)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 24px;padding-top:22px;margin-top:26px;
+  border-top:1px solid var(--rule);font-family:var(--mono);font-size:.72rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--slate-lt)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 0}
+
+/* ---------- SIGNATURE : PATHWAY WEB ---------- */
+.web-stage{background:var(--char);border-radius:6px;overflow:hidden;position:relative;
+  border:1px solid var(--char-2)}
+.web-canvas-hold{position:relative;width:100%;aspect-ratio:16/10;min-height:300px}
+#pathweb{display:block;width:100%;height:100%}
+.web-hud{position:absolute;top:16px;left:18px;pointer-events:none;
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#7E756C}
+.web-hud b{display:block;font-family:var(--disp);font-size:1.9rem;letter-spacing:-.03em;
+  color:var(--ember-lt);font-weight:800;margin-top:4px;line-height:1}
+/* controls ALWAYS below the canvas, never overlaid */
+.web-ctrl{background:var(--char-2);border-top:1px solid rgba(255,255,255,.1);padding:20px 22px}
+.web-ctrl-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.web-ctrl label{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;
+  text-transform:uppercase;color:#9E958C;white-space:nowrap}
+.web-ctrl input[type=range]{flex:1;min-width:180px;accent-color:var(--ember);height:26px;cursor:pointer}
+.web-read{font-family:var(--disp);font-weight:700;font-size:.95rem;color:#fff;white-space:nowrap;
+  letter-spacing:-.01em}
+.web-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.web-chip{font-family:var(--mono);font-size:.66rem;letter-spacing:.07em;text-transform:uppercase;
+  padding:5px 10px;border-radius:20px;border:1px solid rgba(255,255,255,.16);color:#6F675F;
+  transition:.3s;background:transparent}
+.web-chip.on{color:var(--char);background:var(--ember-lt);border-color:var(--ember-lt);font-weight:600}
+.web-note{font-size:.9rem;color:#9E958C;margin:14px 0 0;line-height:1.6;font-family:var(--body)}
+
+/* ---------- ANSWER BLOCK (AIO extraction target) ---------- */
+.answer{background:var(--paper);border:1px solid var(--rule);border-left:4px solid var(--ember);
+  border-radius:0 var(--r) var(--r) 0;padding:24px 28px;margin:0 0 26px}
+.answer .q{font-family:var(--disp);font-weight:700;font-size:1.12rem;letter-spacing:-.022em;
+  margin:0 0 12px;color:var(--char);line-height:1.3}
+.answer p{margin:0;font-size:1.04rem;line-height:1.68}
+.answer p+p{margin-top:14px}
+.sec-warm .answer,.sec-warm2 .answer{background:var(--paper)}
+.sec-dark .answer{background:var(--char-2);border-color:rgba(255,255,255,.14);border-left-color:var(--ember)}
+.sec-dark .answer .q{color:#fff}
+
+/* ---------- CARDS ---------- */
+.grid{display:grid;gap:22px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:28px}
+.card h3,.card h4{margin-bottom:11px}
+.card p:last-child{margin-bottom:0}
+.card p{font-size:.97rem;line-height:1.65}
+.sec-dark .card{background:var(--char-2);border-color:rgba(255,255,255,.13)}
+.card-num{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;color:var(--ember-dk);
+  display:block;margin-bottom:10px;font-weight:600}
+.sec-dark .card-num{color:var(--ember-lt)}
+
+/* ---------- SURFACE ROWS ---------- */
+.surf{border-top:1px solid var(--rule)}
+.surf-row{display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:start;
+  padding:26px 0;border-bottom:1px solid var(--rule)}
+.surf-ico{width:46px;height:46px;border-radius:var(--r);background:var(--ember-wash);
+  display:flex;align-items:center;justify-content:center;font-family:var(--disp);
+  font-weight:800;font-size:1.05rem;color:var(--ember-dk);flex-shrink:0}
+.surf-row h3{margin-bottom:8px;font-size:1.22rem}
+.surf-row p{margin:0;font-size:.97rem;line-height:1.65;color:var(--slate)}
+.surf-tag{font-family:var(--mono);font-size:.66rem;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--slate-lt);white-space:nowrap;padding-top:5px}
+
+/* ---------- DATA TABLE ---------- */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper);
+  -webkit-overflow-scrolling:touch}
+table.data{width:100%;border-collapse:collapse;font-size:.93rem;min-width:640px}
+table.data caption{text-align:left;padding:16px 18px;font-family:var(--mono);font-size:.7rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--slate);border-bottom:1px solid var(--rule)}
+table.data th,table.data td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+table.data th{background:var(--char);color:#fff;font-family:var(--mono);font-size:.68rem;
+  letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+table.data tr:last-child td{border-bottom:none}
+table.data td.fig{font-family:var(--mono);font-weight:600;color:var(--ember-dk);white-space:nowrap}
+table.data tbody tr:hover{background:var(--warm)}
+
+/* ---------- LISTS ---------- */
+.check{list-style:none;padding:0;margin:0 0 22px}
+.check li{position:relative;padding:0 0 13px 32px;line-height:1.65;font-size:1rem}
+.check li::before{content:"";position:absolute;left:0;top:7px;width:19px;height:19px;border-radius:3px;
+  background-color:var(--kale);
+  background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 6L9 17l-5-5' fill='none' stroke='%23ffffff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size:13px 13px;background-position:center;background-repeat:no-repeat}
+.check.x li::before{background-color:var(--ember-dk);
+  background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18 6L6 18M6 6l12 12' fill='none' stroke='%23ffffff' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E")}
+.sec-dark .check li{color:#CFC7BF}
+.sec-dark .check li::before{background-color:var(--kale-lt)}
+.sec-dark .check.x li::before{background-color:var(--ember-lt)}
+
+/* ---------- PULL / TAKEAWAY ---------- */
+.pull{border-left:4px solid var(--ember);padding:6px 0 6px 26px;margin:32px 0}
+.pull p{font-family:var(--disp);font-weight:600;font-size:clamp(1.15rem,2.2vw,1.5rem);
+  line-height:1.35;letter-spacing:-.025em;color:var(--char);margin:0}
+.sec-dark .pull p{color:#fff}
+
+.takeaway{background:var(--char);color:#fff;border-radius:var(--r);padding:30px}
+.takeaway h3{color:#fff;font-size:1.2rem;margin-bottom:16px}
+.takeaway ul{list-style:none;padding:0;margin:0}
+.takeaway li{position:relative;padding:0 0 13px 26px;font-size:.98rem;line-height:1.62;color:#CFC7BF}
+.takeaway li:last-child{padding-bottom:0}
+.takeaway li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:8px;
+  border-radius:50%;background:var(--ember)}
+.takeaway li b{color:#fff;font-weight:600}
+
+/* ---------- FIGURES ---------- */
+figure{margin:0 0 26px}
+figure img{border-radius:var(--r);border:1px solid var(--rule);width:100%}
+figcaption{font-family:var(--mono);font-size:.74rem;line-height:1.6;color:var(--slate-lt);
+  margin-top:11px;letter-spacing:.02em}
+.fig-plain img{border:none}
+
+/* ---------- FAQ ---------- */
+.faq{border-top:1px solid var(--rule)}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{cursor:pointer;list-style:none;padding:21px 46px 21px 0;position:relative;
+  font-family:var(--disp);font-weight:700;font-size:1.06rem;line-height:1.4;color:var(--char);
+  letter-spacing:-.018em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:8px;top:27px;width:11px;height:11px;
+  border-right:2px solid var(--ember);border-bottom:2px solid var(--ember);
+  transform:rotate(45deg);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(-135deg);top:31px}
+.faq .faq-a{padding:0 18px 24px 0}
+.faq .faq-a p:last-child{margin-bottom:0}
+.faq .faq-a p{font-size:1rem}
+
+/* ---------- TOOL ---------- */
+.tool{background:var(--paper);border:2px solid var(--char);border-radius:var(--r);overflow:hidden}
+.tool-hd{background:var(--char);color:#fff;padding:22px 28px}
+.tool-hd h3{color:#fff;margin:0 0 5px;font-size:1.32rem}
+.tool-hd p{margin:0;color:#A69D94;font-size:.9rem}
+.tool-bd{padding:28px}
+.qset{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid var(--rule)}
+.qset:last-of-type{border-bottom:none}
+.qset p.qtxt{font-family:var(--disp);font-weight:700;font-size:1rem;margin:0 0 12px;
+  letter-spacing:-.018em;line-height:1.4}
+.opts{display:flex;flex-wrap:wrap;gap:9px}
+.opt{font-family:var(--body);font-size:.9rem;font-weight:500;padding:10px 16px;
+  border:1.5px solid var(--rule-dk);border-radius:var(--r);background:var(--paper);
+  cursor:pointer;transition:.15s;color:var(--char)}
+.opt:hover{border-color:var(--ember)}
+.opt.sel{background:var(--char);color:#fff;border-color:var(--char)}
+.res{border:1px solid var(--rule);border-radius:var(--r);padding:18px 20px;margin-bottom:12px;
+  background:var(--paper)}
+.res.good{border-left:4px solid var(--kale);background:#F2F8F5}
+.res.bad{border-left:4px solid var(--ember);background:var(--ember-wash)}
+.res h4{margin:0 0 6px;font-size:1rem}
+.res p{margin:0;font-size:.93rem;color:var(--slate);line-height:1.6}
+.res .verdict{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+  font-weight:600;display:block;margin-bottom:6px}
+.res.good .verdict{color:var(--kale)}
+.res.bad .verdict{color:var(--ember-dk)}
+.note{font-size:.85rem;color:var(--slate-lt);margin:14px 0 0;line-height:1.6}
+
+/* ---------- CTA BANDS (restrained) ---------- */
+.cta-band{background:var(--warm);border:1px solid var(--rule);border-left:4px solid var(--ember);
+  border-radius:0 var(--r) var(--r) 0;padding:30px;display:grid;
+  grid-template-columns:1fr auto;gap:28px;align-items:center}
+.cta-band h3{margin:0 0 9px;font-size:1.22rem}
+.cta-band p{margin:0;font-size:.97rem;color:var(--slate);line-height:1.64}
+.sec-warm .cta-band{background:var(--paper)}
+.cta-dark{background:var(--char);color:#fff;border:none;border-radius:var(--r);padding:34px;
+  display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+.cta-dark h3{color:#fff;margin:0 0 9px;font-size:1.34rem}
+.cta-dark p{color:#CFC7BF;margin:0;font-size:.98rem;line-height:1.65}
+.cta-dark a{color:var(--ember-lt)}
+
+/* ---------- GUIDE CARDS ---------- */
+.guides{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.guide{display:block;background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);
+  padding:28px;text-decoration:none;transition:border-color .18s,transform .18s}
+.guide:hover{border-color:var(--ember);transform:translateY(-2px)}
+.guide .g-k{font-family:var(--mono);font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--ember-dk);display:block;margin-bottom:11px;font-weight:600}
+.guide h3{margin-bottom:9px;font-size:1.2rem;color:var(--char)}
+.guide p{margin:0;font-size:.94rem;color:var(--slate);line-height:1.6}
+.guide .g-go{font-family:var(--mono);font-size:.72rem;color:var(--char);margin-top:14px;
+  display:block;font-weight:600;letter-spacing:.04em}
+
+/* ---------- NETWORK ---------- */
+.net{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.net a{display:block;background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);
+  padding:22px;text-decoration:none;transition:border-color .16s,transform .16s}
+.net a:hover{border-color:var(--ember);transform:translateY(-2px)}
+.net .net-u{font-family:var(--mono);font-size:.8rem;font-weight:600;color:var(--ember-dk);
+  display:block;margin-bottom:8px;word-break:break-word}
+.net .net-d{font-size:.9rem;color:var(--slate);line-height:1.58;display:block}
+
+/* ---------- TOC ---------- */
+.toc{background:var(--warm);border:1px solid var(--rule);border-radius:var(--r);padding:28px}
+.toc h2{font-size:1.08rem;margin-bottom:18px}
+.toc ol{margin:0;padding:0;list-style:none;columns:2;column-gap:36px;counter-reset:toc}
+.toc li{margin-bottom:10px;break-inside:avoid;font-size:.93rem;counter-increment:toc}
+.toc li::before{content:counter(toc,decimal-leading-zero);font-family:var(--mono);font-size:.7rem;
+  color:var(--slate-lt);margin-right:10px}
+.toc a{text-decoration:none;color:var(--char);border-bottom:1px solid var(--rule-dk)}
+.toc a:hover{border-bottom-color:var(--ember);color:var(--ember-dk)}
+
+/* ---------- FOOTER : WHITE ---------- */
+.ftr{background:var(--paper);border-top:2px solid var(--char);padding:56px 0 30px;color:var(--slate)}
+.ftr h4{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--char);margin-bottom:16px;font-weight:600}
+.ftr-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:34px;margin-bottom:40px}
+.ftr p{font-size:.9rem;line-height:1.68;color:var(--slate)}
+.ftr ul{list-style:none;padding:0;margin:0}
+.ftr li{margin-bottom:10px}
+.ftr a{color:var(--slate);font-size:.9rem;text-decoration:none}
+.ftr a:hover{color:var(--ember-dk);text-decoration:underline}
+.ftr-logo{width:250px;margin-bottom:16px}
+.ftr-tel{font-family:var(--disp);font-weight:800;font-size:1.3rem;color:var(--char);
+  text-decoration:none;display:inline-block;margin:6px 0 4px;letter-spacing:-.025em}
+.ftr-tel:hover{color:var(--ember-dk)}
+.ftr-btm{border-top:1px solid var(--rule);padding-top:24px;display:flex;
+  justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.84rem;color:var(--slate-lt)}
+.powered{font-family:var(--mono);font-size:.8rem;letter-spacing:.03em}
+.powered a{color:var(--ember-dk);font-weight:600}
+
+/* ---------- MISC ---------- */
+.kicker-band{background:var(--ember-wash);border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);padding:18px 0}
+.kicker-band p{margin:0;font-size:.94rem;color:var(--char);line-height:1.6}
+.kicker-band .mono{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ember-dk);font-weight:600;display:block;margin-bottom:6px}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.stack-lg > * + *{margin-top:22px}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;animation-iteration-count:1!important;
+    transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+@media(max-width:1080px){
+  .nav{gap:16px}
+  .nav a{font-size:.84rem}
+  .mark img{width:250px}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .ftr-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .nav,.hdr-right{display:none}
+  .burger{display:flex}
+  .mark img{width:300px}
+  .g3,.g2{grid-template-columns:1fr}
+  .two-col{grid-template-columns:1fr;gap:30px}
+  .guides{grid-template-columns:1fr}
+  .cta-band,.cta-dark{grid-template-columns:1fr;gap:20px}
+  .toc ol{columns:1}
+}
+@media(max-width:768px){
+  body{font-size:17px}
+  section{padding:58px 0}
+  .sec-tight{padding:42px 0}
+  .card,.tool-bd{padding:22px}
+  .surf-row{grid-template-columns:auto 1fr;gap:16px}
+  .surf-tag{grid-column:2;padding-top:0}
+  .g4{grid-template-columns:1fr}
+  .ftr-grid{grid-template-columns:1fr;gap:28px}
+  .answer{padding:20px 22px}
+}
+@media(max-width:430px){
+  .wrap{padding:0 18px}
+  .mark img{width:300px}
+  .hdr-in{padding:10px 18px}
+  .btn{width:100%}
+  .hero-cta .btn{width:100%}
+  .pull{padding-left:18px}
+}
+</style>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7CT9VNMZP6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7CT9VNMZP6');</script>
+<script>(function(){function s(n,p){try{gtag('event',n,p)}catch(e){}}document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="tel:"]');if(a)s('phone_click',{phone_number:a.getAttribute('href').slice(4),link_text:(a.textContent||'').trim().slice(0,60)})},true);document.addEventListener('submit',function(e){var f=e.target;if(!f||f.getAttribute('role')==='search'||/search/i.test(f.id+' '+f.className+' '+(f.action||'')))return;var id=f.id||f.getAttribute('name')||f.className||'form';if(/estimat|calc/i.test(id+' '+(f.action||'')))s('estimator_use',{form_id:id});s('generate_lead',{form_id:id})},true);window.etAB=function(n,v){var k='etab_'+n,x;try{x=localStorage.getItem(k)}catch(e){}if(!x||v.indexOf(x)<0){x=v[Math.floor(Math.random()*v.length)];try{localStorage.setItem(k,x)}catch(e){}}s('ab_view',{experiment:n,variant:x});try{gtag('set','user_properties',{['ab_'+n]:x})}catch(e){}document.documentElement.setAttribute('data-ab-'+n,x);return x}})();</script>
+</head>
+<body>
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a href="/" class="mark" aria-label="RestaurantsSEO.com home">
+      <img src="/images/restaurants-seo-logo.png" width="300" height="102" alt="RestaurantsSEO.com" fetchpriority="high">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="/#basics">Basics</a>
+      <a href="/#surfaces">Where Diners Look</a>
+      <a href="/restaurant-menu-seo/">Menu SEO</a>
+      <a href="/restaurant-ai-search/">AI Search</a>
+      <a href="/#checkup">Free Checkup</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="hdr-right">
+      <a href="tel:+18004818638" class="tel" aria-label="Call 1-800-481-8638">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        <span class="telstack"><span class="lbl">Talk to a human</span>1-800-481-8638</span>
+      </a>
+      <a href="/#checkup" class="btn btn-p btn-sm">Free checkup</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobnav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobnav" id="mobnav" aria-label="Mobile">
+  <a href="/#basics">Restaurant SEO basics</a>
+  <a href="/#surfaces">Where diners look</a>
+  <a href="/restaurant-google-maps/">Google &amp; Maps</a>
+  <a href="/restaurant-menu-seo/">Menu SEO</a>
+  <a href="/restaurant-reviews-seo/">Reviews</a>
+  <a href="/restaurant-ai-search/">AI search</a>
+  <a href="/#agentic">The agentic shift</a>
+  <a href="/#website">Websites &amp; speed</a>
+  <a href="/#cost">Cost &amp; timeline</a>
+  <a href="/#checkup">Free 60-second checkup</a>
+  <a href="#faq">Questions</a>
+  <a href="tel:+18004818638" class="mob-tel">1-800-481-8638</a>
+  <a href="/#checkup" class="btn btn-p">Run the free checkup</a>
+</nav>
+<style>
+/* ---------- code block ---------- */
+.code{background:var(--char);border-radius:var(--r);padding:22px;overflow-x:auto;
+  font-family:var(--mono);font-size:.78rem;line-height:1.7;color:#CFC7BF;
+  -webkit-overflow-scrolling:touch;margin:0 0 8px}
+.code .k{color:#FF8A4C}
+.code .s{color:#8FE3C4}
+.code .c{color:#6E655B;font-style:italic}
+.code-cap{font-family:var(--mono);font-size:.72rem;color:var(--slate-lt);margin:0 0 24px;line-height:1.6}
+
+/* ---------- step list ---------- */
+.steps{counter-reset:st;list-style:none;padding:0;margin:0}
+.steps > li{counter-increment:st;position:relative;padding:0 0 30px 62px;margin:0}
+.steps > li::before{content:counter(st,decimal-leading-zero);position:absolute;left:0;top:0;
+  font-family:var(--mono);font-size:.82rem;font-weight:600;color:var(--ember-dk);
+  border:1.5px solid var(--rule-dk);border-radius:var(--r);width:44px;height:44px;
+  display:flex;align-items:center;justify-content:center;background:var(--paper)}
+.steps > li h3{margin-bottom:9px;font-size:1.15rem}
+.steps > li p{font-size:.98rem;line-height:1.68}
+.steps > li p:last-child{margin-bottom:0}
+.steps > li::after{content:"";position:absolute;left:22px;top:52px;bottom:8px;width:1px;
+  background:var(--rule)}
+.steps > li:last-child::after{display:none}
+@media(max-width:600px){
+  .steps > li{padding-left:52px}
+  .steps > li::before{width:38px;height:38px;font-size:.74rem}
+  .steps > li::after{left:19px;top:46px}
+}
+</style>
+
+<main id="main">
+<section style="padding-top:52px;padding-bottom:40px">
+  <div class="wrap">
+    <div style="max-width:930px">
+      <span class="eyebrow">Guide 09 &middot; <a href="/" style="color:inherit">Restaurant SEO</a> &rsaquo; Categories and attributes</span>
+      <h1>Google categories and attributes for restaurants: what to pick and where to edit</h1>
+      <p class="lede">Your category tells Google what kind of business you are. Your attributes tell it, and your guests, what you offer. <strong>Both take about five minutes to check, and both can change without you.</strong> This guide covers the edit steps, the limits Google states, and what to do when a label is wrong.</p>
+      <div class="hero-cta">
+        <a href="#steps" class="btn btn-p">Jump to the steps</a>
+        <a href="#table" class="btn btn-o">Who can change what</a>
+      </div>
+      <div class="hero-meta">
+        <span>Updated November 23, 2026</span>
+        <span>Checked against Google's help pages November 2026</span>
+        <span>~7 min read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="answer" class="sec-tight" style="padding-top:8px">
+  <div class="wrap narrow">
+    <div class="answer">
+      <p class="q">How do I change my restaurant's category and attributes on Google?</p>
+      <p>Open your Business Profile and select <strong>Edit profile</strong>. For the category, select <strong>Edit</strong> next to "Business category", type a term, pick a suggestion and select <strong>Save</strong>. For attributes, select <strong>More</strong>, then <strong>Edit</strong> next to an attribute group, set each one to <strong>Yes</strong> or <strong>No</strong>, and save. Google says edits usually take about 10 minutes to review but can take up to 30 days.</p>
+    </div>
+    <p>Most owners set these once and never look again. Google says other people and Google itself can change parts of your profile later, so check each quarter.</p>
+  </div>
+</section>
+
+<section id="category" class="sec-warm">
+  <div class="wrap narrow">
+    <div class="sec-head">
+      <span class="eyebrow">Categories</span>
+      <h2>What Google says about choosing a category</h2>
+    </div>
+    <ul class="check">
+      <li><strong>Pick the most specific option that is true.</strong> Google's own example is choosing "Nail salon" over "Salon". Use a general option only when no specific one fits.</li>
+      <li><strong>You cannot invent a category.</strong> You choose from the list Google shows. You find options by typing a word into the box and reading the suggestions. The page describes no menu to browse.</li>
+      <li><strong>Add a few additional categories, not one for every dish.</strong> Google says additional categories describe special departments or services, and it advises against adding one for every product or service.</li>
+      <li><strong>Separate businesses get their own profile.</strong> If a department is independent, public-facing and separately owned and operated, Google says it should have its own profile, not a category on yours.</li>
+    </ul>
+    <p>Google also says your categories affect your local ranking and can add a label to your business. It adds that the features available on your profile depend on your category. If a feature such as the menu editor is missing, check your primary category first.</p>
+  </div>
+</section>
+
+<section id="steps">
+  <div class="wrap narrow">
+    <div class="sec-head">
+      <span class="eyebrow">The edit, in order</span>
+      <h2>Six steps, checked against Google's help pages</h2>
+      <p class="note" style="margin-top:0">Category steps from <a href="https://support.google.com/business/answer/7249669?hl=en" rel="noopener">Manage your business category</a>. Attribute steps from <a href="https://support.google.com/business/answer/9049526?hl=en" rel="noopener">Manage your business attributes</a>. Edit timing from <a href="https://support.google.com/business/answer/3038311?hl=en" rel="noopener">Understand what happens to your Business Profile edits</a>. More hours from <a href="https://support.google.com/business/answer/9876800?hl=en" rel="noopener">Google's more hours page</a>.</p>
+    </div>
+    <ol class="steps">
+      <li>
+        <h3>Open the category box</h3>
+        <p>Go to your Business Profile and select <strong>Edit profile</strong>. Next to "Business category", select <strong>Edit</strong>. Google says full editing needs a verified profile.</p>
+      </li>
+      <li>
+        <h3>Set the primary category</h3>
+        <p>In the "Primary category" box, type a term that a guest would use to describe you, such as the cuisine or the format. Then select one option from the list that appears. Choose the option that is true on a normal Tuesday, not the one you hope to be.</p>
+      </li>
+      <li>
+        <h3>Add a small number of additional categories</h3>
+        <p>Select <strong>Add another category</strong>, type a term and select a suggestion. Add one only if it is a real part of the business. To remove one, select <strong>Remove</strong> next to it. Then select <strong>Save</strong>.</p>
+        <p>Google says you "might be asked to verify your business again" after you add or edit a category, so it can confirm your information. If that happens, finish the verification. See <a href="/restaurant-google-maps/">Google Maps visibility</a> for the wider profile checklist.</p>
+      </li>
+      <li>
+        <h3>Set your attributes</h3>
+        <p>Select <strong>Edit profile</strong>, then <strong>More</strong>. Next to the attribute group you want, select <strong>Edit</strong>. Next to each attribute, select <strong>Yes</strong> or <strong>No</strong>, then select <strong>Save</strong>. Google says some attributes can be changed only in certain locations, countries or categories, and that attribute names may change over time. Read the labels on your own screen.</p>
+      </li>
+      <li>
+        <h3>Check the status of your edit</h3>
+        <p>Google says edits usually take up to 10 minutes to review, and sometimes up to 30 days. A pending edit is still under review. An accepted edit appears on your profile. If Google cannot confirm an edit is accurate, it may not approve it, and you may be able to appeal. Use the "Check your edit status" link on Google's edit page.</p>
+      </li>
+      <li>
+        <h3>Set the hours that go with your service types</h3>
+        <p>If you offer delivery, takeout, drive through or pickup, Google lets you set separate hours for each. Select <strong>Edit profile</strong>, then <strong>Hours</strong>. Under "Add more hours", choose the type, set the days and hours and select <strong>Save</strong>. Google says these do not display until you set regular hours. See <a href="/restaurant-hours-google/">restaurant hours on Google</a> for holidays.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="attributes" class="sec-warm">
+  <div class="wrap narrow">
+    <div class="sec-head">
+      <span class="eyebrow">Attributes</span>
+      <h2>What attributes are, and which ones you control</h2>
+    </div>
+    <p>Google describes attributes as details that show customers what your business offers. They appear on Search, Maps and other Google surfaces, and certain ones may help you appear in searches for places with that feature.</p>
+    <p>For restaurants, Google's Maps help describes a group of "services and features" that includes service options, dining options, amenities and payment options. We found no single Google page that lists every exact label. The labels you can set are the ones you see under <strong>More</strong> in your own profile, and Google says they vary by category.</p>
+    <p>Two groups of attributes are listed by name on Google's attribute page, and both can matter to a restaurant.</p>
+    <ul class="check">
+      <li><strong>Accessibility.</strong> The listed names include "Wheelchair-accessible entrance", "Wheelchair-accessible restroom", "Wheelchair-accessible seating", "Wheelchair-accessible parking" and "Wheelchair-accessible elevator". Say Yes only if it is true.</li>
+      <li><strong>Business identity.</strong> Google lists identity attributes such as "Women-owned", "Veteran-owned" and "Small business". You can opt in or out at any time. Google says franchises cannot be a small business.</li>
+    </ul>
+    <p>Ordering and booking are separate from attributes. Google's restaurant help page links to its tools for online ordering, Reserve with Google and the menu editor. Our <a href="/restaurant-wrong-menu-on-google/">wrong menu guide</a> covers the menu side.</p>
+  </div>
+</section>
+
+<section id="changes">
+  <div class="wrap narrow">
+    <div class="sec-head">
+      <span class="eyebrow">When it changes without you</span>
+      <h2>Who else can edit your profile</h2>
+    </div>
+    <p>You are not the only source. Google's page on how it sources information lists public web content, licensed third-party data, user contributions and Google's own interactions with a business.</p>
+    <p>For attributes, Google states that some may be filled in from customer input, which means you cannot set them directly. Guests can also suggest edits in Maps. In the Maps app, a guest can open About, then Features, then Edit features, and mark an item True, False or Unsure. Google reviews these edits.</p>
+    <p>Google's page on updates adds a timeline. For some suggested edits you may get an email or an in-product notice before anything publishes. You then have 4 days to accept or reject. If you do not respond, Google may publish the edit when other public information, such as your website, supports it. You can edit your profile yourself at any time.</p>
+    <p>If your site and your profile disagree, you leave Google room to side with a guest's suggestion. Keep your <a href="/restaurant-schema-markup/">site's structured data</a> and your profile saying the same thing. Google does not say whether it can change categories or attributes on its own, so check them on a schedule instead of assuming they stay put.</p>
+  </div>
+</section>
+
+<section id="table" class="sec-warm">
+  <div class="wrap narrow">
+    <div class="sec-head">
+      <span class="eyebrow">Quick reference</span>
+      <h2>Who can change what, and how long it takes</h2>
+    </div>
+    <div class="tbl-wrap">
+      <table class="data">
+        <caption>Restaurant profile details, where you edit them and what Google states</caption>
+        <thead><tr><th>Detail</th><th>Where you edit it</th><th>What Google states</th></tr></thead>
+        <tbody>
+          <tr><td>Primary category</td><td>Edit profile, Business category, Edit</td><td>Pick a specific option; you cannot create your own</td></tr>
+          <tr><td>Additional categories</td><td>Same screen, Add another category</td><td>Add a few; no number or timing stated on that page</td></tr>
+          <tr><td>Attributes</td><td>Edit profile, More, Edit, Yes or No</td><td>Vary by category; some come from guest input and are not editable</td></tr>
+          <tr><td>Delivery, takeout, pickup hours</td><td>Edit profile, Hours, Add more hours</td><td>Not shown until regular hours exist</td></tr>
+          <tr><td>Any edit you save</td><td>Check your edit status link</td><td>Usually up to 10 minutes; can take up to 30 days</td></tr>
+          <tr><td>A suggestion by someone else</td><td>Notice from Google</td><td>4 days to accept or reject, then it may publish</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="sec-warm2">
+  <div class="wrap narrow">
+    <div class="sec-head">
+      <span class="eyebrow">Questions</span>
+      <h2>Restaurant category and attribute questions</h2>
+    </div>
+    <div class="faq">
+      <details><summary>How many additional categories can a restaurant add?</summary><div class="faq-a"><p>Google's category help page does not state a number. It says to add a few for special departments or services, and advises against one for every product.</p></div></details>
+      <details><summary>How long does a category or attribute change take?</summary><div class="faq-a"><p>Google says edits usually take about 10 minutes to review, but it can take up to 30 days. The category page gives no separate timeline.</p></div></details>
+      <details><summary>Why did an attribute on my listing change when I did not touch it?</summary><div class="faq-a"><p>Google says some attributes are filled in from customer input, and that it may update a profile when sources such as user reports suggest the information is wrong. Guests can also suggest edits in Maps. Look for alerts under Edit profile, then correct anything wrong.</p></div></details>
+      <details><summary>Can I type my own category if none fits?</summary><div class="faq-a"><p>No. Google says you cannot create your own category. If no specific option fits, Google says to use a general one.</p></div></details>
+      <details><summary>Will I need to verify again after changing a category?</summary><div class="faq-a"><p>You might. Google says that after you add or edit a category you may be asked to verify your business again so it can confirm your information is accurate.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec-dark">
+  <div class="wrap">
+    <div class="two-col" style="align-items:center">
+      <div>
+        <span class="eyebrow on-dark">Next step</span>
+        <h2>Not sure your listing says the right things?</h2>
+        <p>Call and tell us what Google shows under your name. We will tell you which label to check first.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px">
+          <a href="tel:+18004818638" class="btn btn-p">Call 1-800-481-8638</a>
+          <a href="/#checkup" class="btn btn-o on-dark">Run the free checkup</a>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h3>Related reading</h3>
+          <ul class="check" style="margin-bottom:0">
+            <li><a href="/restaurant-google-maps/">Google Maps visibility</a> &mdash; the rest of the profile.</li>
+            <li><a href="/restaurant-hours-google/">Restaurant hours on Google</a> &mdash; regular, special and more hours.</li>
+            <li><a href="/restaurant-schema-markup/">Restaurant schema markup</a> &mdash; keep your site consistent with your profile.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<script>
+(function(){
+"use strict";
+var $=function(id){return document.getElementById(id)};
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- HEADER + MOBILE NAV ---------- */
+var burger=$('burger'),mobnav=$('mobnav'),hdr=$('hdr');
+function measureHeader(){
+  if(!hdr)return;
+  var h=hdr.getBoundingClientRect().height;
+  document.documentElement.style.setProperty('--hdr-h',h+'px');
+  if(mobnav)mobnav.style.top=h+'px';
+}
+measureHeader();
+window.addEventListener('resize',measureHeader);
+window.addEventListener('load',measureHeader);
+if(burger&&mobnav){
+  burger.addEventListener('click',function(){
+    var open=mobnav.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open?'true':'false');
+    burger.setAttribute('aria-label',open?'Close menu':'Open menu');
+    measureHeader();
+  });
+  mobnav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){
+      mobnav.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
+      burger.setAttribute('aria-label','Open menu');
+    }
+  });
+}
+
+
+})();
+</script>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <img src="/images/restaurants-seo-logo.png" alt="RestaurantsSEO.com" class="ftr-logo" width="250" height="85" loading="lazy">
+        <p>A working guide to restaurant search visibility &mdash; Google, Maps, reviews, menus and AI answers &mdash; written for owners and operators rather than marketers.</p>
+        <a href="tel:+18004818638" class="ftr-tel">1-800-481-8638</a>
+        <p style="margin-bottom:0"><a class="eml" data-a="aW5mbw==" data-b="ZXlldG9hZC5jb20=" data-show href="tel:+18004818638">email us</a><br>Denver, Colorado</p>
+      </div>
+      <div>
+        <h4>On this page</h4>
+        <ul>
+          <li><a href="/#basics">What restaurant SEO is</a></li>
+          <li><a href="/#surfaces">Where diners look</a></li>
+          <li><a href="/#google">Google &amp; Maps</a></li>
+          <li><a href="/#menu">Menu SEO</a></li>
+          <li><a href="/restaurant-reviews-seo/">Reviews</a></li>
+          <li><a href="/restaurant-ai-search/">AI search</a></li>
+          <li><a href="/#agentic">Agentic booking</a></li>
+          <li><a href="/#checkup">Free checkup</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guides</h4>
+        <ul>
+          <li><a href="/restaurant-menu-seo/">Restaurant menu SEO</a></li>
+          <li><a href="/restaurant-google-maps/">Google Maps visibility</a></li>
+          <li><a href="/restaurant-reviews-seo/">Reviews &amp; ratings</a></li>
+          <li><a href="/restaurant-ai-search/">AI search visibility</a></li>
+          <li><a href="/restaurant-seo-statistics/">Statistics &amp; benchmarks</a></li>
+          <li><a href="/restaurant-wrong-menu-on-google/">Wrong menu on Google</a></li>
+          <li><a href="/restaurant-schema-markup/">Restaurant schema markup</a></li>
+          <li><a href="/restaurant-google-categories-attributes/">Categories &amp; attributes</a></li>
+          <li><a href="/restaurant-google-categories-attributes/">Categories &amp; attributes</a></li>
+          <li><a href="/sitemap/">Site index</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services &amp; network</h4>
+        <ul>
+          <li><a href="https://eyetoad.com/" rel="nofollow">Eye To Ad Media</a></li>
+          <li><a href="https://searchconverts.com/" rel="nofollow">Restaurant web design</a></li>
+          <li><a href="https://restaurantsadvertising.com/" rel="nofollow">Restaurant advertising</a></li>
+          <li><a href="https://linkrestaurants.com/" rel="nofollow">NFC &amp; digital menus</a></li>
+          <li><a href="https://localfoodnearme.com/" rel="nofollow">LocalFoodNearMe</a></li>
+          <li><a href="https://bestrestaurantdenver.com/" rel="nofollow">Best Restaurant Denver</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr-btm">
+      <div>&copy; 2026 RestaurantsSEO.com &middot; Last updated November 23, 2026</div>
+      <div class="powered">Powered by <a href="https://eyetoad.com/" rel="nofollow">Eye To Ad Media</a></div>
+    </div>
+  </div>
+</footer>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://restaurantsseo.com/restaurant-google-categories-attributes/#article",
+   "headline": "Google categories and attributes for restaurants: what to pick and where to edit",
+   "description": "How to choose your restaurant primary and additional categories on Google, set attributes, and what changes when guests or Google edit them.",
+   "author": {
+    "@id": "https://restaurantsseo.com/#author"
+   },
+   "publisher": {
+    "@id": "https://restaurantsseo.com/#org"
+   },
+   "datePublished": "2026-11-23",
+   "dateModified": "2026-11-23",
+   "inLanguage": "en-US",
+   "isPartOf": {
+    "@id": "https://restaurantsseo.com/#website"
+   },
+   "mainEntityOfPage": {
+    "@id": "https://restaurantsseo.com/restaurant-google-categories-attributes/#webpage"
+   },
+   "image": "https://restaurantsseo.com/images/restaurant-seo-hero.png"
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://restaurantsseo.com/restaurant-google-categories-attributes/#webpage",
+   "url": "https://restaurantsseo.com/restaurant-google-categories-attributes/",
+   "name": "Restaurant Google Categories and Attributes: How to Set",
+   "description": "How to choose your restaurant primary and additional categories on Google, set attributes, and what changes when guests or Google edit them.",
+   "isPartOf": {
+    "@id": "https://restaurantsseo.com/#website"
+   },
+   "breadcrumb": {
+    "@id": "https://restaurantsseo.com/restaurant-google-categories-attributes/#breadcrumb"
+   },
+   "inLanguage": "en-US"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://restaurantsseo.com/restaurant-google-categories-attributes/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Restaurant SEO",
+     "item": "https://restaurantsseo.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Categories and attributes",
+     "item": "https://restaurantsseo.com/restaurant-google-categories-attributes/"
+    }
+   ]
+  }
+ ]
+}
+</script>
+
+<script>document.querySelectorAll("a.eml").forEach(function(a){var e=atob(a.dataset.a)+String.fromCharCode(64)+atob(a.dataset.b);a.href="mailto:"+e;if(a.hasAttribute("data-show"))a.textContent=e;});</script>
+</body>
+</html>
